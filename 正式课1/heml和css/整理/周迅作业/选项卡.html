@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body,ul,li,div{
+        margin: 0;
+        padding:0;
+    }
+#list{
+    margin: 20px auto 0;
+    width: 300px;
+    height:400px;
+    border: 1px solid red;
+}
+    ul li{
+        width:75px;
+        height: 40px;
+        background-color: #ccc;
+        display: inline-block;
+        text-align: center;
+        font-size:20px;
+        line-height: 40px;
+float: left;
+
+    }
+    ul li.tu{
+        width:150px;
+        border-left:1px solid red;
+        border-right:1px solid red;
+        background-color:#fff;
+        margin: 0 -1px 0;
+    }
+    #list div{
+        line-height: 300px;
+        font-size: 50px;
+        text-align: center;
+        display:none;
+    }
+    #list div.tu{
+        display: block;
+    }
+
+</style>
+<body>
+<div id="list">
+<ul>
+    <li class="tu">我叫啥</li>
+    <li>多高</li>
+    <li>多重</li>
+</ul>
+    <div class="tu">周迅</div>
+    <div>176cm</div>
+    <div>126kg</div>
+</div>
+<script>
+//1,先获取所有的li和div;
+//2,将所有li和div循环
+//3，给li绑定一个点击事件
+//3,每一次循环时再来一次循环，使li和div的class标签清空；
+//4，每次循环将li和div都套上class标签
+var oList=document.getElementById("list");
+    var oLis=oList.getElementsByTagName("li");
+    var oLi=oList.getElementsByTagName("div");
+
+    for(var i=0;i<oLis.length;i++){
+        oLis[i].index=i;
+        oLis[i].onclick=function(){
+        for (var f=0;f<oLis.length;f++){
+
+            oLis[f].className="";
+            oLi[f].className="";
+        }
+            this.className="tu";
+            oLi[this.index].className="tu";
+    }
+    }
+
+
+</script>
+
+</body>
+</html>

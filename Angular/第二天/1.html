@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="myCtrl">
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('myCtrl',function($scope){
+        $scope.products = [
+            {isSelected:true,name:'iphone6s',price:3000,count:1,id:1},
+            {isSelected:true,name:'iphone5s',price:2000,count:2,id:2},
+            {isSelected:true,name:'iphone4s',price:1000,count:3,id:3},
+            {isSelected:true,name:'iphone7s',price:5000,count:4,id:4}
+        ];
+    })
+    var product = $scope.products.find(function(item){
+        return !item.is
+    })
+</script>
+</body>
+</html>

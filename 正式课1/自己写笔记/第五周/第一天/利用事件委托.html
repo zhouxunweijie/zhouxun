@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            width:100px;
+            height:100px;
+            background: -webkit-linear-gradient(left,yellow,red,blue,green);
+            float: left;
+            border-radius: 50%;
+            line-height: 100px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul id="ul">
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+        <li><a href="javascript:void 0">delete</a></li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    var ul = document.getElementById("ul");
+    ul.onclick = function(e){
+        e = e || window.event;
+        var target = e.target || e.srcElement;
+        if(target.nodeName == "A" && target.parentNode.nodeName == "LI"){
+            var parentNode = target.parentNode;
+            parentNode.parentNode.removeChild(parentNode);
+        }
+
+    }
+</script>

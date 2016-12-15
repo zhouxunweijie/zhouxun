@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <style>
+        #div1{
+          width: 200px;
+            height: 200px;
+            background-color: red;
+            cursor: pointer;
+            position: absolute;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom:0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>
+<script>
+    var div = document.getElementById("div1");
+    div.addEventListener('touchstart',function(e){
+        //e:TouchEvent手指事件对象
+        //changedTouches
+        //targetTouches
+        //touches:手指相关信息（x\y轴的坐标）的集合（会记录每一个手指的信息），但是我们一般只需要一个手指信息，所以我们只需要获取集合中索引为零的那一项值即可；一般情况下三者储存的只是一样的，但是当手指离开屏幕，touches中的信息就没有，此时我们想知道离开的时候手指的坐标的话需要从changedTouches中获取
+        var point = e.touches[0];
+
+    },false)
+</script>

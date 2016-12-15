@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    //服务的目的：封装代码，utils.js ,写好后，可以在任意一个控制器可以引用
+    //服务：五种服务一种装饰
+    //provider "factory" service value constant
+    //provider  唯一一个可以配置的服务
+    var app = angular.module('appModule',[]);
+    //服务的名字（provider一运行代码就会将后面的函数new一下，当注入到控制器中，次实例的$get方法就会被默认调用，$get的返回值就是注入后的内容）
+    app.config(function(calcProvider){//在需要配置的provider后面加provider,calcProvider代表的就是函数中的this
+        calcProvider.currency = '%';
+    });
+    app.provider('calc',function(){
+        this.currency = '$';
+        this.$get = function () {
+            var that = this;
+            //这里的this是calc
+            return {
+                '+':function(){return that.currency+(a+b)},
+                '-':function(){},
+                '*':function(){},
+                '/':function(){}
+            }
+        }
+    });
+    app.controller('myCtrl',function($timeout){
+        $timeout.a = 1;
+    });
+    app.controller('myCtr2',function(){
+
+    })
+    //服务，列如$timeout $interval 单例的
+</script>
+</body>
+</html>

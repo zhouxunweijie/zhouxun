@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var f=function(){return true;};
+//    var g=function(){return false;};
+//    (function(){
+//        if(g()&&[]==![]) {
+//
+//           f = function f() {
+//                return false;
+//            };
+//           function g() {
+//                return true;
+//            }
+//        }
+//    })();
+//    alert(f());
+//    alert(g());
+
+//    function fo(){
+//        var i=0;
+//        return function (n){
+//            return n+i++;
+//        }
+//    };
+//
+//    var f=fo();
+
+    var number=6;//12 16
+    var obj={
+        number:9,//13
+        fn1:(function(){
+            this.number*=2;
+            var number=2;//7 21 63
+            number=number+5;
+            return function (){
+                this.number+=4;
+                number*=3;
+                alert(number);
+            }
+        })(),
+        db2:function(){this.number*=3}
+    };
+
+    var fn1=obj.fn1;
+    alert(number);//12
+    fn1();//21
+    obj.fn1();//63
+    alert(window.number);//16
+    alert(obj.number);//13
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #f8f8f8;
+        }
+        ul{
+            list-style: none;
+        }
+        .box{
+            margin: 30px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            width: 300px;
+            height: 400px;
+        }
+        ul{
+            margin-left: -1px;
+            width: 302px;
+        }
+        li{
+            float: left;
+            width: 74px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #f5f5f5;
+            cursor: pointer;
+        }
+        .clear:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        li.cur{
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            width: 150px;
+            background: #fff;
+        }
+        .box div{
+            display: none;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            font-size:40px;
+        }
+        div.cur{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+   <ul class="clear">
+       <li class="cur">小组更新</li>
+       <li>我的小组</li>
+       <li>热门话题</li>
+   </ul>
+   <div class="cur">
+       小组更新
+   </div>
+    <div>
+        我的小组
+    </div>
+    <div>
+        热门话题
+    </div>
+
+    <script>
+        //1、获取到要操作的多有DOM元素
+        //2、循环所有的元素，将每个元素的类名去掉
+        //3、点击某个元素的时候将特殊的类名添加给这个元素就可以了
+        var oBox=document.getElementsByClassName('box')[0];
+        //[box,box....]
+        //typeof oBox--object
+        //getElementsByClassName获取到的对象还是一个集合
+        var oLis=oBox.getElementsByTagName('li');
+        var oDivs=oBox.getElementsByTagName('div');
+        for(var i=0;i<oLis.length;i++){
+            oLis[i].index=i;
+            oLis[i].onclick=function(){
+                //点击这个li的时候，同时要发生将所有li和div的类名去掉，去掉之后给点击的这个li添加类名，并且这个li对应的div也要添加上类名
+                //this.className="";当前这个li的类名去掉
+                for(var j=0;j<oLis.length;j++){
+                    oLis[j].className="";
+                    oDivs[j].className=""
+                }
+                this.className="cur";
+                //this.index==oLis[i].index
+                oDivs[this.index].className="cur";
+            }
+        }
+        /*for(var i=0;i<oDivs.length;i++){
+            //console.log(i);
+            oLis[i].index=i;
+            oLis[i].onclick=function(){
+                for(var j=0;j<oLis.length;j++){
+                    oLis[j].className="";
+                    oDivs[j].className="";
+                }
+                this.className="cur";
+                oDivs[this.index].className="cur";
+            }
+        }*/
+    </script>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /*后代选择器*/
+        /*css选择器的查找方式是从右到左 靠近{}的这个选择器越精确，查找速度越快，性能耗费的越少，选择器尽量不要太长*/
+        /*靠近{}如果是类名 就会比较快速的查找到要操作的元素*/
+        /*ul li{
+            color:red;
+        }
+        ol li{
+            color:yellow;
+        }*/
+        /*子级选择器 通过父级元素选择到第一层级的子级元素*/
+        /*ul liborder:1px solid red;*/
+        /*div>ul>li{
+            border: 1px solid red;
+        }*/
+        /*并集选择器  将相同的css属性给到不同的html元素*/
+        /*div{width:100px;border:1px solid red;}
+        ul{width:100px;border:1px solid red;}
+        ol{width:100px;border:1px solid red;}*/
+        /*div,ul,ol{width: 100px;border: 1px solid red;}*/
+        /*交集选择器  更有针对性的选择要操作的元素（增加权重）*/
+        /*交集选择器就是将标签名和类名组合，或者是将类名组合，在组合的时候中间没有任何的间隙和符号*/
+        /*标签和类名组合的时候 标签名写在类名的前面*/
+        /*.list{color:red;}*/
+        /*#list1,#list2,#list3{color:green;}*/
+        /*.list1{color: green;}*/
+        /*li ul li{color:green;}*/
+        /*.list li{color: green;}/!*11*!/*/
+        /*#pink{color:pink;}*/
+        /*.pink{color:pink;}/!*10*!/*/
+        /*.list .pink{color:pink;}*/
+        /*li.pink{color:yellow;}/!*11*!/*/
+        /*.pinkli{}*/
+        /*.list1.pink{color:pink;}/!*20*!/*/
+        /*伪类选择器 指的是这个元素的一种状态*/
+        /*基本格式   选择器:伪类{}*/
+        li:hover{font-size:50px;color:red;}
+        /*hover 鼠标经过效果*/
+        /*类型选择器  通过元素的type属性中的属性值来得到不同元素*/
+        input[type=submit]{background-color:orange;}
+        input{background-color: red;}
+        .btn{background-color: blue;}
+        /*类型选择器的权重大于10*/
+    </style>
+</head>
+<body>
+<input type="text" class="btn"/>
+<input type="submit" class="btn"/>
+<!--提交按钮-->
+<div>
+    <ul>
+        <li class="list">
+            第一项
+            <ul>
+                <li class="list1">第一级</li>
+                <li class="list1 pink" id="pink">第一级</li>
+                <li class="list1">第一级</li>
+            </ul>
+        </li>
+        <li class="list">第二项</li>
+        <li class="list">第三项</li>
+    </ul>
+</div>
+<div>
+    <ol>
+        <li>第一项</li>
+        <li>第二项</li>
+        <li>第三项</li>
+    </ol>
+</div>
+</body>
+</html>

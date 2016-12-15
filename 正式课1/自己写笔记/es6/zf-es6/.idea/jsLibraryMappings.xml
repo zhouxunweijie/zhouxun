@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{zf-es6/node_modules}" />
+    <file url="file://$PROJECT_DIR$/11.Module" libraries="{zf-es6/11.Module/node_modules}" />
+    <file url="file://$PROJECT_DIR$/9.3.co库与async函数" libraries="{zf-es6/9.3.co库与async函数/node_modules}" />
+    <file url="file://$PROJECT_DIR$/9.4.Mock-server" libraries="{zf-es6/9.4.Mock-server/node_modules}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
+</project>

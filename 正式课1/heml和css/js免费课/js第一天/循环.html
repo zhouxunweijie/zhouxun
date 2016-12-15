@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            list-style: none;
+            background: #ccc;
+        }
+        li{
+            padding-left: 20px;
+            line-height: 35px;
+            color: #fff;
+        }
+        .bg1{
+            background: #f90;
+        }
+        .bg2{
+            background: green;
+        }
+        .bg3{
+            background: #c00;
+        }
+        .bg4{
+            background: #ddd;
+        }
+        .bg5{
+            background: #fc0;
+        }
+        .bg6{
+            background: #df0;
+        }
+        .bg7{
+            background: #eef;
+        }
+        .bg8{
+            background: pink;
+        }
+        .bg9{
+            background: red;
+        }
+        .bg10{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+</ul>
+<script>
+    var oLis=document.getElementsByTagName('li');
+    //var ary=["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10"];
+    //console.dir(ary[1]);//"bg2"
+    /*for(var i=0;i<=9;i++){
+        oLis[i].className=ary[i];
+    }*/
+
+
+    /*for(var i=0;i<=9;i++){
+        oLis[i].className="bg"+(i+1)+"";
+    }*/
+
+
+
+
+
+
+
+
+
+
+//获取要操作的元素 获取10个li
+//给每一个li增加一个背景颜色 red
+//var oLis=document.getElementsByTagName('li');
+//console.log(typeof oLis);//object
+//console.log(oLis);//[li,li,li...li]
+//获取到的是一组元素，这组元素是有索引 索引从0开始到length-1结束，我们将这种集合叫做类数组
+//获取第一个li
+//oLis[0].style.backgroundColor="red";
+//oLis[0] 获取第一个li
+//. 的
+//style 样式
+//. 的
+//backgroundColor 背景颜色
+//= 赋值
+//"red"
+//oLis[1].style.backgroundColor="red";
+/*for(var i=0;i<=9;i++){
+    oLis[i].style.backgroundColor="red";
+}*/
+
+
+
+    /*for(var i=0;i<9;i++){
+        console.log(i);//0-8
+    }
+    console.log(i);//9*/
+    /*for(var i=1;(i*2)<=7;i++){
+        console.log(i);
+        i++;
+    }*/
+</script>
+</body>
+</html>

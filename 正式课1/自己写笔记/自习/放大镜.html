@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+     *{
+         margin:0;
+         padding:0;
+     }
+        .box{
+            width: 350px;
+            height: 350px;
+            position: relative;
+            background: url("images/iphone.jpg")no-repeat;
+            top:20px;
+            left:20px;
+            border:1px solid #2175f1;
+        }
+        .innerBox{
+            display: none;
+            width: 175px;
+            height: 175px;
+            background-color: #f1582c;
+            opacity: 0.4;
+            position: absolute;
+            top: 0;
+            left:0;
+        }
+        .bigImgBox{
+            width:350px;
+            height:350px;
+            position: absolute;
+            left:400px;
+            top:20px;
+            overflow: hidden;
+            display: none;
+        }
+        .bigImgBox img{
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="innerBox"></div>
+</div>
+<div class="bigImgBox">
+    <img src="images/iphone_big.jpg"/>
+</div>
+</body>
+</html>
+<script>
+var box = document.getElementsByClassName("box")[0];
+    var innerBox = box.getElementsByClassName("innerBox")[0];
+    var bigImgBox = document.getElementsByClassName("bigImgBox")[0];
+    var oImg = bigImgBox.getElementsByTagName("img")[0];
+    box.onmouseover = function(){
+        innerBox.style.display = bigImgBox.style.display = "block";
+    };
+    box.onmousemove = function(e){
+        e = e  || window.event;
+        e.pageX = e.pageX || e.clientX + (document.documentElement.scrollLeft||document.body.scrollLeft);
+        e.pageY = e.pageY || e.clientY + (document.documentElement.scrollTop||document.body.scrollTop);
+        var l = e.pageX - box.offsetLeft - innerBox.offsetWidth/2;
+        var t = e.pageY - box.offsetTop - innerBox.offsetHeight/2;
+        var a = 0;
+        var b = 0;
+        var A = box.offsetWidth - innerBox.offsetWidth;
+        var B = box.offsetHeight - innerBox.offsetHeight;
+        l = l < a ? a : l > A ? A: l ;
+        t = t < b ? b : t > B ? B : t;
+        innerBox.style.left = l + "px";
+        innerBox.style.top = t + "px";
+        oImg.style.left = -2*l + "px";
+        oImg.style.top = - 2 * t + "px";
+    }
+    box.onmouseout = function(){
+        innerBox.style.display = bigImgBox.style.display = "none"
+    }
+</script>

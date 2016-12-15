@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #f5f5f5;
+            color: red;
+            -webkit-user-select: none;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">我认为js很简单<span>0</span></div>
+</body>
+<script>
+    var div1=document.getElementById("div1");
+    var span=div1.getElementsByTagName("span")[0];
+
+ (function (){
+       var total=0;
+      div1.onclick=function(){
+           total++;
+           span.innerHTML=total;
+       }
+   })();
+//++   会强制将其他数据类型转化为数字类型
+
+
+</script>
+</html>

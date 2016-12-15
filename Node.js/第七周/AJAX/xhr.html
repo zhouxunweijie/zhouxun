@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+
+
+
+    //var xhrInIE = new ActiveXObject('Microsoft.XMLHTTP');
+    //第二版
+   //var xhrInIE = new ActiveXObject('Msxml2.XMLHTTP');
+    //第三版
+   // var xhrInIE = new ActiveXObject('Msxml3.XMLHTTP')
+
+    /**
+     * 根据用户的浏览器自动返回AJAX对象
+     */
+    function getXHR(){
+        if(window.XMLHttpRequest){
+            return new XMLHttpRequest();
+        }
+        return new ActiveXObject('Microsoft.XMLHTTP')
+    }
+
+
+    /**
+     * //利用惰性函数，减少重复冗余的计算
+     * @returns {*}
+     */
+    function getXHR2(){
+        var xhr;
+        if(window.XMLHttpRequest){
+            xhr = function(){
+                return new XMLHttpRequest();
+            }
+        }else{
+            xhr = function(){
+                return new ActiveXObject('Microsoft.XMLHTTP')
+            }
+        }
+        return (getXHR2 = xhr)()
+    }
+
+    /**
+     * 也是一个惰性函数
+     * @type {Function}
+     */
+    var getXHR3 = (function(){
+        if(window.XMLHttpRequest){
+            return function(){
+                return new XMLHttpRequest();
+            }
+        }
+        return function(){
+            return new ActiveXObject('Microsoft.XMLHTTP')
+        }
+    })
+
+    var getXHR4 = (function(){
+        var list = [];
+
+    })
+
+    for(var i=0;i<20;i++){
+        xhr = getXHR();
+        console.log(xhr);
+    }
+</script>
+<script>
+    //step 1 获取AJax的对象
+
+    //step 2 打开http请求
+    xhr.open('http marhi' +)
+
+</script>
+</body>
+</html>

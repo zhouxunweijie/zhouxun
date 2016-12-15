@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//   递归：函数在执行的时候自己调用自己就可以理解为递归函数
+
+//    递归的方式
+    function sum(){    //自己设置一个停止条件，否则就会无限期质询会。
+        if(n==1){
+            return 1
+        }
+        if((n%3)){
+            return sum(n-1);
+
+        }
+        return n+sum(n-1);
+    }
+    var sum=(100);
+
+
+</script>
+/**/
+</body>
+</html>

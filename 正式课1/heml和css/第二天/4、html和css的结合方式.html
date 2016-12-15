@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link rel="stylesheet" href="style1.css"/>
+    <link rel="stylesheet" href="style2.css"/>-->
+    <!--<style type="text/css">
+        @import "style1.css";
+        @import "style2.css";
+
+    </style>-->
+    <link rel="stylesheet" href="style1.css"/>
+    <!--<style type="text/css">
+        @import "style2.css";
+    </style>-->
+    <!--@import "style1.css";
+    div-->
+</head>
+<body>
+<!--
+1、行内式 直接写在html标签中 通过style整个标签属性引入css样式
+<p style="color:red;"></p>
+2、内嵌式（嵌入式） 将style整个标签写在head标签中，将css相关样式和选择器一起写在style整个标签中
+<head>
+    <style>
+        选择器{color:red;}
+    </style>
+</head>
+3、外链式（外联式）通过link整个标签引入一个外部的css文件，link整个标签要写在head标签中
+<head>
+    <link href="url" />
+</head>
+为什么将style和link放置在head标签中，因为浏览器加载顺序是从上到下，我们需要先加载样式后加载结构，这样在用户打开一个页面的时候，才是一个美观的页面
+4、@import "url"  通过@import这个关键词引入一个外部的css文件
+如果是将@import "url"直接放在html页面中，@import "url"外面必须有style标签
+<style>
+    @import "url"
+</style>
+或者如果是将@import "url"放在一个外部文件里（也就是一个css文件）
+放在这个css文件的最上面
+-->
+<p>我是一个段落标签</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,ul,p,ol{margin: 0;padding: 0;}
+        ul,ol{list-style:none;/*去掉列表自带的点或者是1 2 3序列*/}
+        ul{background-color: green;/*overflow: hidden;*/}
+        /*ul:after,ol:after{display: block;content: "";clear: both;}*/
+        .clear:after{display: block;content: "";clear: both;}
+        li{float: left;width: 100px;height: 100px;background-color: yellow;
+            border: 1px solid red;}
+        div{height: 300px;background-color: blue;}
+        /*让给ul识别到li*/
+        /*
+        1、给ul内增加一个文档流内的元素，并且这个元素在所有浮动元素的后面，并且带有clear属性
+        2、给ul元素增加overflow:hidden;属性
+        */
+        /*
+        给ul高度  无论ul中是否有内容，ul都有高度
+        */
+    </style>
+</head>
+<body>
+<ul class="clear">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <!--<li style="clear:both;float: none;height: 0;border: 0;"></li>-->
+    <!--<p style="clear: both;"></p>-->
+    <!-- clear:both; 清除浮动影响 -->
+    <!--<li>3</li>
+    <li>3</li>-->
+</ul>
+<ol class="clear">
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+<div></div>
+</body>
+</html>

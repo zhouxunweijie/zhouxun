@@ -1,0 +1,868 @@
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, a, span, em, i ,img{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    color: #666;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: normal;
+}
+
+img, input, select {
+    border: none;
+    vertical-align: middle;
+
+}
+
+input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+i, em {
+    font-style: normal;
+}
+
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+/*顶部广告*/
+.topAd {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    background: #fe1b0b;
+}
+
+.button {
+    position: absolute;
+    top: 3px;
+    right: 56px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    /*background: url("../images/indexNew-bg.png") no-repeat -106px -145px;*/
+}
+
+.button:hover {
+    background-position: -121px -145px;
+}
+
+.content {
+    width: 1190px;
+    margin: 0 auto;
+}
+/*顶部导航栏*/
+.navList {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #eeeeee;
+    background: #f5f5f5;
+    line-height: 35px;
+    font-size: 12px;
+    min-width: 990px;
+}
+
+.navList .listLeft{
+    float: left;
+    width:164px;
+}
+.navList .listLeft .list-box{
+    position: relative;
+    float: left;
+    margin-left: -1px;
+}
+
+.navList .listRight{
+    float: right;
+    width:646px;
+}
+
+.navList .list{
+    display: block;
+    float:left;
+    position: relative;
+    padding: 0 9px;
+    overflow: hidden;
+    border:1px solid transparent;
+    z-index: 10;
+}
+.navList .list-box img.arrow{
+    display: inline-block;
+    font-size: 10px;
+    width: 10px;
+    color: #bbb;
+    margin-left: 1px;
+    vertical-align: middle;
+
+}
+.navList .list-box:hover img.arrow{
+    transition: transform .2s ease-in;
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+}
+.navList a{
+    display: inline-block;
+    color:#666;
+}
+.navList a:hover{
+    color:#f60;
+    text-decoration: underline;
+}
+.navList .listLeft .webNav>a,.listRight .serve>a:hover{
+    color:#666;
+    text-decoration: none;
+}
+.navList .list-box .list:hover{
+    background: #fff;
+    border:1px solid #ddd;
+    border-bottom: 0;
+    padding:0 9px;
+}
+.navList .list-box:hover .navHidden{
+    display: block;
+}
+.navList .hidden{
+    position: absolute;
+    top: 35px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.navList .navHidden{
+    display: none;
+    width: 988px;
+    left: 0;
+    padding: 20px 0;
+}
+.navList .navHidden dl{
+    float: left;
+    width: 176px;
+    border-right: 1px solid #eee;
+    padding-left: 20px;
+}
+.navList .navHidden dl dt{
+    height: 25px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+}
+.navList .navHidden dl  dd{
+    float: left;
+    height: 25px;
+    width: 78px;
+    line-height: 25px;
+}
+.navList .navHidden .rightBox{
+    border: none;
+}
+.navList .shopHidden{
+    display: none;
+    width: 162px;
+    padding-top: 5px;
+    left: 0;
+    right: auto;
+}
+.navList .shopHidden a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 71px;
+    float: left;
+}
+.navList .list-box:hover .shopHidden{
+    display: block;
+}
+.navList .listRight .list-box{
+    position: relative;
+}
+.navList .listRight .login a:nth-child(2){
+    margin-left: 10px;
+}
+.navList .listRight .login:hover{
+    background: #eee;
+}
+.navList .listRight .myOrder{
+    position: relative;
+}
+.navList .listRight .orderHidden {
+    width:81px;
+    display: none;
+    padding-top: 5px;
+    left: 81px;
+    position: absolute;
+
+}
+.navList .listRight .orderHidden a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 71px;
+}
+.navList .listRight .myOrder:hover .orderHidden {
+    display: block;
+}
+
+.navList .listRight .egoHidden{
+    width: 162px;
+    left:164px;
+}
+.navList .listRight .egoHidden>div{
+    width: 142px;
+    height: 56px;
+    margin: 5px 10px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+#XX{
+    width:100%;
+    height:800px;
+    background: #eee;
+}
+
+/*放心去喜欢*/
+.like{
+    margin-top: 20px;
+    height:429px;
+}
+.like .title{
+    margin-bottom: 10px;
+    height: 40px;
+}
+.like .title h3{
+    font-weight: 900;
+    font-size: 20px;
+    width:100px;
+}
+.like .feature-enter{
+    float: left;
+    width:379px;
+    height:378px;
+}
+.like .feature-enter a{
+    display: block;
+    border: 1px solid #eeeeee;
+}
+.like .feature-enter a img{
+    position: relative;
+    border:0;
+    display: block;
+    width:100%;
+    height: 100%;
+
+}
+.like .feature-list{
+    width: 797px;
+    height:379px;
+    float: right;
+}
+.like .feature-list li{
+    float: left;
+}
+.like .feature-list li{
+    width:198px;
+    height: 188px;
+    margin: -1px 0 0 -1px;
+    border:1px solid #eee;
+}
+.like .feature-list li a:hover img{
+    position: relative;
+    box-shadow: 0 0 10px #000;
+    z-index: 1;
+}
+/*大牌盛宴*/
+.brand{
+    margin-top: 20px;
+    height:331px;
+}
+.brand .title{
+    margin-bottom: 10px;
+    height: 40px;
+}
+.brand .title h3{
+    font-weight: 900;
+    font-size: 20px;
+    width:80px;
+}
+.brand .leftAd{
+    float: left;
+    width:379px;
+    height:278px;
+    border: 1px solid #eeeeee;
+}
+.brand .leftAd img{
+    width:100%;
+    height:100%;
+    vertical-align: top;
+}
+.brand .rightList{
+    float: right;
+    width:799px;
+    height:278px;
+}
+.brand .rightList li{
+    position: relative;
+    float: left;
+    margin: 0 0 -1px -1px;
+    width:132px;
+    height:92px;
+    border: 1px solid #eeeeee;
+
+}
+.brand .rightList .cover-content{
+    position: absolute;
+    top:0;
+    width:132px;
+    height:92px;
+    background:rgba(0,0,0,.7);
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.brand .rightList li:hover .cover-content{
+    opacity: 1;
+    transition: 0.4s;
+}
+.rightList .cover-content p {
+    margin: 28px 0 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.rightList .cover-content .enter {
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    width: 63px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+    background:#ffc001;
+}
+.rightList .cover-content .collect {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    /*background: url("../images/indexNew-bg.png") no-repeat -138px -40px;*/
+}
+
+/*猜你喜欢*/
+.guess{
+    margin-top: 20px;
+    height:334px;
+}
+.guess .title{
+    margin-bottom: 10px;
+    height:40px;
+}
+.guess .title h3{
+    float: left;
+    font-weight: 900;
+    font-size: 20px;
+    width:80px;
+}
+.guess .title a{
+    float: right;
+    font-size: 18px;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: baseline;
+    color:#333;
+}
+.guess .title a:hover{
+    color:#fa4b4b;
+}
+.guess .likeList li{
+    float: left;
+    width:198px;
+    height:281px;
+    border: 1px solid #eee;
+    margin: 0 -1px 0 -1px ;
+}
+.guess .likeList li img{
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 19px 0 0 19px;
+}
+.guess .likeList li p{
+    width: 160px;
+    height: 44px;
+    margin: 13px auto 0;
+    line-height: 22px;
+    overflow: hidden;
+}
+.guess .likeList li p a{
+    color:#333;
+}
+.guess .likeList li .price{
+    float: left;
+    margin: 5px 0 0 19px;
+    font-size: 18px;
+    color: #e12228;
+}
+.guess .likeList li .sales{
+    float: right;
+    width: 47px;
+    height: 18px;
+    margin: 10px 19px 0 0;
+    line-height: 18px;
+    text-align: center;
+    background: #fa4b4b;
+    border-radius: 2px;
+    color: #fff;
+}
+/*中部广告*/
+.middleAd{
+    height: 120px;
+    margin-top:20px;
+}
+.middleAd img{
+    width:100%;
+    height: 100%;
+}
+/*第一层*/
+/*层头*/
+.floor{
+    margin-top: 30px;
+}
+.floor1{
+    height:634px;
+}
+.floor .floorHead{
+    height: 34px;
+}
+.floor h3{
+    font-weight: 900;
+    font-size: 20px;
+    width: 190px;
+    height: 34px;
+}
+.floor .title{
+    position: relative;
+    float: left;
+    bottom: 6px;
+    width: 190px;
+    height: 34px;
+    color: #222;
+    overflow: hidden
+}
+.floor .floorHead .headList{
+    float: right;
+    height:34px;
+}
+.floor .floorHead .headList li{
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 15px;
+    height:34px;
+    overflow: hidden;
+}
+.floor .floorHead .headList li span{
+    position: absolute;
+    width:0;
+    height:0;
+    border-width:0 11px 7px ;
+    border-style: solid;
+    border-color: transparent transparent #783e18;
+    left: 50%;
+    margin-left: -11px;
+    top:18px;
+
+}
+.floor .floorHead .headList li a{
+    color:#222;
+    font-size: 14px;
+    font-family:"Microsoft Yahei", Arial, SimSun;
+}
+.floor .floorHead .headList .selected{
+    color:#783e18;
+    font-weight: 800;
+}
+/*内容*/
+/*左*/
+.floor1 .context{
+    height:590px;
+    position: relative;
+}
+.context .contextLeft{
+    position: relative;
+    float: left;
+    width: 389px;
+    height: 589px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden
+}
+.context .contextLeft> a{
+    position: relative;
+    display: block;
+    width: 383px;
+    height: 305px;
+    padding-top: 15px;
+    text-decoration: none;
+    background: #ffe2ec;
+}
+.context .contextLeft>a .title{
+    width: 200px;
+    height: 40px;
+    margin: 0 0 0 20px;
+    font-size: 20px;
+    line-height: 40px ;
+    position: relative;
+    z-index: 1;
+    color:#f15453;
+    overflow: hidden;
+}
+.context .contextLeft>a .desc{
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    height: 27px;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 27px;
+    overflow: hidden;
+    color:#f15453;
+
+}
+.context .contextLeft>a img:nth-child(1){
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: block;
+    width: 250px;
+    height: 250px;
+}
+.context .contextLeft>a img.double11{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: block;
+    width:80px;
+    height:80px;
+}
+.context .contextLeft>a .jiao{
+    border-color: transparent transparent transparent #f15453;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    border-style: solid;
+    border-width: 6px 0 0 6px;
+}
+.context .contextLeft .entrances{
+    width:383px;
+    background: rgba(255,255,255,.7);
+    position: absolute;
+    bottom: 270px;
+    overflow: hidden;
+}
+.context .contextLeft .entrances li{
+    float: left;
+    padding: 7px 0;
+    width:127px;
+
+}
+.context .contextLeft .entrances li  a{
+    position: relative;
+    float: left;
+    width: 85px;
+    height: 33px;
+    line-height: 33px;
+    margin: 0 21px;
+    text-align: center;
+    color:#d18592;
+}
+.context .contextLeft .hot{
+    width:383px;
+    height: 124px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+.context .contextLeft .hot div{
+    float: left;
+    width: 128px;
+    height:100px;
+    margin: 12px 18px;
+}
+.context .contextLeft .hot div a{
+    display: block;
+    float: left;
+    line-height: 25px;
+    height:25px;
+    font-size: 12px;
+    width:64px;
+    color:#666;
+}
+.context .contextLeft .hot .right{
+    margin-left: 72px;
+}
+.context .contextLeft .hot a:hover{
+    color: #F60;
+    text-decoration: underline;
+}
+.context .contextLeft .lastImg{
+    height:145px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+.context .title{
+    width: 180px;
+    height: 28px;
+    margin: 15px 0 0 16px;
+    font-size: 18px;
+    line-height:28px;
+    color: #222;
+}
+/*.contextLeft .lastImg*/
+.context .desc{
+    width: 180px;
+    height: 24px;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #f15453;
+}
+.context .contextLeft .lastImg img{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    display: block;
+    width: 145px;
+    height: 145px;
+}
+/*右*/
+.floor .context .main{
+    display: block;
+    float: left;
+    width: 805px;
+    height: 582px;
+    margin-top: 6px;
+    margin-left: -6px;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    overflow: hidden
+}
+/*中部轮播图*/
+.floor .context .main .banner{
+    position: absolute;
+    top: 7px;
+    width:405px;
+    height:291px;
+    border-bottom: 1px solid #eee;
+    border-left:1px solid #eee;
+    background: #fff;
+    .overflow: hidden;
+}
+.floor .context .main .banner .bannerInner{
+    width: 405px;
+    height: 291px;
+    position: relative;
+}
+.floor .context .main .banner .bannerInner li{
+    width: 404px;
+    height: 291px;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+.floor .context .main .banner .bannerInner .on{
+    z-index: 1;
+}
+
+.floor .context .main .bannerInner .double11{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: block;
+    width:80px;
+    height:80px;
+}
+.floor .context .main .bannerInner img:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    display: block;
+    width: 230px;
+    height: 230px;
+}
+.floor .context .main .banner >a{
+    display: none;
+    width:38px;
+    height:77px;
+    position: absolute;
+    top:50%;
+    margin-top: -38px;
+    /*background:url("../images/indexNew-bg.png")no-repeat  0 -51px;*/
+    opacity: 0.5;
+    filter:alpha(opacity=50)
+}
+.floor .context .main .banner:hover a{
+    display: block;
+    z-index:10;
+}
+.floor .context .main .banner> a:hover{
+    opacity:1;
+    filter:alpha(opacity=100)
+}
+.floor .context .main .banner .rightBtn {
+    right: 0;
+    background-position: -43px -51px;
+}
+.banner .focusList{
+    width:36px;
+    height:12px;
+    position:absolute;
+    right:183px;
+    bottom:13px;
+    z-index: 10;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 4px 4px 0 0;
+
+}
+.banner .focusList li{
+    width:8px;
+    height:8px;
+    float:left;
+    margin-left: 4px;
+    background: #eeeeee;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.banner .focusList .selected{
+    background:#fca8a8;
+}
+/*中下广告*/
+.floor .context .main .col1{
+    width:405px;
+    height:291px;
+    position: relative;
+    top:292px;
+    float: left;
+    border-left: 1px solid #eee;
+    display: block;
+}
+.floor .context .main .col1 li{
+    position: relative;
+    height:145px;
+}
+.floor .context .main .col1 li:nth-child(1){
+    border-bottom: 1px solid #eee;
+}
+.floor .context .main .col1 img{
+    position: absolute;
+    top:0;
+    right: 5px;
+    display: block;
+}
+.cover:hover{
+    opacity: 0.8;
+}
+.main .baokuan{
+    position: relative;
+    float: left;
+    border-bottom: 1px solid #eee;
+    width: 199px;
+    height: 582px;
+    overflow: hidden
+}
+.main .baokuan li{
+    position: relative;
+    float: left;
+    height: 291px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    overflow: hidden
+}
+.main .baokuan li img{
+    position: absolute;
+    bottom:10px;
+    left:5px;
+    display: block;
+    width:190px;
+    height:190px;
+}
+.main .pro-list{
+    width:792px;
+    height:582px;
+    padding-left: 14px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.main .pro-list li{
+    float: left;
+    width:197px;
+    height:291px;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+    overflow: hidden;
+}
+.main .pro-list li img{
+    width:180px;
+    height:180px;
+    margin: 22px 8px 0;
+}
+.main .pro-list li .name {
+    width:180px;
+    height:36px;
+    margin: 0 12px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: left;
+}
+.main .pro-list li .name a{
+    color: #666;
+}
+.main .pro-list li .name a:hover{
+    color:#f60;
+    text-decoration: underline;
+}
+.main .pro-list li .price{
+    width:90px;
+    height:45px;
+    line-height: 45px;
+    font-size: 16px;
+    margin-left: 15px;
+    color:#e52228 ;
+}
+.context .selected{
+    display: block;
+}

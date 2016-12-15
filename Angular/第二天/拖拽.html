@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div drag></div>
+<div drag></div>
+<div drag></div>
+<div drag></div>
+<div drag></div>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.directive('drag',function(){
+        return {
+            restrict:'A',
+            link:function(scope,element,attrs){
+                $(element).on('mousedown',function(e){
+                    //获取点击距离盒子的距离  -  获取盒子距离浏览器的距离  = 点击位置距离盒子边框的距离
+                    var disX = e.pageX - this.offsetLeft;
+                    var disY = e.pageY - this.offsetTop;
+                    $(element).on('mousemove',function(e){
+                        $(element).css({left:e.pageX-disX,top:e.pageY-disY})
+                    });
+                    //如果up放在外边，松开鼠标后移除了document上的所有的事件，下次抬起后就不会触发up事件
+                    $(element).on('mouseup',function(){
+                        $(element).off();//关闭document上的所有方法，也可以关闭指定的事件
+                    });
+                    e.preventDefault();
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

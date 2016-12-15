@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+
+    function  Kettle(){}
+        Kettle.prototype.boiling = function (){
+            var that = this;
+            window.setTimeout(function(){
+                alert("水开了");
+                that.run("boiled")
+            },5000)
+        }
+
+    function Emitter(){
+
+    }
+    Emitter.prototype.on = function( type,fn){
+        if(!this[type]){
+            this[type] = [];
+        }
+        var a = this[type];
+        for(var i=0;i< a.length;i++){
+            if(a[i] === fn){
+                return;
+            }
+        }
+        a.pash(fn);
+    }
+    Emitter.prototype.run = function(type){
+        var a = this[type];
+        if(a){
+            for(var i = 0;i< a.length;i++){
+                if(typeof a[i] === "function"){
+                    a[i].call(this,e);
+                }else{
+                    a.splice(i,1);
+                    i--;
+                }
+            }
+        }
+    }
+    Emitter.prototype.off = function(type,fn){
+        var a = this[type];
+        if(a){
+            for(var i=0;i< a.length;i++){
+                if(a[i] === fn){
+                    a[i] = null;
+                    break;
+                }
+            }
+        }
+    }
+    function noodles(){
+        console.log("ok");
+    }
+
+    var k1 = new Kettle();
+    k1.on("boiled",noodles);
+    k1.boliing()
+</script>
+</body>
+</html>

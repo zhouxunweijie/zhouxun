@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none}
+a{text-decoration: none}
+body{font:12px/1.5"Microsoft YaHei"}
+input{border:none}
+.clear:after{display: block;content: "";clear: both;}
+.box{width: 606px;height: 540px;background-color: #f8fdff;margin: 100px 0 0 300px;}
+.title{border-bottom: 1px solid #ddd}
+
+
+h3{height:25px;border:3px solid #59afe4;border-color: transparent transparent transparent #59afe4;padding-left: 6px;font-weight: 300}
+li{position:relative;height: 35px;margin: 20px 0 0 60px;line-height: 35px;}
+input{width:300px;height: 35px;border:1px solid #c0d1d5;background-color: #f2f9fc}
+p{position:absolute;display: inline-block;width: 145px;line-height: 17px;padding-left: 17px;padding-top: 1px;}
+.zx{width: 15px;vertical-align: bottom}
+.zx2{margin-left: 36px;}
+option{background-color: #f2f9fc}
+.za1,.za3,.za4{width: 60px;height: 23px;}
+.za2{width: 106px;height: 23px;}
+.zas{margin-top: 4px;}
+.box1{width: 97px;height: 22px;}
+.zas1{margin:0 11px;}
+i{border:4px solid #4191c3;border-color: #4191c3 transparent transparent transparent;text-align: center;display: inline-block}
+.zxc3{position:absolute;width: 16px;height: 16px;margin-top: 10px;}
+.zxc2{margin-top: 15px;margin-left:60px}
+.box2{position:relative;margin-left: 100px;}
+.zx4{width: 306px;height: 56px;background-color: #69b946;font-size: 22px;font-weight: 800;margin-left: 95px;}
+ol{margin-left: 46px;line-height: 35px;height: 35px;}
+.zxc5{margin-top: 5px;}
+.zas2{margin: 0 13px;}
+.xc1{margin-right: 12px;margin-left: 33px;}
+.bx3{margin-right: 11px;}

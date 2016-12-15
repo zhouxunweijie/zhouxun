@@ -1,0 +1,935 @@
+*{margin: 0px;padding: 0px}
+body{
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    /*所有元素继承body元素设置的字体大小和样式*/
+}
+ul,ol{
+    list-style: none;
+    /*去掉自带列表样式*/
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight: normal;
+    /*去掉自带加粗属性*/
+}
+img,input,select{
+    /*都是特殊的行内元素 可以直接设置宽高*/
+    border: none;
+    /*去掉自带边框*/
+    vertical-align: middle;
+    /*改变垂直对齐方式*/
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    /*去掉自带下划线*/
+}
+i,em{
+    font-style: normal;
+    /*斜体扶正*/
+}
+.clear:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.clear{zoom: 1;}
+.concent{width: 1230px;
+    margin:0 auto;
+}
+.class{
+    background-color: #f5f5f5;
+}
+.head_img{
+    height: 80px;
+    background-color: #57c7f9;
+    text-align: center;
+}
+
+.head{
+    height: 32px;
+    background-color:#f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+}
+.head li{color: #999}
+.head li a{color: #999}
+.headright{float: right}
+.headleft>li:hover a{color: #c40000;
+}
+.headleft>li{margin-right:20px;
+    float: left;
+    line-height: 32px;
+}
+.headright>li{
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+    float: left;
+    line-height: 32px;
+}
+.headright>li>a:hover{color: #c40000;
+}
+
+.headright .mk{padding: 0}
+.sanjiao:hover .color{color: #c40000;}
+.sanjiao:hover{background-color: #fff;
+;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    background-color: #fff;
+    text-decoration:underline
+}
+.sanjiao:hover i{
+    transition: transform 0.4s ease-in;
+    transform:rotate(180deg);
+    transform-origin:50% 20%;
+}
+.sanjiao{height: 33px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+
+}
+.sanjiao i{border: 3px solid;
+    border-color:#bbb transparent transparent transparent;
+    display: inline-block;
+}
+.headright>li b{
+    width:12px;
+    height:12px;
+    display: inline-block;
+    background: url(图片/tianmao.png)no-repeat;
+    vertical-align:middle;
+    margin-right: 2px;
+}
+.headright>li .bon1{background-position:-12px 0  }
+.headright>li .bon2{background-position: -24px 0}
+.headright>li .bon3{background-position: -36px 0}
+.headright>li .bon4{background-position: -48px 0}
+
+.bom{
+    width: 74px;
+    height: 40px;
+    padding: 8px 10px;
+    position: absolute;
+    left:-1px;
+    background-color: white;
+    border:1px solid;
+    border-color: transparent #eee #eee;
+    display: none;
+}
+.bom a{
+    line-height:20px;
+    display: inline-block;
+    font-size: 11px;
+    float: left;
+}
+.bom a:hover{color: #c40000;
+    text-decoration:underline}
+.sanjiao:hover .bom{display: block}
+
+.headright .sanjiao .bom1{
+    width:63px;
+    background-color: white;
+}
+
+.bom2{
+    position: absolute;
+    right: 0px;
+    width:142px;
+    padding:8px 0;
+    background-color: white;
+    border:1px solid;
+    border-color:transparent #eee #eee;
+    display: none;
+}
+.sanjiao:hover .bom2{display: block}
+.sanjiao:hover .bom3{display: block}
+.bom2 dd{line-height: 20px;
+    font-size: 11px;
+    margin: 0 10px;
+    float: left;
+
+}
+.bom2 dd:hover{
+    color:#c40000;
+    text-decoration: underline;
+}
+.bom2 dd:hover a{color:#c40000}
+.bom2 dt{
+    margin-bottom:3px;
+    font-weight: 900;
+    margin-left: 10px;
+    line-height:15px;
+}
+
+.bom2 dl p{
+    display: inline-block;
+    width:124px;
+    float: left;
+    height: 2px;
+    margin-top: 10px;
+    border-bottom: 1px dashed #827777;
+    background-color: white;
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
+.bom3{
+    width: 1198px;
+    height: 200px;
+    position: absolute;
+    right:0;
+    padding: 25px 0;
+    background-color: white;
+    border:1px solid ;
+    border-color:transparent #f5f5f5 #f5f5f5;
+
+}
+.bom4{
+    width: 305px;
+    height: 200px;
+    display:inline-block;
+float: left;
+    z-index: 1;
+    overflow: hidden;
+    border: 1px solid ;
+    border-color:transparent #f5f5f5 transparent transparent;
+}
+
+.bom3 dl{
+float: left;
+     width: 285px;
+    height: 200px;
+    display: inline-block;
+    padding: 0 30px;
+}
+.bom3 dl dt{
+    font-size: 15px;
+    line-height: 37px;
+    color:#f56a00;
+}
+.bom3 dl dd{
+    float: left;
+    line-height: 28px;
+    display: inline-block;
+    width: 95px;
+    color: #666;
+    position: relative;
+}
+
+.bom3 dl dd:hover{
+    text-decoration: underline;
+}
+.bom3>dl a{position: relative}
+.bom4>dl dd:hover a{ color:#f56a00;}
+.tubiao{
+    width: 9px;
+    height: 11px;
+    position: absolute;
+    left:48px ;
+    top:-1px;
+    background: url("图片/tianmao_1.png") no-repeat;
+    background-position: -37px 0px;
+}
+.tu{background-position:-37px -11px}
+.tu1{left:35px;}
+.bom5 dl{
+  position: absolute;
+    width:380px;
+    height:202px;
+    display: inline-block;
+}
+.bom5{
+    z-index:1;
+overflow: hidden;
+    position: relative;
+    width:405px;
+    height:202px;
+    display: inline-block;
+    border-right: 1px solid #f5f5f5;
+}
+
+.bom5 dl dt{color: #2a69d5}
+
+.bom5 dl>dd>a:hover{color:#2a69d5}
+
+.zx1{left:25px}
+
+.bom6{
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 202px;
+    overflow: hidden;
+    border-right: 1px solid #f5f5f5;
+}
+
+.bom6 dl{position: absolute;
+    width: 300px;
+height:202px;
+}
+.bom6 dl dt{color: #000}
+
+.bom6>dl>dd>a:hover{color: #000}
+
+.bom7 dl{
+    width: 125px;
+    height:200px;
+position: absolute;
+    top: 25px;
+    right: 0;
+}
+.bom7 dl dt{
+    color:#666;
+}
+.bom3{display: none}
+.head1{
+    width: 100%;
+    height: 130px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.head1 img{
+    float: left;
+    display:inline-block;
+    height: 130px;
+}
+.head1 h1{
+width:625px;
+    height:40px;
+}
+.head1 input{
+    width: 491px;
+    height: 36px;
+    border:2px solid #c40000;
+   text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 318px;
+}
+.head1 h1{
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    background-color: #c40000;
+    top: 40px;
+    left: 813px;
+    text-align: center;
+}
+.head1 h1 a{color: #fff;
+font-size: 18px;
+}
+
+.bon{
+    position: absolute;    left: 305px;
+    top:85px;
+}
+.bon li,.bon span{
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.bon>li>a{margin: 0 13px;color: #999}
+.concent .bon .bonn{color: #c40000}
+.head2{
+    background-color: #dd2727;
+    height: 36px;
+    line-height: 36px;
+    z-index: 1;
+
+}
+.head2 span{
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    float: left;
+    width: 200px;
+    background-color: #c60a0a;
+
+
+}
+.head2 span i{
+    display: inline-block;
+    width: 15px;
+height: 15px;
+    background-color: #fff;
+    vertical-align: middle;
+    margin: 0 13px 0 16px;
+}
+
+.head2 li{
+    margin-left: 30px;
+    font-size: 15px;
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+
+.bon1 a img{
+    width: 89px;
+    height:36px;
+}
+.head2 li a{color: #fff;
+}
+.head2 li i{width: 36px;
+height:10px;
+    position: absolute;
+
+    left:20%;
+    display: none;
+}
+.head2 li i img{
+    width: 36px;
+    height: 10px;
+   float: left;
+}
+.head2 li:hover i{
+    top: -8px;
+    transition: top 2s;
+    display:block;
+}
+.head3{
+    height:500px;
+    background-color: #1078c0;
+}
+.zxc{
+    position: relative;
+}
+.zxc>a>img{
+    position: absolute;
+    height: 500px;
+top: 0;left:0;
+
+}
+.za{
+    width: 200px;
+    height: 500px;
+    background-color:#e3e7ea;
+  position: absolute;
+    top:0;
+}
+.za>li{
+    line-height: 31px;
+    color: #97999d;
+    display:block;
+}
+.za>li>b{
+    margin: 0 7px 0 13px;
+    display: inline-block;
+    width: 18px;
+    height:18px;
+    background: url("图片/list_bg.png")no-repeat;
+    vertical-align: middle;
+}
+.za>li>a{
+color: #767c79;
+}
+.za>li:hover{background-color: #fff}
+
+.zxc>span>a>img{
+    position: absolute;
+}
+.zxc>span>.cv{
+    position: absolute;
+    right: 100px;
+    top:10px;
+    width: 220px;
+    height:235px;
+    background-color: black;
+    opacity:0.5;
+}
+.zxc>span>.cv:hover{opacity:1;}
+
+.zxc>span>.cv1{
+    position: absolute;
+    width: 220px;
+    height: 235px;
+    right: 100px;
+    top:255px;
+    background-color: black;
+    opacity:0.5;
+}
+.zxc>span>.cv1:hover{opacity:1;}
+
+.as{
+    width: 80px;
+    height: 162px;
+    border-bottom: 1px dashed #031623;
+    padding: 10px 0;
+    margin-left: 10px;
+
+}
+
+.za1{
+    display: inline-block;
+    width: 100px;
+    height: 480px;
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    right:-10px;
+    top:10px;
+
+}
+.as>img{
+margin-top: 2px;
+    margin-left: 5px;
+}
+.as>b,.as>a{
+    display: inline-block;
+    margin-top: 11px;
+    font-size: 11px;
+    color: #fff;
+    margin-left: 9px;
+}
+.as>p{
+    width: 80px;
+    height: 24px;
+    background-color: #dd2727;
+border-radius: 10px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.as>p>a{
+    display: inline-block;
+    color: #fff;
+}
+.as1{
+    width: 100px;
+    height: 119px;
+    text-align: center;
+    padding: 14px 0;
+}
+.as1>p{margin-top: 11px;
+    color: white;
+
+}
+.as1>span{
+    margin: 17px 0 21px 19px;
+    color: white;
+    float: left;
+}
+.as2{
+    width: 100px;
+    height: 160px;
+    text-align: center;
+}
+.as2 h4{
+    width: 100px;
+    height: 25px;
+    background-color: #031826;
+    font-size: 11px;
+    float: left;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+
+}
+.as2 span{
+    width: 57px;
+    height: 57px;
+    background: url("yyyyy.png")no-repeat;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 10px;
+    background-position: -43px -20px;
+}
+.as2>p{
+    color: #fff;
+    margin-top: 8px;
+}
+.head4{
+    margin-top: 32px;
+    height: 30px;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.head4 img{
+    height: 30px;
+    }
+.zxc1{
+    height: 269px;
+    position: relative;
+}
+.head5 a img{
+    width: 238px;
+    height:269px;
+margin-right: 7px;
+    display: inline-block;
+}
+.head5 a img:hover{
+    opacity:0.7;
+}
+.head5 a .mn{
+    position: absolute;
+right:-8px;
+}
+.head6 ul{
+    border-top: 1px solid #f2f2f2;
+    height: 154px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 38px;
+}
+.head6 ul li>a>img{
+    display:inline-block;
+    float: left;
+    margin-top: 24px;
+    margin-right: 10px;
+}
+.head6 ul li>a>.mn1{
+    position: absolute;
+    right:-10px;
+}
+.zxc2{position: relative}
+.head6 span{
+    width: 422px;
+    height:18px;
+    background-color: #f5f5f5;
+position: absolute;
+    color: #dd2727;
+    font-size: 17px;
+    text-align: center;
+    top: -10px;
+    right: 440px;
+    z-index: 1;
+}
+.head7 .bon1{
+    width: 488px;
+    height:436px;
+    float:left;
+    background-color: #050505;  position: relative;
+}
+.head7 .bon1 li .tu3{
+    width: 488px;
+    height:275px;
+
+}
+.head7 .bon1 li span{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    background-color: #273e47;
+  right: 15px;
+    top:15px;
+    border-radius:10px;
+    text-align: center;
+}
+.head7 .bon1 li span>a{
+    font-size: 11px;
+    color:#fff;
+}
+.head7 .bon1 li span i{
+    width: 8px;
+    height: 8px;
+    background-color: #fc4779;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+.head7 .bon1 li>a{
+    position: absolute;
+    top:102px;
+    left:215px;
+}
+.head7 .bon1 .tu2>a>img{
+    width:70px;
+    height:57px;
+    margin-bottom: 9px;
+}
+.head7 .bon1 .tu2>p{
+    font-size:23px;
+    color: #fff;
+  position: absolute;
+    bottom: 208px;
+    left:124px;
+}
+.head7 .bon1 .tu3{
+    width: 488px;
+    height: 90px;
+
+position: relative;
+    overflow: hidden;
+}
+.head7 .bon1 .tu3 .tu4{
+    width: 1000px;
+    height: 90px;
+    margin-top: 8px;
+}
+.head7 .bon1 .tu3 .tu4>a{
+    position: relative;
+    display:inline-block;
+    width: 160px;
+    height: 90px;
+    margin-right: 3px;
+
+    text-align:center;
+}
+.head7 .bon1 .tu3 .tu4 a img{
+    width: 36px;
+    height: 30px;
+    display: inline-block;position: absolute;
+    top:30px;
+    left:62px;
+}
+.head7 .bon1 .tu3 .tu4 a img:hover{
+    width: 40px;
+    height: 34px;
+}
+.head7 .bon1 .tu3 .tu4>a>p{
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+margin-top:67px;}
+.head7 .bon1 .tu3 .tu4 span a .qw{
+    position: absolute;
+    left: -423px;
+    top:-15px;
+    z-index: 2;
+    display: inline-block;
+    width: 17px;
+    height: 90px;
+}
+
+.head7 .bon1 .tu3 .tu4 span a .qw1{
+    position: absolute;
+    left: 48px;
+    display: inline-block;
+    top:-15px;
+    z-index: 2;
+    width: 17px;
+    height: 90px;
+
+}
+.head7  .tu4 span a .qw1:active .bon1 .tu3 .tu4{
+    margin-left: -500px;
+    transition: 0.5s ease-in;
+}
+
+.head7 .bon1 .tu3 .tu4 span a .qw:active .tu4{
+    margin-left:0px;
+}
+
+.tu5{
+    margin-top: 15px;
+}
+.tu5>img{
+    float: left;
+    margin-left: 21px;
+    display: inline-block;
+}
+.tu5 .nb{
+    display:block;
+font-size: 13px;
+    line-height: 21px;
+    color: #fff;
+    margin-left: 109px;
+}
+
+.tu5 .nb1{
+    display: inline-block;
+    font-size: 13px;
+    line-height: 21px;
+    color: #a7284d;
+    margin-left: 9px;
+}
+
+.head7{height: 436px;
+    margin-top: 30px;
+}
+
+
+.head7 .hea {
+    width: 738px;
+    float: right;
+    margin-top: 2px;
+}
+
+.as4 {
+    float: left;
+    position: relative;
+    border: 1px solid #999;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 122px;
+    height: 107px;
+
+}
+
+.as4 img {
+    width: 122px;
+    height: 107px;
+}
+
+.zxc6{
+    width: 122px;
+    height: 107px;
+    background-color: rgba(0, 0, 0, .7);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.as4 .zxc6 p {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 11px;
+}
+
+.zxc5 {
+    width: 63px;
+    height: 18px;
+    display: block;
+    font-size: 11px;
+    background-color: red;
+    border-radius: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.as4:hover .zxc6 {
+    opacity: 1;
+    transition: 0.5s;
+}
+.head8{
+    width: 100%;
+    height: 476px;
+    margin-top: 30px;
+    display: inline-block;
+}
+.head8 ul{
+    margin-right: 10px;
+    float: left;
+    width: 238px;
+    height:476px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+}
+.head8 ul .za2{
+    width:238px;
+    height: 36px;
+   float: left;
+    display: inline-block;
+    background-color: #dd2727;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 900;
+}
+.head8 ul .za3{
+    background-color: white;
+}
+.head8 ul .za3 h1{
+    font-size: 20px;
+display: inline-block;
+    margin-top: 15px;
+    color:#23262f;
+    font-weight: 900;
+}
+.head8 ul .za3 p{
+    color: #b6b4b8;
+    margin-top: 6px;
+}
+.head8 ul .za3 img{
+    display: inline-block;
+    height: 150px;
+
+}
+.head8 ul .za3 img:hover{height: 160px}
+.head8 ul .za3 b{
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f9f9f9 ;
+height: 150px}
+
+.head8 .cv{margin: auto}
+.head9{
+    margin-top: 10px;
+    text-align: center;
+    height: 90px;
+}
+.head10{height: 470px;}
+.head10 .list{
+    display: inline-block;
+    height: 30px;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+.head10 .list .qin{
+    float: left;
+}
+.head10 .list .qin b{
+    display: inline-block;
+    width: 5px;
+    height:20px;
+    background-color:#f7a945;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.head10 .list .qin h4{
+    font-size: 16px;
+    color: #726a70;
+    display: inline-block;
+    vertical-align: middle;
+}
+.head10 .list .qin h4 p{
+    font-size: 11px;
+    margin-left: 9px;
+    display: inline-block;
+    vertical-align: -2px;
+    color:#726a70;
+}
+.head10 .list .qin1{
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 10px;
+    float: right;
+}
+.head10 .list .qin1>a{
+    margin-left: 24px;
+    color:#000;
+    padding-bottom: 1px;
+    line-height: 30px;
+    border-bottom: 1px solid transparent;
+}
+.head10 .list .qin1 a:hover{
+    border-bottom: 1px solid #000;
+}
+.head10 .list1{
+position: relative;
+    width: 246px;
+    height: 330px;
+}
+.head10 .list1 img{
+    width: 246px;
+    height: 330px;
+    float: left;
+    display: inline-block;
+}
+.list1 span{
+text-align: center;
+position: absolute;
+    display:inline-block;
+    height: 30px;
+    width: 246px;
+    background-color: rgba(255,255,255,0.5);
+}
+/*.list1 span {*/
+    /*color: #000;*/
+    /*display: inline-block;*/
+/*}*/
+
+
+
+
+

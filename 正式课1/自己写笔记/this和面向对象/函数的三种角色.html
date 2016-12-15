@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 函数的三种角色： 1 普通函数
+    *                  2  构造函数（类）
+    *                  3  也是Function这个函数累的一个实例
+    *                  ps 只要是实例那么必然天生自带的属性__proto__指向自己所属函数Function这个类的原型
+    *                  ps  那么通过Fn这个函数就可以调用Function的原型上prototype上的方法
+    *                  ps  Function.prototype的原型是一个匿名空函数
+    *
+    * */
+    /*
+    * call和apply和bind都是定义在Function.prototype的方法。任何一个函数都可以直接调用，比如=>虽然是一个内置类但是也是一个函数function Array(){　｝
+    *
+    * ［１，２］．ｐｕｓｈ这也是一个函数，这是定义在Ａｒｒａｙ的ｐｒｏｔｏｔｙｐｅ上的内置函数
+    *
+    * call的作用  ：强制改变函数中的this
+    *
+    *   1   先找到call方法=>只有函数才能找到call方法=>找到call
+    *   2   并且把谁调用call这个函数中的this修改成call的第一个参数 => 改this
+    *   3   调用call方法的那个函数执行 =>  这个函数中的this已经被修改过了
+    *   ps  fn .call()其实fn这个函数已经执行了
+    *
+    *   ps call方法的第一个参数永远是用来修改前面函数的this的，从第二个参数开始才是真正的传给调用call的函数实例的参数
+    *       sum.call(null,1,2) null是用来修改sum的this的。而1和2这两个参数才是分别传给sum当实参的
+    *
+    *  js中有严格模式和非严格模式区别   'use strict'
+    *        1  call方法中的this如果是严格模式下即使是null和undefined那么也直接使用，非严格模式下都是window
+    *        2  如果call没有写参数，严格模式下是undefined，非严格模式下是window
+    *        3  在严格模式下自运行函数中的this是undefined，非严格模式下是window
+    *        4  在严格模式下函数执行时候如果“。”前面没有，那么this是undefined
+    *
+    *
+    *
+    * call 用法
+    *       1    fn1.call(fn2)  =》最后是fn1执行
+    *       2    fn1.call.call.call（fn2）=>最后fn2执行。如果fn2没有穿函数，那么就报错
+    *
+    *
+    *
+    *
+    * apply 和 call 的方法作用都是用来修改this关键字的
+    *   区别 ：Apple的第一个参数也是用来修改调用Apple那个函数中的this的
+    *          Apple的第二个参数是一个数组，是把数组李的每一项当作参数传给调用Apple的函数
+    *          ps   其实就是传参方式不一样，call是一个个的传  Apple是放在数组里传
+    *
+    *
+    *
+    *   bind   的作用也是用来修改this关键字的。
+    *
+    *   区别 ：bind方法修改完this之后并不执行，只是返回一个已经修改过的this的函数，只是返回了一个已经修改了的新函数
+    *           bind方法的兼容性是有问题的
+    *   思想： bind方法只是先处理了this然后返回了一个新函数，预处理思想
+    *   call和apply在修改this的同时，也把函数给执行了，但是我只是想改this，不想执行函数
+    *
+    *
+    * */
+</script>
+</body>
+</html>

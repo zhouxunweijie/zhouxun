@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+在项目中，只要进行浮动设置，就要马上清除浮动
+清除浮动的方式：
+1、给父级元素设置固定的高度
+2、给父级元素设置overflow:hidden;属性
+3、向最后一个浮动元素后面添加一个文档流内的元素，这个元素具有clear:both;的属性******
+4、父级元素和子级元素同时浮动（只能清除掉父级元素不认识子级的问题）
+
+
+一定要放在所有浮动元素的下面，一定要是在文档流的元素
+一定给clear:both属性    <div style="clear:both;">20</div>
+清除浮动是指，清除掉浮动元素对其他元素的影响  -- clear:both;
+去除浮动属性，是将这个元素的float属性去掉     -- float:none;
+
+清除浮动常用的方式：利用伪元素来清除浮动影响
+给浮动元素的父级元素添加伪元素after
+父级元素选择器:after{
+    //1、将伪元素变成一个元素
+    display:block;
+    content:"";
+    //2、设置clear属性
+    clear:both;
+}
+
+
+
+
+margin-right:10px; 正确的
+
+margin-right:20px; 解析错误的
+
+_margin-right:5px; 解决方案
+<style>
+    *{margin-right: 10px;_margin-right:5px;*margin-right:5px;}
+</style>
+
+
+
+
+</body>
+</html>

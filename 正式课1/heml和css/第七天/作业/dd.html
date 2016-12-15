@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myTb>a{
+            display: block;
+            border:1px solid transparent;
+            border-top: none;
+            border-bottom: none;
+        }
+        .myTb .hidden{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 31px;
+            border: 1px solid #eeeeee;
+            padding: 10px;
+            width: 74px;
+            background: #fff;
+            line-height: 18px;
+        }
+        .myTb:hover>a{
+            position: relative;
+            z-index: 1;
+            display: block;
+            border: 1px solid #eee;
+            background: #fff;
+            border-top:none;
+            border-bottom: none;
+            /*border-bottom-color: #fff;*/
+        }
+        .myTb:hover .hidden{
+            display: block;
+        }
+        .myTb a:hover{
+            text-decoration: underline;
+        }
+        .myTb .w62{
+            width: 62px;
+        }
+        .myTb:hover .btn{
+            /*transition: transform 0.4s linear 0s;*/
+            transition: transform 0.4s ease-in;
+            /*transition 运动 ：属性 快慢 运动的时间 延迟时间*/
+            transform: rotate(180deg);
+            transform-origin: 50% 20%;
+            /*旋转180度*/
+            /*transform-origin: 10% 20%; 旋转的起始点*/
+        }
+        /*.hidden1{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 31px;
+            border: 1px solid #eee;
+            padding: 10px;
+            width: 62px;
+            background: #fff;
+            line-height: 18px;
+        }
+        .myTb1>a{
+            position: relative;
+            z-index: 1;
+            display: block;
+            border: 1px solid transparent;
+            border-top: none;
+            border-bottom: none;
+        }
+        .myTb1:hover>a{
+            background: #fff;
+            border-left-color: #eee;
+            border-right-color: #eee;
+        }
+        .myTb1:hover .hidden1{
+            display: block;
+        }*/
+        .ewm .hidden{
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: -43px;
+            box-shadow: 1px 2px 10px rgb(235,235,235);
+            border:1px solid #dcdcdc;
+            padding: 18px 13px 9px;
+            width: 148px;
+            height: 200px;
+            background: #fff;
+        }
+        .ewm .hidden span{
+            position: absolute;
+            top: -11px;
+            left: 76px;
+            border:5px solid;
+            border-color: transparent transparent #eee transparent;
+        }
+        .ewm .hidden .bg_w{
+            top: -10px;
+            border-bottom-color: #fff;
+        }
+        .ewm:hover .hidden{
+            display: block;
+        }
+        .myTb .navHidden{
+            display: none;
+            position: absolute;
+            right:0;
+            top:31px;
+            border: 1px solid #eee;
+            padding: 25px 0;
+            width: 1198px;
+            background: #fff;
+        }
+        .navHidden .over{
+            float: left;
+            border-right: 1px solid #eee;
+            padding-left: 30px;
+            width: 275px;
+        }
+        .navHidden dt{
+            padding-left: 10px;
+            line-height: 25px;
+            font-size: 16px;
+            color: #f9a565;
+        }
+        .navHidden dl{
+            margin-left: -10px;
+        }
+        .navHidden dd{
+            position: relative;
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 85px;
+            line-height: 20px;
+        }
+        .navHidden dd a{color: #666;}
+        .navHidden dd a:hover{text-decoration: underline;}
+        .navHidden dd em{
+            position: absolute;
+            top: -2px;
+            width: 9px;
+            height: 10px;
+            background: url("../images/tianmao_1.png") no-repeat;
+            background-position: -37px 0;
+        }
+        .navHidden dd .new{
+            background-position: -37px -11px;
+        }
+        .myTb:hover .navHidden{
+            display: block;
+    </style>
+</head>
+<body>
+
+</body>
+</html>

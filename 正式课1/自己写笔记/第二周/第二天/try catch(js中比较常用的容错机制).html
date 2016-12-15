@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    try{
+        //先尝试使用try这花括号里面的代码，如果报错就去运行catch里面的代码
+    }catch (e){
+        //(e)  Error
+        console.log(e.message);//e.message能捕获到try代码块中抛出的错误信息
+    }
+
+
+
+//    JSON就是一种数据格式，用于前后台的交互
+//JSON格式的对象和普通的js对象区别
+//    1  属性名全部用双引号
+//      2  属性值如果是字符串也使用双引号
+
+//    JSON.parse()   把JSON格式的字符串转化为JSON格式的对象   => 把包含JSON格式对象的双引号去掉
+//    JSON.stringify()   把JSON格式的对象转换为JSON格式的字符串  => 就是把这个对象用双引号抱起来了
+
+    'JSON' in window //在ie7以下是不存在的，
+</script>
+</body>
+</html>

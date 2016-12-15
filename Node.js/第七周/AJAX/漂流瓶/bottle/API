@@ -1,0 +1,13 @@
+
+
+1、扔瓶子
+路径：/throeBottle
+方法： post
+参数： {'content':'xxxx'}
+服务器返回：{code:0||1}  //0
+
+2、捞瓶子
+路径: /getBottle
+方法: get
+参数: 无
+服务器返回:{code:0||1,data:'content':}

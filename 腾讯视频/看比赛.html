@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script>
+        document.documentElement.style.fonSize = document.documentElement.clientWidth /640 * 100;
+    </script>
+    <script src="js/less-2.5.3.min.js"></script>
+</head>
+<body>
+<header class="header clear">
+    <div class="title">
+        <h1 class="logo"><a href="">腾讯视频</a></h1>
+        <a href="javascript:;">NBA</a>
+        <a href="javascript:;" id="main" isBlock="true"></a>
+        <a href="javascript:;">登录</a>
+    </div>
+    <div class="group">
+        <ul class="clear" id="ul1">
+            <li><a href="#">NBA</a></li>
+            <li><a href="#">CBA</a></li>
+            <li><a href="#">英超</a></li>
+            <li><a href="#">西甲</a></li>
+            <li><a href="#">意甲</a></li>
+            <li><a href="#" class="hide">收起</a></li>
+            <li class="none"><a href="#">德甲</a></li>
+            <li class="none"><a href="#">热门</a></li>
+            <li class="none"><a href="#">法甲</a></li>
+            <li class="none"><a href="#">亚冠</a></li>
+            <li class="none"><a href="#">NHL</a></li>
+            <li class="none"><a href="#">NFL</a></li>
+            <li class="bag none"><a href="#">欧洲世预赛</a></li>
+            <li class="bag none"><a href="#">亚洲世预赛</a></li>
+            <li class="bag none"><a href="#">南美世预赛</a></li>
+            <li><a href="#">中超</a></li>
+            <li><a href="#">综合</a></li>
+            <li><a href="#">电竞</a></li>
+            <li><a href="#">社区</a></li>
+            <li><a href="#">下载</a></li>
+        </ul>
+    </div>
+</header>
+<section class="video">
+    <video src="http://123.125.110.143/sports.tc.qq.com/c0022bpou04.mp4?vkey=DB45C21306EB134F7E5A85BE893225A5B5D76597DD85E1C35C3983DB6AC87C893DBFECC9B5FA64785635C408C0C5EC87CF3CA92CC45ED15D55BF2224BE571A84C139846552C61D9BEB11BE54FDAEE605A560CC6F59025B38&br=60&platform=2&fmt=auto&level=0&sdtfrom=v3010&guid=3cbccfa3afbabc96423508e76e6dd1b5&locid=682942ca-fcfa-45c5-be32-008c790b69b6&size=13484525&ocid=249438124" controls preload="none"></video>
+</section>
+<section class="match" id="match">
+    <script type="text/template" id="matchTemplate">
+        <div class="top clear">
+            <div class="left">
+                <img src="<%=matchInfo.leftBadge%>" alt="">
+                <span><%=matchInfo.leftGoal%></span>
+            </div>
+            <div class="center"><%=matchInfo.startTime.formatTime('{1}月{2}日 {3}:{4}')%></div>
+           <div class="right">
+               <img src="<%=matchInfo.rightBadge%>" alt="">
+               <span><%=matchInfo.rightGoal%></span>
+            </div>
+        </div>
+        <div class="middle">
+            <%matchInfo.leftSupport=parseFloat(matchInfo.leftSupport);%>
+            <%matchInfo.rightSupport=parseFloat(matchInfo.rightSupport);%>
+            <%var per=matchInfo.leftSupport/(matchInfo.leftSupport+matchInfo.rightSupport);%>
+            <%per=per*100+'%';%>
+            <div class="progress" style="width: <%=per%>"></div>
+        </div>
+        <div class="bottom clear">
+            <div class="left support" data-type="1"><%=matchInfo.leftSupport%></div>
+            <div class="center"><%=matchInfo.matchDesc%></div>
+            <div class="right support" data-type="2"><%=matchInfo.rightSupport%></div>
+        </div>
+</script>
+
+</section>
+<section>
+    <div>
+        <ul>
+            <li>
+                <div>
+                    <img src="" alt="">
+                    <span></span>
+                </div>
+                <span></span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll-5.1.3.min.js"></script>
+<script src="js/ejs.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

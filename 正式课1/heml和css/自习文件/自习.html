@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div,input{
+            margin: 0;
+            padding:0;
+        }
+        div{
+            width:100px;
+            height: 100px;
+        }
+input{
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+}
+    </style>
+</head>
+
+<body>
+<input type="button" value="red"/>
+<input type="button" value="w300"/>
+<input type="button" value="h300"/>
+<input type="button" value="l40"/>
+<div id="list">
+
+</div>
+<script>
+    var olist=document.getElementById("list");
+    var olis=document.getElementsByTagName("input");
+
+        olis[0].onclick=function(){
+            olist.style.backgroundColor="red";
+        };
+         olis[1].onclick=function(){
+             olist.style.width="300px"
+         };
+         olis[2].onclick=function(){
+             olist.style.height="300px"
+         };
+         olis[3].onclick=function(){
+             olist.style.marginLeft="40px";
+         };
+
+
+
+
+</script>
+</body>
+</html>

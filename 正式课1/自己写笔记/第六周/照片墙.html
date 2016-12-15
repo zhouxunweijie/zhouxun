@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul{
+            width: 480px;
+            height: 640px;
+            margin: 5px auto;
+            list-style: none;
+            padding: 5px;
+            background-color: #ccc;
+        }
+        ul li{
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+            background-color: lightcoral;
+            cursor: pointer;
+            float: left;
+        }
+        ul li img{
+            width: 100%;
+            height: 100%;
+            border:none;
+            vertical-align: top;
+            -webkit-user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="img/1.png"/></li>
+    <li><img src="img/2.png"/></li>
+    <li><img src="img/3.png"/></li>
+    <li><img src="img/4.png"/></li>
+    <li><img src="img/5.png"/></li>
+    <li><img src="img/6.png"/></li>
+    <li><img src="img/7.png"/></li>
+    <li><img src="img/8.png"/></li>
+    <li><img src="img/9.png"/></li>
+    <li><img src="img/10.png"/></li>
+    <li><img src="img/11.png"/></li>
+    <li><img src="img/12.png"/></li>
+</ul>
+</body>
+</html>
+<script src="utils2.0.js"></script>
+<script src="event-4.0.js"></script>
+<script src="animate.js"></script>
+<script src="wheel.js"></script>
+<script src="dragclass (1).js"></script>
+<script>
+
+    var lis = document.getElementsByTagName("li");
+    //for(var i = 0;i<lis.length;i++){
+    for(var i = lis.length-1;i>=0;i--){
+
+        //先把这些图片li从float 定位成absolute
+        //把每个li的offsetleft的值作为重新定位之后的left的值
+        //然后又5px的误差，这个误差从margin那来的；
+        var li = lis[i];//每次li循环代表的就是页面中的那个Li
+        //无论是让li是float还是aboslite,都是原来的li
+        var l = li.offsetLeft - 5;
+        var t = li.offsetTop -5 ;
+        li.l = l;
+        li.t = t;//没个li记录在自己身上原始的位置，
+        li.style.top = t + "px";
+        li.style.left =  l + "px";
+        li.style.margin = 0;
+        li.style.position = 'absolute';//先把没个li 绝对定位
+        new Drag(lis[i])
+                .on('selfdragstart',increaseIndex)
+                .on('selfdragstart',changeBg)
+                .on('selfdragend',resetBg)
+                .on('selfdraging',processLi)
+                .on('selfdragend',changePosition);
+    }
+    function changePosition(){
+        //先获取在拖拽过程中，拿到那个离我最近的的那几个橘黄色盒子；
+        //在这几个橘黄色盒子中跳出离我最近的
+        //和他交换位置
+        var a = this['hitedbox'];//这个数组中就有碰撞的那几个盒子
+        if(a && a.length){//如果没有就返回原来的位置
+            //先找到距离当前最近的
+            for(var i =0;i< a.length;i++){
+                var li = a[i];//橘黄色中间的一个
+                var x = this.ele.offsetLeft - li.offsetLeft;
+                var y = this.ele.offsetTop - li.offsetTop;
+                //Math.pow(x,2) x的二次方
+                li.distance = Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
+                //这个循环结束之后那几个橘黄色的盒子每个人都会保存着一个叫distance的属性，记录着距离拖拽的那个盒子有多远
+            }
+            a.sort(function(a,b){
+                return a.distance - b.distance;
+            });
+            var shorLi = a[0];//按照升序排列
+            //最短的已经找到了，那么和正在拖拽的盒子交换位置
+            animate(shorLi,{left:this.ele.l,top:this.ele.t},300);
+            animate(this.ele,{left:shortLi.l,top:shorLi.t},300);
+            //每次交换位置之后，为了下一次交换位置，那么需要更新记录位置的L和T;
+            for(var i=0;i< a.length;i++){
+                a[i].style.backgroundColor = "";
+            }
+            var tempObj = {
+                l:shorLi.l,
+                t:shorLi.t
+            };
+            shorLi.l = this.ele.l;
+            shorLi.t = this.ele.t;
+            this.ele.l = tempObj.l;
+            this.ele.t = tempObj.t;
+            this['hitedbox'] = null;
+        }else{
+            animate(this.ele,{left:this.ele.l,top:this.ele.t},300);
+        }
+
+    }
+    function processLi(){
+        this['hitedbox'] = [];//新创建一个数组，并且保存到实例上
+        var a = this['hitedbox'];//这个数组存放的是碰上的盒子
+        for(var i = 0;i<lis.length;i++){
+            var li = lis[i];//每个图片
+            if(li == this.ele){//
+                continue;//如果是自己就不用去做碰撞检测了
+            }
+            li.style.backgroundColor = "";//在没有装上之前将颜色设置为空
+            if(isHited(this.element,li)){ //
+                li.style.backgroundColor = "orange";
+                a.push(li);//在拖拽结束的过程中把所有碰上的盒子保存起来，拖拽结束的时候我需要找到那个距离这个盒子最近的盒子，然后交换位置
+            }
+        }
+
+    }
+    function isHited(dragBox,staticbox){//判断当前正在拖拽的和图片是否和其他图片碰撞
+        //碰撞检测  dragbox正在拖拽的盒子    staticbox就是原地不变的那些
+        if(dragBox.offsetLeft + dragBox.offsetWidth < staticbox.offsetLeft ||
+           dragBox.offsetLeft > staticbox.offsetLeft + staticbox.offsetWidth ||
+           dragBox.offsetTop +  dragBox.offsetHeight < staticbox.offsetTop ||
+           dragBox.offsetTop > staticbox.offsetTop + staticbox.offsetHeight){
+            return false;
+        }else{
+            return true;
+        }
+
+
+    }
+    function resetBg(){
+        this.ele.style.backgroundColor = '';
+    }
+    function changeBg(){
+        this.ele.style.backgroundColor = 'drakblue';
+    }
+    function increaseIndex(){
+        this;
+        for(var i=0;i<lis.length;i++){
+            if(lis[i] ==this.ele){
+                lis[i].style.zIndex = 0
+            }else{
+                lis[i].style.zIndex = 1
+            }
+        }
+    }
+
+</script>

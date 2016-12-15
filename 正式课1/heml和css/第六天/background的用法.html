@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+    <style>
+        div{border:3px solid red;
+        width:500px;
+            height:500px;
+            background-color:red; /*背景颜色*/
+            background-image:url(tupian);/*引入背景图片*/
+
+          background-repeat:repeat;   /*背景图片平铺*/
+            /*
+            repeat     背景图片平铺
+            no-repeat   不平铺
+            repear-x    x轴平铺
+            repear-y    y轴平铺
+            */
+           background-position: center center;
+            /* 如果背景图片大小小于盒子的大小   center定位会将这个图片放置在盒子的中心位置 */
+            /* 如果背景图片大小大于盒子的大小   center定位会将这个图片的中心放置在盒子的中心位置 */
+/*以图片为参照物定位的时候所有数值都为负值*/
+            background-position:20px 100px;/*  20是左，100是上*/
+        background-position: right 20px bottom 100px;
+
+        background-size:200px 300px;  /*背景图片大小  宽  高*/
+        background-size: 50% 50%;   /*是指盒子的百分比多少*/
+
+        background:url("pic.jop") no-repeat red;   /*复合写法*/
+
+        background: linear-gradient(to bottom,red 30%, green 50%);/*背景颜色渐变  ie9以上兼容*/
+
+
+        图片最初的位置+图标在图片上的位置=最后的坐标
+
+
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

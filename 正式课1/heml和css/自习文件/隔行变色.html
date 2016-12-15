@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+    <style>
+        body,ul,li{
+            margin: 0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+            width: 900px;
+            border:1px solid red;
+            margin: 10px auto 0;
+        }
+        li{
+            line-height: 30px;
+            cursor: pointer;
+
+
+        }
+        .c1{background-color: #19c8a9}
+        .c2{background-color: #59af44}
+        .c3{background-color: #8b8b8b}
+    </style>
+ </head>
+<body>
+<ul>
+    <li>今日是中秋节，是团圆节，以月之圆兆人之团圆。</li>
+    <li>自古以来，中秋便有祭月、赏月、拜月、吃月饼、赏桂花、饮桂花酒等习俗</li>
+    <li>2015年9月23日，习近平在西雅图出席美国侨界欢迎招待会上，对广大侨胞致以节日的问候。</li>
+    <li>虽然距离中秋节还有几天，习近平用这样别开生面的方式与侨胞们提前庆祝中秋佳节却令现场侨胞感到分外亲切。</li>
+    <li>今日是中秋节，是团圆节，以月之圆兆人之团圆。</li>
+    <li>自古以来，中秋便有祭月、赏月、拜月、吃月饼、赏桂花、饮桂花酒等习俗</li>
+    <li>2015年9月23日，习近平在西雅图出席美国侨界欢迎招待会上，对广大侨胞致以节日的问候。</li>
+    <li>虽然距离中秋节还有几天，习近平用这样别开生面的方式与侨胞们提前庆祝中秋佳节却令现场侨胞感到分外亲切。</li>
+    <li>今日是中秋节，是团圆节，以月之圆兆人之团圆。</li>
+    <li>自古以来，中秋便有祭月、赏月、拜月、吃月饼、赏桂花、饮桂花酒等习俗</li>
+    <li>2015年9月23日，习近平在西雅图出席美国侨界欢迎招待会上，对广大侨胞致以节日的问候。</li>
+    <li>虽然距离中秋节还有几天，习近平用这样别开生面的方式与侨胞们提前庆祝中秋佳节却令现场侨胞感到分外亲切。</li>
+    <li>今日是中秋节，是团圆节，以月之圆兆人之团圆。</li>
+    <li>自古以来，中秋便有祭月、赏月、拜月、吃月饼、赏桂花、饮桂花酒等习俗</li>
+    <li>2015年9月23日，习近平在西雅图出席美国侨界欢迎招待会上，对广大侨胞致以节日的问候。</li>
+    <li>虽然距离中秋节还有几天，习近平用这样别开生面的方式与侨胞们提前庆祝中秋佳节却令现场侨胞感到分外亲切。</li>
+</ul>
+<script>
+    var olist=document.getElementsByTagName("li");
+        for(var i=0;i<olist.length;i++){
+            olist[i].index=i;
+           if(i%2===0){
+               olist[i].className="c1";
+               olist[i].index1="c1"
+           }else{
+               olist[i].className="c2";
+               olist[i].index1="c2"
+           }
+            olist[i].onclick=function(){
+                alert(this.index+1);
+            };
+            olist[i].onmouseover=function(){
+                this.className="c3";
+            };
+            olist[i].onmouseout=function(){
+                this.className=this.index1
+            }
+
+        }
+
+
+
+</script>
+</body>
+</html>

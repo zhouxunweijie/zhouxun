@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        .box1{position: absolute;width: 400px;height: 400px;background-color: blue;}
+        .content1{position: absolute;width: 100px;height: 100px;background-color:yellow;z-index: 2;}
+        .box2{position: absolute;top:30px;left:0;width: 300px;height: 300px;background-color:red;z-index: 3}
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p class="content1"></p>
+</div>
+<div class="box2">
+    <p class="content2"></p>
+</div>
+
+<!--
+1、父子元素不参与z-index的比较
+2、两个盒子比较z-index的时候，如果同级盒子都有z-index值，那么同级之间比较，如果两个同级盒子没有这个值，那么里面的子级盒子的z-index起作用（只作用于这个子级盒子）
+3、只要父级元素没有z-index值，子集就会参与比较
+-->
+
+
+
+
+
+</body>
+</html>

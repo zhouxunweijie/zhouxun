@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       span{
+           display: block;
+           margin-top: 160px;
+            margin-left:592px ;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            right: 50%;
+            top:20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1"></div>
+<span>
+    <input type="button" value="左" class="input1">
+    <input type="button" value="右" class="input2">
+</span>
+
+<script src="../1/utils2.0.js"></script>
+<script>
+    var div1 = utils.getElesByClass("div1")[0];
+    var input1 = utils.getElesByClass("input1")[0];
+    var input2 = utils.getElesByClass("input2")[0];
+    var right = utils.win("clientWidth") - div1.offsetWidth;//终点
+    var left = 0;//起点
+
+    input1.onclick = function(){
+        move(left,asd);
+    };
+    input2.onclick = function(){
+        move(right,asd1);
+    };
+    function move(data,fn){
+        if(div1.timer){
+            window.clearInterval(div1.timer);
+        }
+        var speed = 5;//运动速度
+        div1.timer = window.setInterval(function(){
+            var curData = utils.css(div1,"left");
+            if(data>curData){
+                curData +=5;
+                if(curData+speed >= right){
+                    window.clearInterval(div1.timer);
+                    utils.css(div1,"left",right);
+                    if(typeof fn == "function"){
+                        fn();
+                    }
+                    return;
+                }
+                utils.css(div1,"left",curData);
+                //console.log(ory);
+            }else if(data<curData){
+                curData-=5;
+                if(curData-speed <= left){
+                    window.clearInterval(div1.timer);
+                    utils.css(div1,"left",left);
+                    if(typeof fn == "function"){
+                        fn();
+                    }
+                    return;
+                }
+                //console.log(ok);
+
+                utils.css(div1,"left",curData);
+            }else{
+                return;
+            }
+        },10)
+    }
+function asd(){
+    utils.css(div1,"borderRadius","50%");
+}
+    function asd1(){
+        utils.css(div1,"backgroundColor","blue");
+    }
+
+</script>
+
+</body>
+</html>

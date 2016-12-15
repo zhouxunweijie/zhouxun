@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="appModule" >
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="myCtrl">
+{{name}}
+<ul>
+    <!--li便利的时候会产生N个作用域，-->
+    <li ng-repeat="v in arrs track by $index">{{v}}</li>
+</ul>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    //app.controller('myCtrl',function($scope){
+    //    $scope.name= 'hello zfpx'
+    //});
+    app.controller('myCtrl',['$scope',function($scope){
+        $scope.name= 'hello zfpx';
+        $scope.arrs = ['橡胶','苹果','橘子'];
+    }])
+</script>
+</body>
+</html>

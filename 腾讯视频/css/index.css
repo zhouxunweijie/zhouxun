@@ -1,0 +1,220 @@
+html,
+body {
+  font-size: 100px ;
+  width: 100%;
+  overflow: hidden;
+}
+.header {
+  width: 100%;
+  overflow: hidden;
+}
+.title {
+  width: 100%;
+  height: 44px;
+  background: #1c90f2;
+  line-height: 44px;
+}
+.title a {
+  display: inline-block;
+  color: #fff;
+  line-height: 44px;
+  height: 100%;
+  float: right;
+  font-size: 16px;
+  font-weight: 300;
+}
+.title h1 {
+  display: inline-block;
+  float: left;
+  width: 118px;
+  height: 44px;
+  background: url("../img/icon-logo.png") no-repeat 10px center;
+  border-right: 1px solid #066dc4;
+  background-size: 24px;
+}
+.title h1 a {
+  border-right: 1px solid #61b2f6;
+  padding-right: 10px;
+  text-align: right;
+}
+.title a:nth-child(2) {
+  padding: 0 10px;
+  float: left;
+}
+.title a:nth-child(4) {
+  padding-right: 15px;
+}
+.title a:nth-child(3) {
+  background: url("../img/btn-nav-fold.png") no-repeat 10px center;
+  background-size: 24px;
+  width: 44px;
+  height: 44px;
+}
+.group {
+  background: #f7f7f7;
+}
+.group ul {
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  display: none;
+}
+.group ul li {
+  float: left;
+  height: 37px;
+  width: 16%;
+}
+.group ul li.bag {
+  width: 32%;
+}
+.group ul li.none {
+  display: none;
+}
+.group ul li a {
+  float: left;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  line-height: 37px;
+  color: #0f0f0f;
+}
+.group ul li a.hide:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 5px solid;
+  border-color: transparent transparent #000 transparent;
+  content: '';
+  vertical-align: 4px;
+}
+.group ul li a.aaa:after {
+  transform: rotate(180deg);
+  transform-origin: 50% 75% ;
+}
+.video {
+  height: 1.81rem;
+  background: #000;
+}
+.video video {
+  width: 100%;
+  height: 100%;
+  background: url("../img/poster.jpg") no-repeat center;
+  background-size: contain;
+}
+.match {
+  padding: 15px;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.match .top {
+  height: 30px;
+  width: 100%;
+}
+.match .top div {
+  width: 33%;
+  height: 100%;
+  float: left;
+  line-height: 30px;
+}
+.match .top div.center {
+  width: 34%;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+.match .top .left {
+  text-align: left;
+}
+.match .top .left img {
+  width: 32px;
+  height: 30px;
+  float: left;
+}
+.match .top .left span {
+  margin-left: 12px;
+  font-size: 20px;
+  color: #333;
+  float: left;
+}
+.match .top .right {
+  text-align: left;
+  text-align: right;
+}
+.match .top .right img {
+  width: 32px;
+  height: 30px;
+  float: left;
+}
+.match .top .right span {
+  margin-left: 12px;
+  font-size: 20px;
+  color: #333;
+  float: left;
+}
+.match .top .right img {
+  float: right;
+}
+.match .top .right span {
+  float: right;
+  margin-left: 0;
+  margin-right: 12px;
+}
+.match .middle {
+  width: 100%;
+  height: 2px;
+  background: #1c90f2;
+  margin-top: 8px;
+  position: relative;
+}
+.match .middle .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: red;
+}
+.match .bottom {
+  margin-top: 12px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #888888;
+  font-size: 12px;
+}
+.match .bottom div {
+  box-sizing: border-box;
+  float: left;
+  width: 34%;
+  height: 100%;
+}
+.match .bottom div.center {
+  width: 32%;
+}
+.match .bottom .left {
+  text-align: left;
+  padding-left: 25px ;
+  background: url("../img/support-left.png") no-repeat left center;
+  background-size: 12px 12px ;
+}
+.match .bottom .left.bg {
+  color: red;
+  background: url("../img/support-red.png") no-repeat left center;
+  background-size: 12px 12px ;
+}
+.match .bottom .right {
+  text-align: right;
+  padding-right: 25px;
+  background: url("../img/support-right.png") no-repeat right center;
+  background-size: 12px 12px;
+}
+.match .bottom .right.bg {
+  color: #00b3ee;
+  background: url("../img/support-blue.png") no-repeat right center;
+  background-size: 12px 12px;
+}

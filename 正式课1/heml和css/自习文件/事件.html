@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style="width: 200px;height:100px;text-align: center;line-height: 100px;margin: 50px auto;border: 1px solid red">
+00：00:00
+</body>
+<script>
+    window.setInterval(sun,1000);
+    function sun(){
+        var date=new Date();
+        document.body.innerHTML=addZero(date.getHours())+":"+addZero(date.getMinutes())+":"+addZero(date.getSeconds())
+    }
+    function addZero(n){
+        return n<10?"0"+n:n;
+    }
+
+
+</script>
+</html>

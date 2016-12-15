@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var str = "12345678" ;
+    var reg = /\d(?!$)/g;
+    str = str.replace(reg,function(item,index){
+        if((str.length -index)%3 ===1){
+            return item + ",";
+        }else{
+            return item
+        }
+    });
+    console.log(str)
+
+    //后面数字出现的次数必须是三个连续数字的正整数倍，但是必须是到包括结尾
+    var str = "123456789";
+    var reg = /(\d{1,2})(?=(\d{3})+$)/g;  //zero-width-lookhead
+    str = str.replace(reg,"$1,");  //zero-width-behind
+
+
+//非空验证  /^\s*$/  有效数字  邮箱 数字和字母组合
+</script>
+
+</body>
+</html>

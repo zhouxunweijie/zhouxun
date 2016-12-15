@@ -1,0 +1,636 @@
+*{margin: 0px;padding: 0px}
+body{
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    /*所有元素继承body元素设置的字体大小和样式*/
+}
+ul,ol{
+    list-style: none;
+    /*去掉自带列表样式*/
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight: normal;
+    /*去掉自带加粗属性*/
+}
+img,input,select{
+    /*都是特殊的行内元素 可以直接设置宽高*/
+    border: none;
+    /*去掉自带边框*/
+    vertical-align: middle;
+    /*改变垂直对齐方式*/
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    /*去掉自带下划线*/
+}
+i,em{
+    font-style: normal;
+    /*斜体扶正*/
+}
+.clear:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.clear{zoom: 1;}
+.conter{
+    width:1090px;
+    margin: 0 auto;
+}
+.beijing{background-color: #f5f5f5;
+width:100%;
+}
+.top{
+    background: linear-gradient(to bottom,#f98521 0%, #f57614 100%);
+    height:53px;
+}
+.top .zx1{
+    display: inline-block;
+    width: 165px;
+    height: 53px;
+    float: left;
+    background: url("虾米/default.png") no-repeat;  margin-right: 25px;
+
+}
+.top .zx1:hover{
+    background-position: 0px -60px;
+}
+.top .zx{
+    width: 90px;
+    height: 53px;
+ text-align: center;
+    float: left;
+    background-color: #e36b06;
+
+
+display: inline-block;
+}
+.top .zx p{
+    color:#fff;
+    font-size: 15px;
+    line-height: 53px;
+}
+.top .zx2{background-color: transparent}
+
+.zx3{
+    width: 245px;
+    height:30px;
+    margin: 8px 20px 0;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+.zx3>a{
+    width: 60px;
+    height:28px;
+    display: inline-block;
+    border: 1px solid #ef7917;
+    border-right: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+
+    line-height: 28px;
+    text-align: center;
+}
+.zx3 .zx6{border-right: 1px solid #ee7716}
+.zx3>a:hover{background-color: #d96015}
+.top span{
+
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin-top: 8px;
+}
+.zx4{width: 210px;
+    height: 30px;
+    border-radius: 2px;
+padding-left:20px ;
+}
+.zx5{width: 16px;
+    height:16px;
+    position: absolute;left: 2px;
+    top:7px;
+    background: url("虾米/header_icon.png")no-repeat;
+    background-position:  -5px -53px;
+    cursor:pointer;
+
+}
+.top ul{
+    width: 181px;
+    height:30px;
+    display: inline-block;
+    margin:9px 0 0 15px;
+}
+.xz2{
+    width: 58px;
+    height:30px;
+    float: left;
+}
+.top ul .xz2 a{
+
+    border:1px solid #ce6415;
+    border-radius: 3px;
+    color: #fff;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    background-color: #c46115;
+
+}
+.top ul .xz2 a:hover{
+    background-color: #ba570b;
+}
+.xz3{
+    width: 120px;
+    height: 28px;
+    display: inline-block;
+    float:left;
+
+}
+
+.top ul .xz3 .xz4{
+    width:56px;
+    height:28px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 4px;
+    line-height: 28px;
+    border-radius: 2px;
+    border: 1px solid #ce6415;
+vertical-align: middle;
+    text-align: center;
+}
+.top ul .xz3 .xz{
+    width: 26px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #ce6415;
+    border-left: none;
+    margin-left: -4px;
+    vertical-align: middle;
+    background: url("虾米/header_thirdparty_icon.png");
+    background-position:1px 2px;
+    background-color: #c46115
+}
+.top ul .xz3 a{background-color: #c46115}
+.top ul .xz3 .xz5{background-position: 49px 2px}
+.top ul .xz3 a:hover{
+    background-color: #ba570b;
+}
+.head{
+    height:30px;
+    border-bottom:1px solid #e6e6e6;
+background-color: #f0f0f0;
+
+}
+
+
+
+.list ul{
+    float: left;padding-left:100px;
+}
+.list ul .list1 a{color: #f60}
+.list ul li{
+    margin-right:34px;
+    line-height: 30px;
+    display: inline-block;
+}
+.list ul li a{ color: #1a1a1a;}
+
+.list ul li a:hover{color:#f60 }
+.list span{
+    display: inline-block;
+    float: right;
+}
+.list span a{
+    margin-left: 25px;
+    line-height: 30px;
+    color: #5d5d5d;
+    display: inline-block;
+    text-align: center;
+}
+.list span a:hover{color:#f60 }
+.list span a i{
+    width:16px;
+    height:14px;
+    background: url("虾米/header_icon.png")no-repeat;
+    display: inline-block;
+vertical-align: -3px;
+    }
+.list span .hui{background-position: -75px -53px}
+.list span .hui1{background-position: -29px -53px}
+.list span .hui2{background-position: -51px -53px}
+.list span a:hover .hui{background-position: -75px -77px}
+.list span a:hover .hui1{background-position: -29px -77px}
+.list span a:hover .hui2{background-position: -51px -77px}
+.head0{
+    height: 19px;
+    width: 100%;
+    margin-top: 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #f2f2f2;
+}
+.body{
+    width: 740px;
+    background-color: #fff;
+    border:1px solid #e6e6e6;
+    position: relative;
+    padding: 15px 10px;
+}
+.bodyimg{position: relative;}
+.bodyimg .cv {
+    width: 740px;
+    height: 170px;
+    overflow: hidden;
+}
+.bodyimg ul li {
+    width: 740px;
+    height:170px;
+}
+.bodyimg ul li img{
+    width: 740px;
+    height: 170px;
+}
+.bodyimg ol{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 70px;
+    height: 18px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}
+.bodyimg ol:hover{background: rgba(0,0,0,0.8)}
+.bodyimg ol li a{
+    width: 8px;
+    height: 8px;
+    border-radius:50%;
+    background-color: #fff;
+    margin-left:5px;
+    margin-top: 5px;
+    display: inline-block;
+    float: left;
+}
+.bodyimg ol li a:hover{background-color:#f60}
+
+.body h2{
+    font-size: 18px;
+    color: #1a1a1a;
+    line-height: 54px;
+}
+.body h2 a{
+    font-size: 11px;
+    color:#f60 ;
+    vertical-align: 2px;
+}
+
+.body .play .play1{
+    width: 139px;
+    height: 220px;
+    display: inline-block;
+position: relative;
+    vertical-align: middle;
+
+}
+.body .play .play1 h2{
+    width: 134px;
+    height:158px;
+    background-color:#3a3935;
+    padding: 3px;
+}
+.body .play .play1 h2 img{
+    width: 134px;
+    height:134px;
+}
+.body .play .play1 h2 a{
+    width: 43px;
+    height: 43px;
+    display: inline-block;
+    position: absolute;
+    background: url("虾米/icon.png")no-repeat;
+    top: 50px;
+    left:45px;
+    background-position: -49px -266px;
+}
+.body .play .play1 h2 a:hover{background-position: -97px -266px;}
+.body .play .play1 h2 p{
+    position: absolute;
+    color: #6f6e6d;
+    bottom: 40px;
+    font-size:12px;
+    left:6px;
+}
+.body .play .play1>a{
+    width: 140px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 17px;
+    color: #333;
+  margin-left: 6px;
+}
+.body .play .banne{
+    width:140px;
+    height: 220px;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.body .play .banne img{
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+}
+
+.body .play .banne>.body1{
+    display: block;
+    width: 135px;
+    height: 18px;
+    background-color: #f5f5f5;
+    bottom:56px;
+    color: #bbbbbb;
+    padding-top: 6px;
+padding-left: 5px;
+}
+.body .play .banne>.body1:hover{
+    color: #f5f5f5 ;
+}
+.body .play .banne>h3{
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 24px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.body .play .banne>p{
+    line-height: 22px;
+    color:#dddddd;
+}
+.body .play .banne .banne1{
+    width: 140px;
+    height: 140px;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+   background: url("虾米/dzq.jpg")no-repeat;
+    background-size:140px 140px;
+
+}
+.body .play .banne .banne1 .banne2{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.7);
+display: none;
+}
+.body .play .banne .banne1:hover .banne2{
+    display: block;
+    cursor:pointer
+}
+.cv1{
+    width: 30px;
+    height: 14px;
+    border-radius:3px;
+    border: 1px solid #777a7b;
+    background: url("bt1_03.png")no-repeat;
+    background-size: 30px 14px;
+    display: inline-block;
+    margin: 5px;
+position: relative;
+}
+.body .play .banne .banne1 .banne2 b a{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("虾米/icon.png")no-repeat;
+    background-position:0 -264px ;
+
+}
+.body .play .banne .banne1 .banne2 b a:hover{
+    background-position:0 -288px ;
+}
+.span1{
+    width: 85px;
+    height:75px;
+    background-color: #fff;
+    position: absolute;
+    top:1px;
+    left:1px;
+    padding: 5px 0;
+    border:1px solid #858a8a;
+    border-radius: 2px;
+display: none;
+}
+.cv1:hover .span1{
+    display: block;
+}
+.cv1 .span1>a{
+    width: 85px;
+    height: 25px;
+    display: inline-block;
+    color: #a4a4a4;
+    line-height: 25px;
+    text-align: left;
+}
+.span1>a:hover{    background-color: #f60;color: #fff;}
+
+.span1 a i{
+    width: 14px;
+    height: 13px;
+    display: inline-block;
+    background: url("虾米/icon.png")no-repeat;
+    margin:0 10px;
+
+}
+.span1>a .span5{
+    background-position:-5px -124px;
+}
+.span1>a:hover .span5{
+    background-position:-5px -148px;
+}
+.span1>a .span3{
+    background-position:-29px -125px;}
+.span1>a:hover .span3{
+    background-position:-29px -149px;}
+.span1>a .span4{
+    background-position:-52px -125px;}
+.span1>a:hover .span4{
+    background-position:-52px -149px;
+}
+.body .play .banne .body1 .span2{
+    display: none;
+    width: 100px;
+    height: 131px;
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.7);
+    padding: 33px 20px 0;
+
+}
+.body .play .banne .body1 .span2 p{
+    color: #fff;
+}
+.body .play .banne .body1 .span2 .body2{
+    width:68px;
+    height: 30px;
+    background: #999999;
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    display: inline-block;
+margin: 18px 0 0 16px;
+    cursor:pointer
+}
+.body .play .banne .body1 .span2 .body2:hover{
+    background-color: #888;
+}
+.body .play .banne .body1:hover .span2{
+    display: block;
+}
+
+.body .body3{
+    display: inline-block;
+    height: 60px;
+    margin-top: 30px;
+}
+.body .body3 li{
+    width: 175px;
+    height:60px;
+    display: inline-block;
+    margin-left: 8px;
+}
+.body .body3 .body4{
+    margin-left: 5px;
+}
+.body .rbd{
+    float: right;
+}
+.body .rbd a{
+    color: #3a3935;
+    text-decoration:inherit;
+    line-height: 14px;
+    margin: 0 8px;
+    display:inline-block;
+
+}.body .rbd i{
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    border-right: 1px solid #f5f8f5;
+ }
+.body .play3{
+    padding:0 10px ;
+    border-top:1px solid #f5f5f5;
+    display: inline-block;
+    width: 720px;
+    height: 28px;
+    position: relative;
+}
+.body .play3 .song{
+    width: 725px;
+    position: relative;
+    border-top:1px solid grey;
+
+}
+.body .play3 .song h6{
+    display: inline-block;
+    line-height: 28px;
+    color: #000;
+
+    height: 28px;
+
+}
+.body .play3 .song .biao3{
+    display: inline-block;
+    line-height: 28px;
+color: #97999d;
+    margin-left: 1px;
+
+}
+.body .play3 .song i{
+    width: 18px;
+    height: 12px;
+    display: inline-block;
+    background: url("虾米/mv.png")no-repeat;
+    margin-left: 5px;
+    vertical-align: -2px;
+}
+.body .play3 .song .biao{
+    position: absolute;top:0;
+    left: 390px;
+    width: 263px;
+    line-height: 28px;
+    color: #97999d;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    display: inline-block;
+}
+.body .play3 .song .biao1{
+    line-height: 28px;
+    color: #97999d;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.body .play3 .song2{
+    width: 740px;
+background-color: #f5f8f5;
+    padding: 10px 10px 15px;
+
+}
+.body .play3 .song2 ul .tu span{
+    position: relative;
+    width: 270px;
+
+}
+.body .play3 .song2 ul .tu span img{
+    width: 55px;
+    height:55px;
+
+}
+.body .play3 .song2 ul .tu span:hover a{
+    display: block;
+
+}
+.body .play3 .song2 ul .tu span a{
+    position: absolute;
+    width: 24px;
+    height:24px;
+    display: inline-block;
+    top:15px;
+    left:15px;
+    background: url("虾米/play_icon.png");
+    display: none;
+    background-position: 0 -48px;
+}
+.body .play3 .song2 ul .tu span a:hover{
+    background-position: -24px -48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

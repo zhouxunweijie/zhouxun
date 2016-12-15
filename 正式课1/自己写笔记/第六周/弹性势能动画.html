@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            margin: 0;
+            padding:0;
+            width: 100px;
+            height: 100px;
+            border-radius:50px ;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
+<script src="event-4.0.js"></script>
+<script>
+    var div1 = document.getElementById("div1");
+    on(div1,"mousedown",down);
+    function down(){
+        this.l = e.pageX - this.offsetLeft;//获取当前的鼠标距离盒子位置
+        this.t = e.pageY - this.offsetTop;
+        if(this.setCapture){
+                this.setCapture();
+                on(this,"mousemove",move);
+                on(this,"mouseup",up);
+        }else{
+            var that = this;
+            this.MOVE = function(e){
+                move.call(that,e)
+            };
+            this.UP = function(e){
+                up.call(that,e);
+            };
+            on(document,"mousemove",this.MOVE);
+            on(document,"mouseup",this.UP);
+        }
+    }
+function move(e){
+    var l = e.pageX - this.l;//求出盒子的left的值
+    var t = e.pageY - this.t;
+    var minL = 0,minT = 0;
+    var maxT = (document.documentElement.clientHeight || document.body.clientHeight) - this.offsetHeight;
+    var maxL = (document.documentElement.clientWidth || document.body.clientWidth) - this.offsetWidth;
+    l = l > minL? minL :l < maxL? maxL:l;
+    t = t > minT? minT :t < maxT? maxT:t;
+    this.style.left = l + "px";
+    this.style.top = t + "px";
+    if(!this.prevPosi){
+        this.prevPosi = this.offsetLeft;
+    }else{
+        this.speedFly = this.offsetLeft - this.prevPosi;
+        this.prevPosi = this.offsetLeft;
+    }
+}
+function up(e){
+     if(this.releaseCapture){
+         off(this,"mousemove",move);
+         off(this,"mouseup",up);
+     }else{
+         off(document,"mousemove",this.MOVE);
+         off(document,"mouseup",this.UP);
+     }
+    fly.call(this);
+    drop.call(this);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        ul{
+            list-style: none;
+            background: #ccc;
+        }
+        li{
+            cursor: pointer;
+            line-height: 35px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+</ul>
+<script>
+    var oLis=document.getElementsByTagName('li');
+    for(var i=0;i<oLis.length;i++){
+        if(i%2===0){
+            oLis[i].className="bg0";
+        }else{
+            oLis[i].className="bg1";
+        }
+        oLis[i].index=i;
+        oLis[i].onclick=function(){
+            alert("我是item"+(this.index+1));
+            //alert("我是item"+this.index+1);
+            //this 是这个的意思 这个是谁？ 当前你操作的对象
+            //alert("我是item"+i+1);
+            //alert("我是item"+oLis[i].index);//Cannot read property 'index' of undefined
+            //oLis[10].index=?;
+        };
+//        alert(1);
+    }
+    //i=10
+
+
+
+
+
+
+
+
+
+    /*
+    * 操作谁获取谁--获取要操作的元素
+    * 判断每一个li所在的行数，奇数行赋给一个bg0，偶数行赋给一个bg1
+    * 当前索引数/2 余数为0的是奇数行  余数是1的是偶数行
+    * 给每一个li的className赋值
+    * */
+    /*var oLis=document.getElementsByTagName('li');
+    //console.log(oLis);//[li,li,li....]
+    // oLis[0]--第一个li
+    console.dir(oLis[1]);
+    for(var i=0;i<oLis.length;i++){
+        if(i%2===0){
+            oLis[i].className="bg0";
+        }else{
+            oLis[i].className="bg1";
+        }
+        oLis[i].index=i;
+        /!*oLis[0].index=0;
+        oLis[9].index=9;*!/
+        oLis[i].onclick=function(){
+            //alert("我是item"+(oLis[i].index+1));//Cannot read property 'index' of undefined
+            alert("我是item"+(this.index+1));
+        //this 这个 代词  代表的是当前执行这个方法的对象
+            //只有点击发生，this才知道我自己是谁
+            //如果不发生任何事情，this永远不知道自己是谁
+
+
+            //alert("我是item"+(i+1));
+            //当浏览器加载完成的时候，for循环就已经完成，那么这个时候的i早已变最终的一个数值--10
+            //当我们点击这个对象执行这个方法的时候，是for已经加载完成的时候，所以这个方法中读取到的i是一个最终值 -- 10
+            //我们想得到的是从0-length-1的值，我们可以在循环的时候，将0-9这些数值存到一个地方，用的时候直接调用就可以了
+            //存在什么地方，存在自己身上，也就是存在oLis[i]上，我们得以赋值的形式将i这个变量代表的数值(0-9)赋给oLis[i]的属性上（人为定义的属性--自定义属性）
+        }
+    }
+    //i=10
+    //点击每个li的时候弹出 我是item几
+*/
+</script>
+</body>
+</html>

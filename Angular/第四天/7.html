@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-controller="parentCtrl">
+    总价<input type="text" ng-model="total" ng-change="fn()">
+    <div ng-controller="childCtrl">
+        单价 30 <br>
+        数量 <input type="text" ng-model="count">
+    </div>
+</div>
+
+<!--发布订阅模式 on -->
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    //数据交互的第一种方式￥rootScope
+    //事件的交互 儿子告诉父亲
+    var app = angular.module('appModule',[]);
+    app.controller('parentCtrl',function($scope){
+        $scope.total = 30;
+        $scope.$on('老子要改价格了',function(e,data){
+            //e是事件源，data代表的是听到的内容
+            $scope.total = data;
+        });
+        //代码执行到这发话了
+        $scope.fn = function(){
+            $scope.$broadcast('你还敢叫老子',$scope.total);
+        };
+
+    });
+    app.controller('childCtrl',function($scope){
+        $scope.count = 1;
+        //监控数量的变化
+        $scope.$watch('count',function(newVal,oldVal){
+            $scope.$emit('老子要改价格了',newVal*30);//自己知道
+        });
+        $scope.$on('你还敢叫老子',function(e,data){
+            $scope.count = data/30;
+        })
+    })
+</script>
+</body>
+</html>

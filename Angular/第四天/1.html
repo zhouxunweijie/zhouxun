@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--内置的过滤器 2.自定义过滤器-->
+<!--用法{{ 数据 | filterA | filterB}}-->
+<!--小写转大写 uppercase lowercase-->
+{{'adsasgg'|uppercase}}
+<!--处理数字 number:2 :2 表示保留几位-->
+{{"10000000.222" | number:0}}
+<!--钱币过滤器 currency-->
+{{'100.431'|currency:'￥':1}}
+<!--日期过滤器 毫秒戳-->
+{{154511581411|date:'yyyy年MM月dd日 hh-mm-ss'}}
+<!--限制位数-->
+{{'abcd'|limitTo:2}}
+<!--json过滤器-->
+<bre>
+{{aa|json:4}}
+</bre>
+
+<!--ng中提供了 orderBy filter-->
+
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.Module('appModule',[]);
+    app.run(function($rootScope){
+        $rootScope.aa = {'name':1,age:2,gender:0,hobby:0}
+    })
+</script>
+</body>
+</html>

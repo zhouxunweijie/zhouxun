@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li,span{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            width: 800px;
+            height: 270px;
+            border:1px solid red;
+            margin: 30px auto 0;
+            list-style: none;
+        }
+
+        span{
+            display: inline-block;
+            width: 48px;
+            line-height: 30px;padding:0 20px;
+            cursor: pointer;
+
+
+        }
+        .c0{background-color: #2a69d5}
+        .c1{background-color: #8f59bd}
+        .c2{background-color: #7ca627}
+    </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    var bom="";
+    for (var i=1;i<=9;i++){
+        bom+="<li>";
+            for(var f=1;f<=i;f++){
+                bom+="<span>"+f+"*"+i+"="+(f*i)+"</span>";
+            }
+        bom+="</li>"
+    }
+    list.innerHTML=bom;
+
+    var olist=document.getElementsByTagName("span");
+    for (var k=0;k<olist.length;k++){
+        olist[k].index=k;
+        k%2===0?(olist[k].className="c1",olist[k].index1="c1"):(olist[k].className="c2",olist[k].index1="c2");
+        olist[k].onmouseover=function(){
+            this.className="c0";
+        };
+        olist[k].onmouseout=function(){
+            this.className=this.index1;
+        };
+        olist[k].onclick=function(){
+            alert(this.innerHTML)
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

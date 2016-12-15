@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 300px;height: 300px;background-color: red;
+        }
+        div:before{
+            /*因为伪元素本身不是一个元素，所以他没有display属性*/
+            display: block;
+            /*因为伪元素本身不是一个元素，所以他没有内容，人为的添加内容，在不需要内容的情况下 --"" */
+            content:"我是before";
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        div:after{
+            display: block;
+            content: "你猜猜我在哪里？";
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<!--向某个元素内添加一个原本不存在的元素，通过css来添加-->
+<!--before这个伪元素 紧挨着开始标签
+after这个伪元素  紧挨着结束标签-->
+<div>
+    ::before
+    我是内容
+    ::after
+</div>
+</body>
+</html>

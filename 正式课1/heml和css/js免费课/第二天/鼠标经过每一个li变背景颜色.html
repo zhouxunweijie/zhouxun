@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            background: #cccccc;
+        }
+        li{
+            cursor: pointer;
+            padding-left: 30px;
+            line-height: 35px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: pink;
+        }
+        .bg2{
+            background: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+    <li>我是列表项4</li>
+    <li>我是列表项5</li>
+    <li>我是列表项6</li>
+    <li>我是列表项7</li>
+    <li>我是列表项8</li>
+    <li>我是列表项9</li>
+    <li>我是列表项10</li>
+</ul>
+<script>
+    var oList=document.getElementById('list');
+    var oLis=oList.getElementsByTagName('li');
+    //var oLis=document.getElementById('list').getElementsByTagName('li');
+    for(var i=0;i<oLis.length;i++){
+        if(i%2===0){
+            oLis[i].className="bg0";
+            oLis[i].index="bg0";
+        }else{
+            oLis[i].className="bg1";
+            oLis[i].index="bg1";
+        }
+        oLis[i].index1=i;
+        //oLis是一个集合  oLis[i]代表集合中的每一项  index1是一个属性  =i  将这个i赋值给这个对象中的index1这个属性
+
+        oLis[i].onclick=function(){
+            alert(this.index1+1);
+        };
+        oLis[i].onmouseover=function(){
+            //oLis[i].className="bg2";
+            this.className="bg2";
+        };
+        oLis[i].onmouseout=function(){
+            this.className=this.index;
+        }
+    }
+</script>
+</body>
+</html>

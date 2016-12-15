@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #outer{
+            margin: 20px auto;
+            width: 500px;
+            height:500px;
+            background: #ccc;
+            box-sizing: border-box;/*添加了padding填充属性不用减少width或者height的值*/
+            padding:100px;
+        }
+        #middle{
+            width: 300px;
+            height: 300px;
+            background: pink;
+            box-sizing: border-box;
+            padding:100px;
+        }
+        #inner{
+            width: 100px;
+            height: 100px;
+            background: #f1582c;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="middle">
+        <div id="inner"></div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    //DOM 0级事件
+    //DOM 0级只能够给事件绑定一个函数
+    //    DOM 0级事件绑定只能冒泡
+    var inner = document.getElementById("inner");
+    inner.onclick = function(){
+
+    }
+    //DOM 2级事件
+    //DOM 2级事件可以绑定多个函数
+//     事件的执行顺序 ：先捕获 => 目标 => 冒泡
+//    DOM 2级事件绑定才能规定函数在捕获还是冒泡的阶段触发
+    //DOM 2  参数：事件类型  绑定函数  是否捕获阶段发生  false/true  冒泡/捕获
+    function middle(){
+        console.log()
+    }
+    inner.addEventListener("click",function(){
+        
+    },false);
+</script>

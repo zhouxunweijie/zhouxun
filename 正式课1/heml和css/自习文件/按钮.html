@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .zz{
+            width:60px;
+            height: 30px;;
+        }
+        .zz1{
+            width: 30px;
+            height:30px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="全选" class="zz"/>
+<input type="button" value="不选" class="zz"/>
+<input type="button" value="反选" class="zz"/>
+<input type="checkbox"  class="zz1"/>
+<input type="checkbox" class="zz1"/>
+<input type="checkbox" class="zz1"/>
+<input type="checkbox" class="zz1"/>
+<input type="checkbox" class="zz1"/>
+<input type="checkbox" class="zz1"/>
+<input type="checkbox" class="zz1"/>
+</body>
+<script>
+var olist=document.getElementsByClassName("zz");
+    var olis=document.getElementsByClassName("zz1");
+
+
+        olist[0].onclick = function () {
+            for (var f = 0; f < olis.length; f++) {
+                olis[f].checked = "checked";
+            }
+        };
+        olist[1].onclick=function(){
+            for(var k=0;k<olis.length;k++){
+                olis[k].checked=false;
+            }
+        };
+        olist[2].onclick=function(){
+          for(var q=0;q<olis.length;q++){
+              if(olis[q].checked){
+                  olis[q].checked="";
+              }else {
+                  olis[q].checked=true;
+              }
+
+          }
+        };
+//        } else if (olist[1]) {
+//            this.onclick = function () {
+//                for (var k = 0; k < olis.length; k++) {
+//                    olis[k].checked = false;
+//
+//                }
+//            }
+//        }
+//    }
+
+
+
+
+
+</script>
+</html>

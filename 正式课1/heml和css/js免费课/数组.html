@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>99乘法表</title>
+</head>
+<style>
+    ul,li,span{
+        margin: 0;
+        padding:0;
+    }
+    ul{
+        width: 810px;
+        height: 270px;
+        margin: 20px auto 0;
+        border:1px solid red;
+    }
+    li{list-style: none}
+    span{
+        width: 50px;
+        display: inline-block;
+        padding: 4px 20px;
+        font-size: 19px;
+        text-align: center;
+        cursor: pointer;
+
+
+    }
+</style>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+   var bom="";
+    for(var i=1;i<=9;i++){
+        bom+="<li>";
+                for(var f=1;f<=i;f++){
+                    bom+="<span>"+f+"*"+i+"="+(f*i)+"</span>"
+                }
+        bom+="</li>";
+    }
+list.innerHTML=bom;
+var olist=document.getElementsByTagName("span");
+    for(var k=0;k<olist.length;k++){
+        if(k%2===0){
+            var bg=null;
+            olist[k].style.backgroundColor="red"
+        }else{
+            olist[k].style.backgroundColor="#65ddff"
+        }
+        olist[k].onmouseover=function(){
+            bg=this.style.backgroundColor;
+            this.style.backgroundColor="yellow";
+
+        };
+        olist[k].onmouseout=function(){
+            this.style.backgroundColor=bg;
+        };
+        olist[k].onclick=function(){
+            alert(this.innerHTML)
+        }
+
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

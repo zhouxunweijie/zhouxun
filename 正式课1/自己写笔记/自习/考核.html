@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style="height: 100%">
+<input type="button"/>
+<input type="button"/>
+<input type="button"/>
+<script type="text/javascript">
+    var body=document.body;
+    var inpList=body.getElementsByTagName("input");
+    var cur=["red","blue","yellow"];
+    for(var i=0;i<inpList.length;i++){
+        (function(i){
+            inpList[i].onclick=function(){
+                body.style.backgroundColor=cur[i]
+            };
+        }(i))
+    }
+//    inpList[0].onclick=function(){
+//        body.style.backgroundColor="red"
+//    };
+//    inpList[1].onclick=function(){
+//        body.style.backgroundColor="blue"
+//    };
+//    inpList[2].onclick=function(){
+//        body.style.backgroundColor="yellow"
+//    };
+//    var body=document.body;
+//    var inpList=body.getElementsByTagName("input");
+//    for(var i=0;i<inpList.length;i++){
+//        console.log(i);
+//       (function(i){
+//           inpList[i].onclick=function(){
+//            if(i==0){
+//                body.style.backgroundColor="red";
+//            }else if(i==1){
+//                body.style.backgroundColor="blue"
+//            }else{
+//                body.style.backgroundColor="yellow"
+//            }
+//           }
+//        }(i))
+//    }
+//
+//    var inpList=document.getElementsByTagName("input");
+//
+//    var ary=["red","green","orange"];
+//
+//    for(var i=0;i<inpList.length;i++){
+//        console.log(i);
+//        inpList[i].index=i;
+//        inpList[i].onclick=function(){
+//            document.body.style.backgroundColor=ary[this.index];
+//        }
+//    }
+    /*
+    * 1    var res=ary.sort（function（a,b）{return b-a}）降序
+    * var res=ary sort（function（a,b）{return a-b}）升序
+    * 2    length--,splice(length-1,1),pop
+    * 3   ary slice（n,m）
+    * 4   document.documentElement.clientWidth;
+    *     document.documentElement.clientHeight;
+    *     document.body.clientWidth;
+    *     document.body.clientHeight;
+    * 5   appendChild   insertBefore
+    * 6
+    * 7   Math.round(Math.random()*(m-n)+n)
+    * 8   splice
+    * 9   document.getElementById("tab");
+    *     document.getElementByClassName("tabCan");
+    *     body.getElementBy
+    * 10     true    true
+    *
+    *
+    * 11   undefined    undefined
+    *
+    * 12   珠峰  5000     珠峰  undefined
+    *
+    * 13   obj={age:5000}     obj{name:中国，age:7}
+    *
+    *14    15    33    48   100
+    *
+    * 15   4   5  14  22
+    *
+    *  16
+    *
+    * appendChild
+    * insertBefore
+    * document.createElement("span")
+    * removeChild
+    * spliceChild
+    * prevorsibling
+
+    *push
+    * pop
+    * unshift
+    * shift
+    * splice
+    * slice
+    * forEach
+    * indexOf
+    * lastIndexOf
+    * var res=ary.sort(function(a,b){return a-b})  升序
+    * var res=ary.sort(function(a,b){return b-a})  降序
+    * concat
+    * reverse
+    * join
+    * eavl
+    * map
+    * */
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+
+        }
+        #wrap{
+            width:500px;
+            margin:30px;
+            font-family: 微软雅黑;
+            font-size: 18px;
+        }
+        #wrap input{
+            width: 496px;
+            height:30px;
+            line-height: 30px;
+            outline: none;
+            padding: 0 10px;
+            font-size: 16px;
+            border-color: #0060b5;
+        }
+        #wrap ul{
+            position: relative;
+            display: none;
+            list-style: none;
+            border: 1px solid #ccc;
+            margin-top: -1px;
+        }
+        #wrap ul li{
+            height: 30px;
+            line-height: 30px;
+        }
+        #wrap ul li a{
+            padding:0 5px;
+            color: #000;
+            display: block;
+            text-decoration: none;
+        }
+        #wrap ul li a:hover{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <input type="text" id="input"/>
+    <ul>
+        <li><a href="javascript:void 0">珠峰培训</a></li>
+        <li><a href="javascript:void 0">珠峰H5</a></li>
+        <li><a href="javascript:void 0">珠峰JS</a></li>
+        <li><a href="javascript:void 0">珠峰NODE</a></li>
+    </ul>
+</div>
+
+<script>
+var wrap = document.getElementById("wrap");
+    var input = wrap.getElementsByTagName("input")[0];
+    var ul = wrap.getElementsByTagName("ul")[0];
+    var lis = ul.getElementsByTagName("li");
+    input.onfocus=input.onkeyup = function(){
+        var reg = /^\s*$/;
+        if(reg.test(this.value)){
+            ul.style.display = "none";
+            return;
+        }
+        ul.style.display="block";
+    }
+    ul.onclick = function(e){
+        e = e || window.event;
+        e.target = e.target || e.srcElement;
+        if(e.target.nodeName == "A"){
+            input.value = e.target.innerHTML;//这是把A连接的内容赋值给表单输入框Value
+            this.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

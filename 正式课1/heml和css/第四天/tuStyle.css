@@ -1,0 +1,118 @@
+body, ul, li, div, span, a, img, h3, b, strong, i, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1.5 "微软雅黑", "Microsoft YaHei";
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*列表样式清除*/
+a {
+    text-decoration: none;
+}
+
+/*去掉文字下划线*/
+img {
+    vertical-align: top;
+}
+
+/*改变非块级元素的垂直对齐方式*/
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/*全局样式重置*/
+ul {
+    width: 738px;
+    background-color: #47b0e0;
+}
+
+li {
+    float: left;
+    margin: 0 0 7px 7px;
+    padding: 10px 9px;
+    width: 215px;
+    height: 160px;
+    background-color: #ffffff;
+}
+
+div {
+    position: relative;
+    height: 120px;
+}
+
+div p {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div p span {
+    display: block;
+    width: 64px;
+    height: 20px;
+    background-color: #f1582c;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+}
+
+/*.top1{top:0;}
+.top2{top:20px;}*/
+.top2 {
+    background-color: #ffb536;
+}
+
+img {
+    width: 215px;
+    height: 120px;
+}
+
+h3 {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding: 3px 3px 0;
+    width: 209px;
+    height: 37px;
+    font-size: 12px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+}
+
+a {
+    color: #fff;
+}
+
+li > p {
+    height: 35px;
+    line-height: 35px;
+}
+
+/*line-height:35px; 让文字在某一个高度内居中*/
+li > p > span {
+    float: left;
+    color: #f60;
+}
+
+i {
+    float: right;
+    color: #999;
+    font-style: normal;
+}
+
+strong {
+    font-sie: 16px;
+}
+
+
+
+

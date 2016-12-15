@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            background-color: #ccc;
+        }
+        li{
+            cursor: pointer;
+            line-height:35px;
+            font-size: 20px;
+            color:#ccc;
+        }
+        .c1{background-color: red}
+        .c2{background-color: #2a69d5}
+        .c3{
+            background-color: #4c856f;
+        }
+    </style>
+</head>
+<body>
+<ul id="nnn">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+<script>
+    var olist=document.getElementsByTagName("li");
+    //console.log(olist);
+        for (var i=0;i<olist.length;i++){
+            if(i%2===0){
+              olist[i].className="c1";
+            }else{
+                olist[i].className="c2";
+            }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var olist=document.getElementsByTagName("li");
+//    for (var i=0;i<olist.length;i++){
+//    olist[i].index=i;
+//        i%2===0?(olist[i].className="c1",olist[i].inde="c1"):(olist[i].className="c2",olist[i].inde="c2");
+//        olist[i].onclick=function(){
+//            alert("我是item"+(this.index+1))
+//        };
+//        olist[i].onmouseover=function(){
+//           this.className="c3"
+//        };
+//        olist[i].onmouseout=function(){
+//            this.className=this.inde
+//        }
+//    }
+//var olist=document.getElementsByTagName("li");
+//    for (var i=0;i<olist.length;i++){
+//        olist[i].index=i;
+//        if (i%2===0){
+//            olist[i].className="c1";
+//            olist[i].inde="c1"
+//        }else{
+//           olist[i].className="c2";
+//            olist[i].inde="c2"
+//        }
+//        olist[i].onclick=function(){
+//            alert(this.index+1)
+//        };
+//        olist[i].onmouseover=function(){
+//            this.className="c3"
+//        };
+//        olist[i].onmouseout=function(){
+//            this.className=this.inde
+//        }
+//    }
+//
+
+
+
+</script>
+</body>
+</html>

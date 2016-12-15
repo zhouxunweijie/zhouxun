@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{
+            /*border:1px solid #000;*/
+            background: #000;
+        }
+        th,td{background: #fff;}
+    </style>
+</head>
+<body>
+<!--
+cellspacing 单元格和单元格之间的距离
+cellpadding 单元格中内容距离边框的距离
+rowspan     合并行
+colspan     和并列
+-->
+<table cellspacing="1" cellpadding="30"><!--表格-->
+    <caption>标题</caption>
+    <thead><!--表头-->
+        <tr><!--行-->
+            <th>表头1</th>
+            <th>表头2</th>
+            <th>表头3</th>
+            <th>表头4</th>
+            <!-- th是单元格 （列）-->
+        </tr>
+    </thead>
+    <tfoot><!--表尾-->
+        <tr><!--行-->
+            <td>表尾1</td>
+            <td>表尾2</td>
+            <td>表尾3</td>
+            <td>表尾4</td>
+            <!-- td是单元格-->
+        </tr>
+    </tfoot>
+    <tbody><!--表身-->
+        <tr>
+            <td rowspan="3">表身1</td>
+            <td>表身2</td>
+            <td>表身3</td>
+            <td>表身4</td>
+        </tr>
+        <tr>
+            <!--<td>表身1</td>-->
+            <td>表身2</td>
+            <td>表身3</td>
+            <td>表身4</td>
+        </tr>
+        <tr>
+            <td colspan="3">表身1</td>
+            <!--<td>表身2</td>
+            <td>表身3</td>-->
+            <!--<td>表身4</td>-->
+        </tr>
+    </tbody>
+    <tbody><!--表身-->
+    <tr>
+        <td colspan="2" rowspan="2">表身1</td>
+        <!--<td>表身2</td>-->
+        <td>表身3</td>
+        <td>表身4</td>
+    </tr>
+    <tr>
+        <!--<td>表身1</td>-->
+        <!--<td>表身2</td>-->
+        <td>表身3</td>
+        <td>表身4</td>
+    </tr>
+    <tr>
+        <td>表身1</td>
+        <td>表身2</td>
+        <td>表身3</td>
+        <td>表身4</td>
+    </tr>
+    </tbody>
+</table>
+<!--
+    一个表格中有一个表头 一个表尾  但是可以有多个表身
+-->
+
+
+
+
+
+
+
+
+</body>
+</html>

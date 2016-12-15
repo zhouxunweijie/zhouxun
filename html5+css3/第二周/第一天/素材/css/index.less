@@ -1,0 +1,371 @@
+@import (reference) "public"; /*reference：只调取PUBLIC中的公共样式，但是不解析公共样式*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.header {
+  height: 63px;
+  border-bottom: 1px solid darken(@border-color, 10%); /*darken: 在原来的颜色基础上加深10%的颜色，lighten:和其相反，属于在原来的颜色值基础上变浅=LESS中自带的方法*/
+  background: @back-color;
+
+  .content {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: unit((@content-w)-20, px); /*unit: 给一个值加单位或者去单位*/
+    height: 100%;
+
+    .logo, .nav {
+      float: left;
+
+    }
+
+    .logo {
+      margin-right: 60px;
+      width: 160px;
+      height: 100%;
+      font-size: 0;
+      background: url("../img/kbs-logo.png") no-repeat center;
+    }
+
+    .login {
+      float: right;
+      margin-top: unit((63-28)/2, px);
+      a {
+        display: block;
+        width: 46px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 12px;
+        color: @back-color;
+        background: @back-blue;
+        border-radius: 3px;
+
+        &:hover { /*等价于>a:hover的效果 &在这里仅仅是一个连接符，只是把A和hover连接到一起*/
+          background: darken(@back-blue, 20%);
+
+        }
+      }
+    }
+    .nav {
+      height: 100%;
+      li {
+        float: left;
+        a {
+          display: block;
+          width: 90px;
+          height: 55px;
+          line-height: 55px;
+          text-align: center;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          color: @text-color;
+          font-size: 16px;
+
+          &.bg {
+            color: @back-color;
+            background: @back-blue;
+          }
+
+          &:hover {
+            border-top-color: @back-blue;
+          }
+
+          &.liveQQ {
+            width: 63px;
+            height: 63px;
+            border: none;
+            img {
+              width: 100%;
+              height: 100%;
+
+            }
+          }
+
+          &.downLoad {
+            position: relative;
+            .weChat {
+              .transition(@duration: 0.3s);
+              position: absolute;
+              width: 92px;
+              height: 0;
+              left: -15px;
+              top: 59px;
+              padding: 0 14px;
+              z-index: 10;
+              overflow: hidden;
+             // background: rgba(255,255,255,0.6);  rgba在pc不兼容，如果不兼容就没有背景了
+              //background: #FFFFFF;
+              //opacity: 0.7;  opacity 虽然是设置的透明度，它的意思是所有内容都透明，包含图片和文字，我们只想让背景透明即可
+
+              img {
+                width: 92px;
+                height: 92px;
+              }
+              span {
+                display: block;
+                font-size: 14px;
+                line-height: 25px;
+              }
+            }
+            .weChatBg{
+              .weChat;
+              z-index: 9;
+              background: #FFFFFF;
+              opacity: 0.7;
+              filter: alpha(opacity=70);
+
+            }
+
+            &:hover{
+              .weChat, .weChatBg{
+                padding: 18px 14px;
+                height: 142px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.main-content {
+  margin: 20px auto;
+  width: unit(@content-w, px);
+
+}
+
+.menu {
+  width: 198px;
+  overflow: hidden;
+  position: relative;
+  background: @back-color;
+  border: 1px solid @border-color;
+  float: left;
+
+  ul{
+    position: absolute;
+    width: 100%;
+
+  }
+  a {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    height: 50px;
+    line-height: 50px;
+    border-left: 5px solid transparent;
+    color: @text-color;
+    font-size: 16px;
+    &.bg, &:hover {
+      color: @back-blue;
+      border-left-color: @back-blue;
+      background: @back-blue-light;
+    }
+
+
+
+    &.bg {
+      .arrow {
+        display: block;
+      }
+    }
+
+    .arrow {
+      display: none;
+      position: absolute;
+      right: 10px;
+      top: unit((50-12)/2, px);
+      width: 0;
+      height: 0;
+      font-size: 0;
+      border: 6px solid transparent;
+      border-left-color: @back-blue;
+    }
+
+    .arrow:after {
+      .arrow;
+      display: block;
+      right: -4px;
+      top: -6px;
+      content: '';
+      border-left-color: @back-blue-light;
+    }
+  }
+}
+
+
+.right {
+  float: right;
+  width: 820px;
+  height: 100%;
+}
+
+.calendar {
+  position: relative;
+  height: 80px;
+  background: @back-color;
+  border: 1px solid @border-color;
+
+  .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 100%;
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -9px 0 0 -9px;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      border: 9px solid transparent;
+    }
+
+    .arrow:after {
+      .arrow;
+      display: block;
+      content: '';
+    }
+
+    &.btnLeft {
+      .arrow {
+        margin-left: -13.5px;
+        border-right-color: @text-color;
+      }
+      .arrow:after {
+        margin-left: -7px;
+        border-right-color: @back-color;
+      }
+    }
+
+    &.btnRight {
+      left: auto;
+      right: 0;
+      .arrow {
+        margin-left: -4.5px;
+        border-left-color: @text-color;
+      }
+      .arrow:after {
+        margin-left: -11px;
+        border-left-color: @back-color;
+      }
+    }
+
+    &:hover {
+      &.btnLeft {
+        .arrow {
+          /*.btn:hover.btnLeft .arrow{}*/
+          border-right-color: @back-blue;
+        }
+      }
+      &.btnRight {
+        .arrow {
+          border-left-color: @back-blue;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    margin: 5px 24px;
+    height: 70px;
+    overflow: hidden;
+
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      li {
+        float: left;
+        a {
+          display: block;
+          padding-top: 9px;
+          width: 110px;
+          height: 61px;
+
+          span {
+            display: block;
+            line-height: 27px;
+            text-align: center;
+            color: @text-color;
+            font-size: 16px;
+            &.week {
+              color: lighten(@text-color, 30%);
+            }
+          }
+
+          &.bg, &:hover {
+            background: @back-blue-light;
+            span {
+              color: @back-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.iScrollIndicator{
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

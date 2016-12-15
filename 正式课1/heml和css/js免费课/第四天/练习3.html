@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*input[type=button]{
+            width: 100px;height: 100px;
+        }
+        input[type=checkbox]{
+            width: 100px;
+            height: 100px;
+        }*/
+    </style>
+</head>
+<body>
+<div id="btn">
+    <input type="button" value="全选"/>
+    <input type="button" value="全不选"/>
+    <input type="button" value="反选"/>
+</div>
+<div id="list">
+    <input type="checkbox"/>
+    <br/>
+    <input type="checkbox"/>
+    <br/>
+    <input type="checkbox"/>
+    <br/>
+    <input type="checkbox"/>
+    <br/>
+    <input type="checkbox"/>
+    <br/>
+</div>
+<script>
+    //选择所有要操作的元素
+    //btn下面的三个按钮分别绑定点击事件，第一个点击后，list下所有按钮 checked="checked" 第二个点击后，list下面所有的按钮checked="" 点击第三个按钮，list下面的按钮每一个进行判断，判断当前checked这个属性的属性值为什么，如果是空，就"checked"属性值添加上，如果是有属性值就去除掉
+    var oBtn=document.getElementById('btn').getElementsByTagName('input');
+    var oList=document.getElementById('list').getElementsByTagName('input');
+    //console.log(oBtn,oList);
+    oBtn[0].onclick=function(){
+        for(var i=0;i<oList.length;i++){
+            oList[i].checked="checked";
+        }
+    };
+    oBtn[1].onclick=function(){
+        for(var i=0;i<oList.length;i++){
+            oList[i].checked="";
+        }
+    };
+    oBtn[2].onclick=function(){
+        for(var i=0;i<oList.length;i++){
+            if(oList[i].checked){
+                oList[i].checked='';
+            }else{
+                oList[i].checked='checked';
+            }
+        }
+    }
+</script>
+</body>
+</html>

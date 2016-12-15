@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<table class="table table-bordered " ng-controller="myCtrl">
+   <tr>
+       <th><input type="checkbox" ng-model="all" ng-click="All(all)">全选</th>
+       <th>商品</th>
+       <th>价格</th>
+       <th>数量</th>
+       <th>总计</th>
+       <th>操作</th>
+   </tr>
+    <tr ng-repeat="a in product track by $index">
+        <td><input type="checkbox" ng-model="a.isSelected" ng-click="Info()"></td>
+        <td>{{a.name}}</td>
+        <td>{{a.code}}</td>
+        <td>{{a.age}}</td>
+        <td>{{a.code * a.age}}</td>
+        <td><input class="bth btn-danger" type="button" ng-click="remove(a)" value="删除"></td>
+    </tr>
+</table>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('myCtrl',['$scope',function($a){
+        $a.product = [
+            {isSelected:false,name:'iphone7',age:1,code:1000,id:1},
+            {isSelected:true,name:'iphone6',age:2,code:5000,id:2},
+            {isSelected:false,name:'iphone5',age:3,code:2000,id:3},
+            {isSelected:true,name:'iphone4',age:4,code:6000,id:4},
+        ];
+        $a.All = function(all){
+            $a.product.forEach(function(item){
+                item.isSelected = all;
+            })
+        };
+        $a.Info = function(){
+            var flag = true;
+            flag = $a.product.forEach(function(item){
+                flag = !item.isSelected;
+                return flag;
+            });
+            $a.all = flag;
+        }
+
+
+    }])
+</script>
+</body>
+</html>

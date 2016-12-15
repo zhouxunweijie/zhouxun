@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body ng-controller="ctrl">
+商品名称 {{product.name}} <br>
+商品单价 {{product.price}} <br>
+商品数量 <input type="text" ng-model="product.count"> <br>
+{{product.express==0?'':'不'}}包邮 {{product.express}}
+总价 {{product.price*product.count+product.express}}
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('ctrl',function ($scope) {
+        $scope.product = {name:'飞机',price:15,express:10,count:1};
+        $scope.$watch('product.count',function (newVal) {
+            $scope.product.express = newVal*$scope.product.price>=100?0:10;
+        })
+    });
+</script>
+</body>
+</html>.

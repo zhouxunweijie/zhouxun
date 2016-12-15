@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {
+            list-style: none;
+            background: #ccc;
+        }
+
+        li {
+            padding-left: 20px;
+            line-height: 35px;
+            color: #fff;
+        }
+
+        .bg1 {
+            background: pink;
+        }
+
+        .bg2 {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+</ul>
+<script>
+    var oLis=document.getElementsByTagName("li");
+    //获取到了10个li，给每一个li绑定一个类名 这就是一个赋值的过程
+    //className="val"
+    //oLis这是一个集合[li,li,li,li.....] 属性名是索引 从0开始到length-1
+    //length 整个集合的长度
+    //oLis[0]--第一个li
+    //oLis[1]--第二个li
+    //oLis[2]--第三个li
+    for(var i= 0,len=oLis.length;i<len;i++){
+        //oLis[i].className="bg1";
+        /*if(i%2===0){
+            oLis[i].className="bg1";
+        }else{
+            oLis[i].className="bg2";
+        }*/
+        /*switch (i%2){
+            case 0:
+                oLis[i].className="bg1";
+                break;
+            default :
+                oLis[i].className="bg2";
+        }*/
+        oLis[i].className="bg"+(i%2+1);
+        oLis[i].className="bg"+(i%2+1)+"";
+        //   "+i+" '+i+'
+    }
+
+
+</script>
+</body>
+</html>

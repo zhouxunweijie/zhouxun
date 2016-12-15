@@ -1,0 +1,15 @@
+@back-color:#fff;
+@bor-color:#eee;
+@content-w:1040;
+@back-blue:#346AFF;
+@text-color:#555;
+@back-blue-light:#EFF3FF;
+
+//less中创建一个函数
+.transition(@property:all,@duration:1s,@time-function:linear,@delay:0s){
+  -webkit-transition:  @arguments;
+  -moz-transition:  @arguments;
+  -ms-transition:  @arguments;
+  -o-transition:  @arguments;
+  transition:  @arguments;;
+}

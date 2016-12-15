@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet/less" href="css/index.less"/>
+    <script>
+        var dinW = 320;
+        var tinW = document.documentElement.clientWidth;
+        document.documentElement.style.fontSize = tinW / dinW * 100 + 'px';
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="music">
+        <audio src="audio/薛之谦%20-%20你还要我怎样.mp3" preload="none" loop id="beyond"></audio>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <img src="./img/2/11.jpg" alt=""/>
+                <img src="./img/2/3.png" alt=""/>
+                <img src="./img/2/8.png" alt=""/>
+                <img src="./img/2/10.png" alt=""/>
+                <span>个人简历</span>
+                <i></i>
+            <span>
+                <p>姓名：周迅</p>
+                <p>年龄：22</p>
+            </span>
+                <b></b>
+            </div>
+            <div class="swiper-slide slide1">
+                <img src="./img/2/1.png" alt=""/>
+                <!--<img src="./img/2/2.png" alt=""/>-->
+                <span class="banner">个人简介</span>
+                <ul class="list">
+                    <li>姓名：周迅</li>
+                    <li>性别：男</li>
+                    <li>年龄：22</li>
+                    <li>家乡所在地：山东滨州</li>
+                    <li>爱好：听音乐 旅游</li>
+                    <li>座右铭：带你装逼带你飞</li>
+                </ul>
+                <b></b>
+            </div>
+            <div class="swiper-slide slide2">
+                <img src="./img/2/1.png" alt=""/>
+                <span class="banner">技能简述</span>
+                <b></b>
+                <ul class="up">
+                    <li>JS</li>
+                    <li>Node.JS</li>
+                    <li>JQuery</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>swiper</li>
+                </ul>
+                <ul class="down">
+                    <li>JS
+                        <span></span>
+                    </li>
+                    <li>JQ
+                        <span></span>
+                    </li>
+                    <li>H5
+                        <span></span>
+                    </li>
+                    <li>CSS
+                        <span></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-slide slide4">
+                <img src="./img/2/1.png" alt=""/>
+                <span class="banner">技能简述</span>
+                <b></b>
+            </div>
+            <div class="swiper-slide slide3">
+                <img src="./img/2/1.png" alt="" class="img"/>
+                <span class="banner">联系方式</span>
+                <ul class="nuv">
+                    <li></li>
+                    <li>
+                        <span><a href="tel:15254323904">拨打</a>电话：15254323904</span>
+                        <span>QQ : 1124364350</span>
+                        <span>email:www.1124364350@qq.com</span>
+                    </li>
+                </ul>
+                <b></b>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script>
+    var less = {
+        env:"development",
+        poll:1000
+    }
+</script>
+<script src="js/less-2.5.3.min.js"></script>
+<script>
+    less.watch();
+</script>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+        direction:'vertical',
+        loop:true,
+        onTransitionEnd:function(swiper) {
+            var curIndex = swiper.activeIndex;
+            var slides = swiper.slides;
+            [].forEach.call(slides, function (item, index) {
+                item.id = "";
+                if (index == curIndex) {
+                    switch (index) {
+                        case 0:
+                            item.id = "page" + (slides.length - 2);
+                            break;
+                        case slides.length - 1:
+                            item.id = "page1";
+                            break;
+                        default :
+                            item.id = "page" + curIndex
+                    }
+
+                }
+            })
+        }
+    });
+    var music = document.querySelector(".music");
+    var beyond = document.querySelector("#beyond");
+    window.setTimeout(function(){
+        beyond.play();
+        beyond.addEventListener("canplay",function(){
+            music.style.opacity ="1";
+            music.className = "music musicCur";
+        },false)
+    },1000);
+
+    music.addEventListener("click",function(){
+        if(beyond.paused){
+            beyond.play();
+            music.className  = "music musicCur";
+        }else{
+            beyond.pause();
+            music.className = "music";
+        }
+    },false);
+</script>

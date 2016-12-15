@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*
+    *sort的参数函数中
+    * */
+    var ary = [6,5,4,2,1,];
+    ary.sort(function (a ,b) {
+        console.log(a, b);//a,b都是两两比较的数组项
+        return -1;//a-b这个位置的值是一个恒小于0，如果按照升序排序a-b<0,那么就是说明a<b,按照升序就不用换位置了
+        return a - b;//
+    }
+// DOM回流：页面内元素的增加，删除，位置的改变都会引起DOM回流操作，DOM回流比较浪费性能
+//    DOM重绘：元素样式的改变
+
+</script>
+</body>
+</html>

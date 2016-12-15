@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    <!--字面量-->
+//    var reg = /name/
+//    实例   1 创建方式第一个参数是一个字符串（字面量创建方式两个斜杠中间的部分）
+//           2  第二个参数就是修饰符“i”/ "m" / "g"
+//           ps 只要在正则表达式中需要变量，那就只能用实例的创建方式
+
+    //修饰符的位置：/\w/i   十里创建方式：第二个参数用字符串的方式
+//    ignoreCase  忽略大小写
+
+
+/*
+* str.match(reg):和exec的用法基本相同
+* match的返回值
+*
+*   1 返回值是一个数组
+*   2 如果有全文g那么match会一次性把所有符合条件的全部捕获，并且添加到这个数组，如果用exec来达到同样效果需要执行多次
+*   3 如果没有全文g ，那么match和exec的捕获结果是相同的
+* */
+    var reg = /\d+/g;
+    var str = 'zhufeng2015peixun2016';
+//    var rey=[];
+//
+//    var res = reg.exec(str);
+//    rey.push(res);
+//
+//    var res = reg.exec(str);
+//    rey.push(res);
+//    var res = reg.exec(str)
+//
+//
+    var res = reg.match(str);
+
+</script>
+</body>
+</html>

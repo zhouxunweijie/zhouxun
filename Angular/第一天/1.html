@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="oneCtrl">{{age}}{{name}}</div>
+<div ng-controller="twoCtrl">{{name}}</div>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    //将共有的方法放在全居中
+    app.run(function($rootScope){
+       $rootScope.name = 'zfpx1'
+    });
+    app.controller('oneCtrl',function($scope){
+        $scope.age = 8;
+    });
+    app.controller('twoCtrl',function($scope){
+        $scope.name = 'zfpx';
+    });
+    //只能子找父，不能父找子，控制器可以嵌套
+
+    //控制器可以嵌套
+    //控制器可以产生一个作用域
+    //作用范围，和DOM的标签平齐
+    //不要复用控制器，而且不要操作DOM
+
+</script>
+</body>
+</html>

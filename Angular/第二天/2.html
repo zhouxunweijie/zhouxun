@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../node_modules/angular/angular-csp.css"></script>
+<script>
+    //默认指令是不会产生作用域的
+    var app = angular.module('appModule',[]);
+    app.directive('redBorder',function(){
+        return{
+            restrict:'A',
+            link:function(scope,element,attrs){ //链接 试图和作用域的，特点，唯一一个可以操作DOM的地方
+                //scope:当前指令产生的作用域
+                scope.name = 1;//作用域在那声明的变量就在那
+                //element：是一个JQ对象,指向的是当前的指令所在的元素上
+                //angular.element()将原生变成angular格式
+                element.css();
+                //attrs:  当前指令的所有的属性都会变成对象格式
+            }
+        }
+    })
+</script>
+</body>
+</html>

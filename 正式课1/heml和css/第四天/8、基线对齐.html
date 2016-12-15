@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>基线对齐</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        p{background-color: black;color: #fff;}
+        /*
+        /*
+        vertical-align：span{display: inline-block;width: 5px;height: 5px;background-color: #fff;
+        /!*vertical-align: top;/!*在父级盒子的顶部*!/!*!/
+            /!*vertical-align: middle; 底部在父级盒子的中间位置*!/
+            /!*vertical-align: bottom; 底部在父级盒子的最下面*!/
+            vertical-align: text-bottom;
+            /!*vertical-align: baseline; 基线对齐*!/
+        }*/
+        img{vertical-align: text-top;}
+        /*vertical-align还支持 px  %   负值*/
+        1、只能作用于行内元素和行内块级元素
+    2、参照物要么是盛装这个元素的盒子，要么是和他平级的文字
+    3、是垂直方向的对齐方式
+    */
+    </style>
+    </head>
+    <body>
+    <p>
+    我是社会主义接班人
+    <img src="images/pic2.png" alt=""/>
+</p>
+</body>
+</html>

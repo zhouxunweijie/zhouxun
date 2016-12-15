@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body class="body">
+1、html如何引入css文件
+（1）行内式   写在标签里  通过标签属性style属性引入css样式
+（2）内嵌式   写在style标签里 通过选择器选择要操作的元素，向这个元素添加样式
+<style>
+    选择器{css属性1:属性值;css属性2:属性值;}
+</style>
+（3）外链式   通过link标签引入一个外部的css文件  通常写在head标签中
+<link rel="stylesheet" href="url"/>
+（4）导入式   @import "url" 通过@import这个关键词引入一个外部的css文件
+<style>/*此处是css文件*/
+    @import "url";
+</style>
+<!--js是操作DOM和BOM-->
+<!--<script>
+    var oDiv=document.getElementsByClassName("body")[0];
+    var oLink=document.getElementsByTagName("link")[0];
+</script>-->
+
+
+css的选择器
+基本选择器
+1、标签选择器   权重 1
+标签名{属性名:属性值;}
+2、类选择器     权重 10   一个标签可以起多个类名 每一个类名之间用空格隔开
+<p class="className"></p>
+.className{属性名:属性值;}
+3、id选择器     权重 100  idName在这个文档下 只能有一个
+<p id="idName"></p>
+#idName{属性名:属性值;}
+4、通配符选择器   选择所有的标签 从html标签开始
+*{}
+其他选择器
+1、后代选择器   整体的权重是所有选择器之和
+父级 子级{}
+div .list{11} div元素下的所有类名叫做list的元素
+2、子级选择器   整体的权重是所有选择器之和
+div>.list{11}   div元素下的第一层级中所有类名叫做list的元素
+3、并集选择器   逗号两侧的选择器是没有关系个体，每一个选择器的权重都是独立计算 不需要将逗号隔开的选择器权重相加
+div,#list,.content{}  将{}内的css属性分别给到 div ，#list ，.content这三个元素
+<div></div>
+<ul id="list"></ul>
+<p class="content"></p>
+4、交集选择器  权重相加    标签在前类名在后  选择器之间组合的时候没有任何间隙和符号
+<p class="className1 className2"></p>
+p{1}
+.className1{10}
+.className2{10}
+p.className1{11}
+p.className2{11}
+.className1.className2{20}
+
+5、伪类选择器  元素的一种状态
+标签名:hover{鼠标经过这个标签的时候}
+
+6、类型选择器   权重大于10
+标签名[type=value]{}
+<input type="button"/>
+input[type=button]{}
+
+
+
+
+
+
+
+</body>
+</html>

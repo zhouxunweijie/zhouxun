@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            margin: 10px;
+            width:350px;
+            height:350px;
+            position:relative;
+            background: url("../images/iphone.jpg")no-repeat;
+            box-shadow: 3px 3px 3px #000;
+        }
+        .box .innerBox{
+            display: none;
+            width: 175px;
+        height:175px;
+            position: absolute;
+            left:0;
+            top:0;
+            opacity: 0.5;
+            background: #fa8c1e;
+            cursor: move;
+        }
+       .bigBox{
+           width: 350px;
+       height:350px;
+           position:absolute;
+           left:400px;
+           top:20px;
+           overflow: hidden;
+           display: none;
+
+       }
+        .bigBox img{
+            width: 200%;
+            height:200%;
+            border:none;
+            vertical-align: top;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="innerBox">
+    </div>
+</div>
+<div class="bigBox">
+    <img src="../images/iphone_big.jpg" alt=""/>
+</div>
+<script src=""></script>
+<script>
+
+    var box = document.getElementsByClassName("box")[0];
+    var innerBox = box.getElementsByClassName("innerBox")[0];
+    var bigbox = document.getElementsByClassName("bigBox")[0];
+    var bigImg = bigbox.getElementsByTagName("img")[0];
+    //给最外层的Box绑定onmousemove事件，当事件被触发的时候，让里面的半透明盒子跟随鼠标移动
+    box.onmouseover = function(){//鼠标悬停让Box出来
+        innerBox.style.display = "block";
+        bigbox.style.display = "block";
+    };
+    box.onmousemove = function(e){//让里面的盒子跟随盒子移动
+        //让这个透明盒子的left和top值随着鼠标的move变化而变化
+        e = e || window.event;
+        e.pageX = e.pageX || e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+        e.pageY = e.pageY || e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+        //开始实现盒求出盒子的left和top
+        var l = e.pageX - box.offsetLeft - innerBox.offsetWidth/2;
+        var t = e.pageY - box.offsetTop - innerBox.offsetHeight/2;
+        var minLeft = 0 ;
+        var minTop = 0;
+        var maxLeft = box.offsetWidth - innerBox.offsetWidth;
+        var maxTop = box.offsetHeight - innerBox.offsetHeight;
+        l = l > maxLeft? maxLeft:l < minLeft? minLeft:l;
+        t = t > maxTop ? maxTop :t < minTop ? minTop :t;
+        innerBox.style.left = l + "px";
+        innerBox.style.top = t + "px";
+        //下面的代码负责右侧大图跟随左侧透明innerBox移动
+        bigImg.style.left = - 2 * l + "px";
+        bigImg.style.top = - 2 * t + "px";
+    };
+    box.onmouseout = function(e){
+        innerBox.style.display = "none";
+        bigbox.style.display = "none";
+    }
+</script>
+</body>
+</html>

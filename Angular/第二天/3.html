@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="myCtrl">
+<input type="text" ng-model="name"/>
+<!--<cur-text title="{{name}}"></cur-text>-->
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    //
+    var app = angular.module('appModule',[]);
+    app.controller('myCtrl',function($scope){
+           $scope.name = 'hello';
+    });
+//    app.directive('curText',function(){
+//        return {
+//            restrict:'E',
+//            templalte:`<h1>{{name}}</h1>
+//                        <input type="text" ng-model="name">`,//
+//            //scope:true,//仍然可以找到上级的作用域
+//            scope:{
+//                name:'@title'
+//            },//断绝和上级的关系，要获取控制器上的数据,只能够通过属性传递props
+//            //用@符取得是当前指令  上属性的字符串（单向）
+//            //用=取得是当前指令上属性对应的作用于上的变量（双向）
+//        }
+//    })
+</script>
+</body>
+</html>

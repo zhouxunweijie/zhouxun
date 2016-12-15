@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            width: 300px;
+            margin: 30px auto;
+        }
+        ul li{
+            height: 30px;
+            background: lightgreen;
+            line-height: 30px;
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>5</li>
+    <li>4</li>
+</ul>
+<script>
+    var oUl=document.getElementById("ul1");
+    var oLis=oUl.getElementsByTagName("li");
+    var ary=utils.listToArray(oLis);
+    ary.sort(function(a,b){
+        return parseFl
+    })
+
+</script>
+</body>
+</html>

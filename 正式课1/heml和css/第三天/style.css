@@ -1,0 +1,49 @@
+body,ul,h2,p{
+    margin: 0;
+    padding: 0;
+    /*盒子模型的相关属性，在书写css样式的时候，从外到内*/
+}
+ul{font-size: 0;}/*ul下面所有的字符都变成大小为0，空格也是空字符*/
+li{
+    display: inline-block;
+    /*将块级元素转化为块级行内元素，让其在一行显示，并且可以设置盒子模型的相关属性*/
+    margin-right: 14px;
+    border-top: 1px solid #ffac13;
+    width: 234px;
+    height: 339px;
+    background-color: #cccccc;
+    text-align: center;
+    /*水平对齐方式:居中;*/
+    /*放置在一个有宽度的父级元素中的时候，这个父级元素下所有的文本，图片都会自动居中*/
+    font-family: "微软雅黑","Microsoft YaHei";
+}
+img{
+    margin-top: 39px;
+    /*margin-left:37px;*/
+    width: 160px;
+    height: 160px;
+    /*因为图片引入的时候，显示的是其原大小，我们需要将图片的大小与设计稿的大小保持一致*/
+}
+h2{
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: normal;/*字体不加粗*/
+    color: #212121;
+}
+.atc1{
+    margin-top: 7px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.atc2{
+    margin-top: 17px;
+    font-size: 14px;
+    color: #ff6709;
+}
+
+
+
+
+
+
+

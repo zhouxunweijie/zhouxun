@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0;}
+        input{height: 50px;outline: none;border:none;}
+        input:focus{background: #f2c3d2;}/*:focus点击获得焦点时*/
+        /*outline: none 去掉表单点击后默认的颜色框*/
+        /*border:none; 在全局样式重置的时候 加上这个属性，可以去掉凹凸的效果*/
+        /*
+        如果给input设置宽高的时候
+        输入的框就是这个宽高，还有一个边框，只不过这个边框不再这个宽度和高度之内
+        按钮 这个宽度和高度是包括边框的
+        选择框  宽高不一致的时候，以小的值为直径或者四个边的长度，会在大的值内进行水平或者垂直居中,如果宽高只给一个指，那么这个元素会在这个值内进行居中显示，如果想改变这个元素的大小，只能同时给定相同的宽和高，选择框的其他样式，没有办法认为设置
+        select 宽高包含边框的，不能设置其他样式（三角形的样子等都不能设置）
+        */
+    </style>
+</head>
+<body>
+<!--
+type值代表什么意思
+怎么去控制表单元素的样式
+-->
+<!--所有的表单元素要放在form这个标签中，这个标签中也可以放置其他标签-->
+<!--
+当label标签中for里面的值和表单元素中id里面的值一致的时候，那么这个label标签中的内容点击后直接跳转到该表单元素，也就是起到一个快捷提示的作用
+
+placeholder  用来给表单元素书写提示信息的地方 是html5才有的标签属性 所以在用的时候，文档声明必须是html5的生命
+checked="checked" /checked  都可以达到选中状态
+maxlength  输入内容的最大长度
+
+input：
+type="text" 文本框/输入框
+type="password"  密码框
+type="radio"     单选框  标签中name属性的属性值相同的时候，才可以单选
+type="checkbox"  多选框
+type="file"      上传文件  任何格式都支持
+type="button"    普通按钮
+type="reset"     重置按钮
+type="submit"    提交按钮
+
+
+<select>下拉列表
+    <option>列表项</option>
+</select>
+<textarea>多文本框</textarea>
+
+action 里面的文件大多是接口
+method 是规定了获取到的值是通过什么方式返回
+get  操作简单 安全性低
+post 操作复杂 安全性高
+
+
+
+-->
+<form action="文件路径" method="get/post">
+    <label for="idName">姓名：</label>
+    <input type="text" id="idName" placeholder="提示信息"/>
+    <br/>
+    <label>密码：</label>
+    <input type="password" placeholder="请输入密码"/>
+    <br/>
+    <label>性别：</label>
+    <input type="radio" name="name" checked="checked"/> <label>男</label>
+    <input type="radio" name="name"/> <label>女</label>
+    <br/>
+    <label>爱好：</label>
+    <input type="checkbox" name="name" checked="checked"/> <label>男</label>
+    <input type="checkbox" name="name" checked/> <label>旅游</label>
+    <input type="checkbox" name="name"/> <label>美食</label>
+    <input type="checkbox" name="name"/> <label>运动</label>
+    <input type="checkbox" name="name"/> <label>电影</label>
+    <br/>
+    <label>出生日期：</label>
+    <label>年：</label>
+    <select>
+        <option>1997</option>
+        <option>1996</option>
+        <option>1995</option>
+        <option>1994</option>
+        <option>1993</option>
+        <option>1992</option>
+        <option>1991</option>
+        <option>1990</option>
+    </select>
+    <label>月：</label>
+    <select>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+    </select>
+    <label>日：</label>
+    <select name="" id="">
+        <!--option{$}*31-->
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+        <option value="">24</option>
+        <option value="">25</option>
+        <option value="">26</option>
+        <option value="">27</option>
+        <option value="">28</option>
+        <option value="">29</option>
+        <option value="">30</option>
+        <option value="">31</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </select>
+    <label>自我评价：</label>
+    <textarea maxlength="10">
+        <!--我写一些内容-->
+    </textarea>
+    <label>上传文件：</label>
+    <input type="file"/>
+    <br/>
+    <input type="button" value="点击"/>
+    <br/>
+    <input type="reset"/>
+    <br/>
+    <input type="submit"/>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

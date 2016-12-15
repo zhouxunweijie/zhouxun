@@ -1,0 +1,292 @@
+1、HTML5
+  ->新增加的构建页面语义化结构的标签:header、footer、main、article、figure、figcaption、nav、aside、section...
+    在IE6~8下不兼容,我们需要使用JS把新的标签替换为传统的标签=>html5.min.js
+    <!--[if lt IE 9]>
+       <script src='js/html5.min.js'></script>
+    <![endif]-->
+
+  ->对于传统的input表单新增加了一些类型:<input type='search/url/email/tel/number/range/color/time/date...'/>
+    在IE6~8下不兼容,我们也没办法处理,所以说新增加的类型我们只在移动端使用
+    1)新增加的类型自带一些验证方式
+      <input type='email' id='userEmail'/>
+      [css]
+      #userEmail:valid {
+          /*success*/
+          border-color: green;
+      }
+
+      #userEmail:invalid {
+          /*error*/
+          border-color: red;
+      }
+      局限性：只能通过INPUT新提供的两个验证的伪类来控制我们当前表单的样式,进而给用户提示操作
+
+      [js]
+      之前的JS验证
+      $userEmail.on('blur', function () {
+          var reg = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+          var val = $(this).val();
+          if (reg.test(val)) {
+             $spanEmail.css('display', 'none');
+          } else {
+             $spanEmail.css('display', 'block');
+          }
+      });
+
+      我们现在使用新的类型后的验证比这个简单
+      $userEmail.on('blur', function () {
+          if (this.checkValidity()) {
+              $spanEmail.css('display', 'none');
+          } else {
+              $spanEmail.css('display', 'block');
+          }
+      });
+
+    2)新增加placeholder="xxx"做文本框输入内容的提示，这个属性在IE下不兼容,我们需要使用JS的方式把它处理兼容了(原理：我们自己模拟这个属性)
+    课时170回去后自己研究=>这是一个常问的面试题
+
+    3)我们在移动端页面中使用不同的类型，当用户输入的时候可以调取出最符合用户操作的虚拟键盘，例如：如果类型我们写的是email，在调取出来的键盘中有我们需要的 . @ 英文 数字...
+
+    4)功能强大了
+      <input type="date">
+
+  课后回去后的扩展:
+    ->做一个完成的注册信息的表单验证
+      用户名:用户名仅支持中英文、数字和下划线,且不能为纯数字，最多14个英文或者7个汉字
+      真实姓名:2~4位中文汉字
+      年龄:18~65之间，必须是数字
+      电话或者手机:
+      性别:
+      邮箱:
+      密码:长度为6~14位，可以是数字、字母和特殊字符，不能是标点符号(要求至少是数字和字母组合的/要求必须要出现数字、小写字母、大写字母)
+      确认密码:
+      ...
+
+    ->可以搜集一些关于表单验证的插件:JQ->jQuery Validate ...
+
+
+
+
+->webStorage Pk  cookie
+
+->新兴的API，比如：获取地理位置信息
+
+->canvas
+
+->web socket 和 web work
+
+->audio  和 video
+
+
+2、CSS3
+    ->选择器
+    nth-child(1、odd、even、3n+1)
+    nth-of-type
+    :target
+    :not
+    ....
+
+
+    ->常用的一些样式属性：border-radius/background:-webkit-linear-gradient/-webkit-radial-gradient/box-shadow/text-shadow-/filter-
+    background:
+    ->background-size:100% 100% 、30px、30px、cover、contain、.....
+      background-clip:border-box、padding-box、content-box
+      background-origin:
+      background：rgba(0,0,0,0.5)
+
+      传统：
+      background-image
+      background-color
+      background-repeat
+      background-position (css sprite  雪碧图)
+      background-attachment:scroll、 fixed..
+
+
+    ->transform变形
+        translate(x|y|z)
+        rotate(x|y|z)
+        scale
+        skew  倾斜
+        matrix  矩阵
+
+        3D
+        perspective 视距
+        transform-style：preserve-3d
+        transform-origin:center center 0
+
+    -》transition  过渡动画
+        transition-property:all;
+        transition-duration:1s;
+        transition-time-function;
+        transition-delay:0s
+
+
+    -》animation   帧动画
+        @key-frames [name]{
+        0%{
+
+        }
+   ....
+        100%{
+
+        }
+
+    }
+        animation-name: ;
+        animation-duration:;
+        animation-time-function: ;
+        animation-delay:;
+        animation-count: infinite;
+        animation-fill-model: both / forwards/backwards.....
+
+        animation.css 2D 动画库
+
+
+
+    ->盒子模型
+            columns：多列布局（栅格布局）
+            box-sizing:border-box、padding-box、content-box 新的盒子模型
+            flexbox: 伸缩盒子模型
+
+
+    ->导入网络的字体包
+            @font-face
+
+    ->SVG: 一个新的图片，主要是用代码编辑出来的  目前市场上都是用工具生成svg图片
+
+    ->@media 媒体查询
+
+
+3、移动端实战和优化以及JS处理
+
+    响应式布局：
+    DPI适配：屏幕像素密度比
+    流式布局（媒体查询）、
+    REM响应式布局（等比缩放布局）
+    webAPP（hyBride模式和nativeApp混合开发模式）
+    微信的二次开发
+    微信小程序
+
+
+
+
+    项目优化；
+        减少HTTP请求的次数
+        减少HTTP请求的大小
+
+
+
+    JS:
+        touch模型
+        gesture模型
+        Zepto
+        swiper
+        iscroll
+
+        Angular
+        React
+        React Native
+        ...
+        gulp
+        webpack
+        git
+        ...
+        bootstrap
+
+
+
+1、论程序员的基本编程素质
+  -》写页面前，首先在HEAD中增加几个META标签
+  <meta name="viewport" content="...">
+
+  ->设置页面的title
+  <title>
+
+
+  SEO 推广优化：我们在页面中设置一些关键词（HEAD中的 keywords和BODY中的内容），百度或者谷歌等搜索引擎会定期派出他们的小蜘蛛（爬虫）来我们的网站上检索把一些关键词和内容收拢到百度 ，谷歌等，搜索引擎的数据库中，当用户使用百度或者谷歌搜索内容的时候，会输入一个关键词，百度等公司会到自己的数据库中把所有和输入的关键词匹配的网站提前展示。。。。
+
+
+  SEM百度进价:我们可以设定一些关键词（可能跟我们没关系），谁给百度钱多，谁的靠前
+
+  ->设置标题区域的图标
+    <link rel="icon" href="img/icon.png" type"image/x-con"/>
+
+
+2、一个页面中的H1只能出现一次，而且它的权重非常的高，在这里写的文字百度非常爱抓取 SEO，所以我们即使设置了背景图，背景图上已经存在了需要展示的文字，但是我们还是会加一点文字进来，目的是给百度的小蜘蛛看的
+
+3、LESS叫做CSS预处理器：我们按照LESS的语法（JS类似是面向对象编程的，在LESS中存在变量、函数、继承、作用域等内容）编写需要的样式，但是浏览器不能直接的渲染这些代码，需要把写好的LESS代码转为标准的 CSS代码才可以
+    [编译]
+        ->在开发过程中，使用JS解析处理即可
+
+        ->在产品上线后，我们直接的使用NODE或者编译工具把LESS转换为CSS，以后线上的项目直接使用编译过的CSS既可，不用行第一种方案一样，每当刷新一次页面都需要重新的编译（耗性能）
+
+
+
+4、MENU区域的HASH值
+当点击每一个选项卡的时候，除了控制右侧的内容跟着改变，而且还在当前页面的URL地址栏中增加了对应的HASH值：http://ksb.sports.qq.com/#nba
+    以后当页面刷新或者重新的加载的时候，我们手心获取URL中的HASH值，然后判断哪一个选项默认的被选中
+
+data-id="100000"每一场比赛都有一个自己对应的赛事类型ID（不冲突的），主要目的就是控制右侧内容跟着改变的
+
+
+5、实现三角箭头的方式
+    切图： 由于需要加载图片，所以比较来说耗性能稍微耗性能，尤其对于移动端来说，能不用图片，坚决不用图片
+
+    直接用 &lt; &gt; 大于号和小于号实现
+    弊端：不好操控大小，而且如果需要调节接待的话，我们需要使用特殊的字体，这样导致很多的浏览器不支持这个字体就识别不了对应样式
+
+    ->把一个只有两个边框的盒子进行旋转
+    弊端：虽然足够的简单，但是不兼容，所以只在移动端使用
+
+    ->我们制作两个两角形，然后两个三角形叠加，其中一个颜色和区域的背景颜色保持一致，
+
+
+
+
+6、使用ISCROLL实现局部滚动
+    原理：类似于轮播图，他首先通过第一个参数获取到需要局部滚动的区域，然后再获取到这个区域中的第一个子元素（他认为这个元素就是我们即将实现滚动的与元素）=》在项目中，我们需要把所有需要滚动的内容东西放在当前区域的第一个子元素中
+
+
+    找到需要滚动的哪一个元素，在用户操作的时候（鼠标滚动，拖动），我们控制这个元素在MENU这个区域中来回的运动（上下：控制的是TOP值 左右：控制的是LEFT值 在最新的ISCROLL版本中（我们当前的版本第五版本就是最新的），控制的是TRANSFORM）;=>这样的话首先必须保证MENU区域有固定的宽高，里面真实的内容宽高是大于MENU区域的，这样才需要左右或者上下滚动看
+
+    如果需要禁用CSS3处理
+    此时还需要保证UL是相对于MENU定位的
+
+    默认是不显示滚动条的，如果需要我们需要配置， scrollbars:true 配置完成后，ISCROLL会向MENU区域的末尾追加一个新的元素
+    最外层DIV是滚动条滚动的区域，里层DIV就是当前的那个滚动条，滚动条那个区域默认是position：absolute 定位的，所以想让滚动条在MENU区域中，需要给MENU加position：relative；
+    我们还可以自定义滚动条的样式。iScrollIndicator{...}
+
+
+==》宽展只是：
+    ISCROLL有好多的版本
+        5版本是不兼容IE低版本浏览器，一般应用于移动端的开发
+        pc端用的一般都是第一版本和第二版本（兼容的），但是这个两个版本的配置参数的名字和五版本有几个不太一样，自己回去搜收总结一下
+        开发者版本，相对于其他的版本提供了更加强大的处理，使用开发者版本可以实现，下拉加载和上拉刷新的效果，自己回去后可以把这个效果实现了
+
+7、jQuery
+        -》通过JQ选择器获取的结果都是jQ的实例，也会死一个类数组集合
+            $links[0];
+            $links.get(0): 前两个都是获取类数组集合中索引为0这一项，返回的结果是一个DOM原声对象
+            @link.eq(0)：虽然也是获取第一个，但是获取到的结果依然还是JQ对象
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

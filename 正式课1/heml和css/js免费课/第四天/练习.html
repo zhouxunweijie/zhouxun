@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            line-height: 30px;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: yellow;
+        }
+        .bg2{
+            background: peachpuff;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    var oList=document.getElementById('list');
+    var str="";
+    for(var i=0;i<11;i++){
+        str+="<li>我是第"+(i+1)+"个li</li>";
+    }
+    oList.innerHTML=str;
+    var oLis=oList.getElementsByTagName('li');
+    var len=oLis.length;
+    for(var k=0;k<len;k++){
+        if(k%2===0){
+            oLis[k].className="bg0";
+            oLis[k].oldBg="bg0";
+            oLis[k].index=k;
+        }else{
+            oLis[k].className="bg1";
+            oLis[k].oldBg="bg1";
+            oLis[k].index=k;
+        }
+        //oLis[k].index=k;
+        oLis[k].onclick=function(){
+            alert(this.index+1);
+        };
+        oLis[k].onmouseover=function(){
+            this.className="bg2";
+        };
+        oLis[k].onmouseout=function(){
+            this.className=this.oldBg;
+        };
+    }
+</script>
+</body>
+</html>

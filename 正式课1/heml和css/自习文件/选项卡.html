@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        body,div,ul,li{
+
+            margin: 0;
+            padding:0;
+        }
+        #list{
+            width:300px;
+            height: 400px;
+            margin: 20px auto 0;
+            border:1px solid black;
+
+        }
+        ul{list-style: none}
+        li{
+            height: 30px;
+            width: 75px;
+            background-color: #6c6c6c;
+            line-height: 30px;
+            text-align: center;
+            float: left;
+            font-size: 12px;
+        }
+        ul>.bom{width: 150px;
+        background-color: #fff;
+        border-right: 1px solid black;
+            border-left: 1px solid black;
+            margin: 0 -1px 0;
+
+        }
+        #list div{
+            line-height: 300px;
+            text-align: center;
+            font-size: 40px;
+            display: none;
+        }
+        #list .bom{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="list">
+    <ul>
+        <li class="bom">伤心的情歌</li>
+        <li>安河桥</li>
+        <li>分手就分手</li>
+    </ul>
+    <div class="bom">伤心的情歌</div>
+    <div>安河桥</div>
+    <div>分手就分手</div>
+</div>
+<script>
+    olist=document.getElementById("list");
+    olis=olist.getElementsByTagName("li");
+    olis1=olist.getElementsByTagName("div");
+    for(var i=0;i<olis.length;i++){
+        (olis[i].onclick=function(i){
+            olis[i].onclick=function(){
+                for (var f=0;f<olis.length;f++){
+                    olis[f].className="";
+                    olis1[f].className="";
+                }
+                this.className="bom";
+                olis1[i].className="bom"
+            }
+        })(i)
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none}
+a{text-decoration: none}
+body{font:12px/1.5"Microsoft YaHei"}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal}
+img,input,select{border: none;
+vertical-align: middle;}
+i,em{font-style: normal}
+.clear:after{display: block;
+content:"";
+clear:both;}
+.clear{zoom:1;}
+.headimg{background-color: #57c7f9;
+    height:80px;
+    width: 100%;
+    text-align: center}
+
+.headtop{
+    height: 33px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+position: relative;
+}
+.concer{padding: 0 30px;
+margin: 0 auto;
+}
+
+
+.headtopleft>li{
+    margin-right: 20px;
+    float: left;
+    line-height: 33px;
+    display: block;
+    color: #999;
+}
+
+.headtopleft li a{color: #999}
+.headtopright li a{color: #999}
+.headtopleft li a:hover{color: red;}
+
+.headtopright{
+    float: right;
+    display: inline-block;
+    line-height: 33px;
+}
+
+.headtopright li{
+    position: relative;
+    float: left;
+margin-left: 20px;
+}
+
+.headtopright li i{
+    border:3px solid #bbb;
+    display: inline-block;
+border-color: #bbb transparent transparent transparent;
+}
+
+.headtopright li>b{
+    width:12px;
+    height: 12px;
+    background: url("tianmao.png") no-repeat;
+    display: inline-block;
+   text-align: center;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.headtopright li .za1{background-position:-24px 0}
+.headtopright li .za2{background-position:-36px 0}
+.headtopright li .za3{background-position:-48px 0}
+.headtopright li .za{background-position:-12px 0}
+.headtopright li:hover a{color: red
+}
+
+ .headtopright .color:hover{background-color: white}
+.color:hover .headtoprights{display: block}
+
+
+
+.color:hover .zc{transition:transform 0.4s ease-in;transform:rotate(180deg);
+    transform-origin: 50% 20%;
+}
+
+.headtoprights p:hover{color: red}
+.headtoprights{
+    width: 72px;
+
+    position: absolute;
+padding: 12px;
+    border:1px solid #e5e5e5;
+    line-height: 20px;
+    display: none;
+    border-color:transparent #e5e5e5 #e5e5e5 #e5e5e5;
+    background-color: white;
+    margin-top:-1px;
+}
+.headtopright p{
+display:inline-block;
+}
+.zc3{
+    border:1px dashed #827777;
+    border-color: transparent transparent  #827777 transparent;
+margin: 8px 12px;
+}
+.zc2{
+    position: absolute;
+    width: 150px;
+    right:-1px;
+    padding: 0 ;
+}
+.zc2 h3{margin-left: 12px;
+
+
+}
+.zc2 a{margin:12px;
+font-size:11px;
+    line-height: 22px;
+}
+
+.zxc{
+
+}

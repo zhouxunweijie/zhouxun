@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrap{
+            position: absolute;top:0;
+            width: 100%;
+            height:100%;
+        }
+        .wrap ul{
+            list-style: none;
+            position: fixed;
+            right: 30px;
+            top:50%;
+            margin-top: -75px;
+        }
+        .wrap ul li{
+            width: 30px;
+            height:30px;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+            margin-bottom:5px ;
+        }
+        .wrap ul li.selected{
+            background-color: #fff;
+        }
+        .wrap div{
+            width: 100%;
+            height:100%;
+            font-size: 100px;
+            font-weight: bold;
+            line-height: 100%;
+            text-align: center;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <div style="background-color: red">page1</div>
+    <div style="background-color: yellow">page2</div>
+    <div style="background-color: blue">page3</div>
+    <div style="background-color: forestgreen">page4</div>
+    <div style="background-color: deeppink">page5</div>
+    <ul>
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script src="utils2.0.js"></script>
+<script src="animate.js"></script>
+<script src="wheel.js"></script>
+<script>
+   var wrap = document.getElementById("wrap");
+   var divs = wrap.getElementsByTagName("div");
+   var lis = wrap.getElementsByTagName("li");
+   var index= 0;
+   var canScroll = true;
+   addWheelEventListener(wrap,function(isDown,e){
+       //给最外层的wrap绑定鼠标滚动事件，向上或者向下是不同的操作
+       if(canScroll){
+           if(isDown){
+               if(index === divs.length-1){
+                   return;
+               }
+               index++;
+           }else{
+               if(index === 0){
+                   return;
+               }
+               index--;
+           }
+           canScroll = false;
+           //animate这个方法就是负责运动top值的，运动到哪取决于你是向下还是向上
+           animate(this,{top:-index * utils.win("clientHeight")},300,function(){
+               window.setTimeout = (function(){
+                   canScroll = true
+               },1000)
+               canScroll = true;
+           });
+           for(var i =0;i<lis.length;i++){
+               if(i == index){
+                   lis[i].className = "selected"
+               }else{
+                   lis[i].className = "";
+               }
+           }
+       }
+
+   })
+   //标示变量：我们经常用标示变量来记忆一些当时的状态，当符合条件的时候再去修改这个状态值；
+   //这次应用：就是记录当前状态是否可以播一屏
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var div1 = document.getElementById("div1");
+//    window.onscroll = function(){};//给浏览器绑定的滚动条事件，当页面的高度超出了窗口的高度滚动的的时候就会触发
+//    document.body.onmousewheel = function(){
+//
+//    }
+//    //由于火狐和谷歌的的滚轮事件绑定方式不同
+//    if(window.navigator.userAgent.indexOf('Firefox')!==-1){
+//        document.addEventListener("DOMMouseScroll",fn)
+//    }else{
+//        document.onmousewheel = fn;
+//    }
+//    function fn(e){
+//        e= e || window.event ;
+//        //既然是滚轮事件那么一定是要判断下滚动的方向（上/下）
+//        //e.wheelDelta // 谷歌和IE  上  120   ||  下  -120
+//        //e.detail  //火狐   上  -3  ||  下  3
+//        var isDown = null;
+//        // e.wheelDelta 在firefox里是undefined
+//        if(e.wheelDelta){
+//            isDown = e.wheelDelta < 0
+//        }else{  // firefox
+//            isDown = e.detail > 0;
+//        }
+//        //经过上面的代码isDown这个变量必然会保存一个true||false的布尔值，那么为true的时候就是向下的
+//        if(isDown){//向下滚动发我让这个盒子长高
+//            div1.style.height = div1.offsetHeight + 10 + "px";
+//        }else{
+//            div1.style.height = div1.offsetHeight - 10 + "px"
+//        }
+////        当一个bug觉得都特别合理的时候，不妨使用一下阻止默认行为
+//        e.preventDefault ? e.preventDefault() : e.returnValue  = false;
+//    };//这个fn就是我在鼠标滚动的时候要执行的事件
+
+
+</script>
+</body>
+</html>

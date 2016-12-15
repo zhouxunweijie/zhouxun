@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //console.log({}=={});//false
+    //console.log([]=={});//false
+    //console.log([]=='');//true
+    //console.log([1,1]=='1,1');
+    //[1,1].toString()-->1,1
+
+    //console.log([]==true);//false
+    //!![]--true
+
+    //console.log([]==='');//false
+
+
+    //console.log(parseFloat("1.0px")==[1]);//true
+
+
+    //对象和布尔进行比较   最终是数字之间的比较
+    /*
+    * 对象--数字 {对象.toString--Number(对象.toString-)}
+    * 布尔--数字
+    * */
+    /*console.log({}==true);
+    console.log({}.toString());//"[object Object]"
+    console.log(Number("[object Object]"));//NaN
+    console.log(Number(true));//1
+    console.log(NaN==1);//false
+
+    console.log(!{}==true);//false
+    console.log({}==[]);//false*/
+
+    /*console.log(![]==[]);//true
+    console.log([]==[]);//false
+    console.log([]==false);//true
+    console.log(![]===false);//true*/
+
+    //两个值进行比较的时候遵循的规则
+    //val1==val2
+    /*
+    * 1、对象==对象 false
+    * {} [] /^$/  {}=={}  []==[]
+    * 2、对象==字符串  对象转化为字符串  .toString()
+    * [].toString()-->''
+    * {}.toString()-->'[object Object]'
+    * 3、对象==数字  对象转化为字符串 .toString()  字符串转化为数字Number()
+    * 4、对象==布尔  对象转化为字符串 .toString()  字符串转化为数字Number() 布尔转化为数字 0/1
+    * 5、字符串==数字  字符串转化为数字Number()
+    * 6、字符串==布尔  字符串转化为数字Number()  布尔转化为数字 0/1
+    * 7、布尔==数字    布尔转化为数字 0/1
+    * 8、null==undefined--》 true  null===undefined--》false
+    * 9、null或者undefined和任何类型比较都返回false
+    * 10、NaN==NaN--》false  NaN===NaN --》false
+    * */
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

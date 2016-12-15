@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //因为on和off方法在不同的类和场景下经常会使用。那么就把三个方法封装到一个类上，无论哪个其他类想用，那么先继承这个类
+    function Emitter(){
+
+    }
+    Emitter.prototype.on = function(type,fn){
+        if(!this[type]){
+            this[type] = [];
+        }
+        var a = this[type];
+        for(var i = 0;i< a.length;i++){
+            if(a[i] === fn){
+                return;
+            }
+        }
+        a.push(fn);
+    };
+    Emitter.prototype.run = function(type){
+        var a = this[type];
+        if(a){
+            for(var i=0;i< a.length;i++){
+                if(typeof a[i] === "function"){
+                    a[i].call(this);
+                }else{
+                    a.splice(i,1);
+                    i--;
+                }
+            }
+        }
+    }
+    Emitter.prototype.off =function(type,fn){
+        var a = this[type];
+        if(a){
+            for(var i = 0;i< a.length;i++){
+                if(a[i] === fn){
+                    a[i] = null;
+                    //如果移除事件绑定，使用的是赋值为null这种方法，那么就要考虑到在run执行的时候要判断一线是不是函数，不是函数我就要删掉了
+                    break;
+                }
+            }
+        }
+    }
+
+    //由于这三个on，off，run方法已经封装在Emitter这个类的原型是上了，如果谁像用这个方法就直接来继承就好了，如果想继承那么只有类和类之间才能够继承
+
+    function Kettle(){};
+    Kettle.prototype = new Emitter();
+    Kettle.prototype.constructor = Kettle;
+    //var k1 = new Kettle();//通过继承之后Emitter方法之后任何一个Kettle类实例都能调用on和off和run的方法
+    Kettle.prototype.boliing = function(){}//每个水壶都有烧水的功能
+
+</script>

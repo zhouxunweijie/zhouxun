@@ -1,0 +1,33 @@
+ 1.事件
+   pc:click、dblclick、mouseover、
+
+
+   移动端
+   keudown和keyup事件在移动端兼容性不好，我们一般不用（）=>我们使用input事件来代替这两个事件：当用户再输入的过程中就会触发这个事件
+   mouse系列的在移动端兼容性不好，所以我们也不用
+
+   scroll、focus、blur、change、resize、load、unload、error、canplay、readystatechange、
+
+
+   click :移动端可以使用click，在pc端click是点击的意思（不管是按下的快慢，只要是操作就会触发click事件），在移动端click是单击事件而不是点击事件，并且浏览器的浏览器默认规定300ms以内的触发两次点击操作为双击事件，只触发一次点击事件的话属于单击事件=>移动端使用此click事件有300ms延迟
+
+
+移动短事件
+点击、单击，双击、滑动、（四个方向的滑动）、长按、拖拽、重力感应（陀螺仪）、放大缩小、旋转
+一个手指的操作、多个手指得操作、调用手机内部的重力感应的实现的
+
+单手指事件模型：touch ->touchstart、touchmove、touchend、touchcancle
+多手指事件模型：gesture -》gesturestart、gesturechange、gesttureend、gesturecancle
+
+在移动端我们使用touch事件来模拟一个点击的事件，解决点击事件300ms延迟的问题
+
+移动端常用的时间类库
+百度云TOUCH手势事件库
+Zepto(移动端的小型JQuery =》它的用法和实现完全是按照JQ实现的)
+
+Zepto PK JQery
+ ->Zepto不兼容IE低版本浏览器，他是为移动端开发而生，比JQ更适合移动端的开发
+   Zepyo比JQ小：
+   Zepto不需要处理兼容/Zepto只实现了JQ中常用的方法
+ ->Zepto中的animate方法支持CSS3的transform变形操作
+ ->Zepto中除了提供on方法用来绑定时间以外，还专门的提供了一些移动端常用的一些方法：top、singleTop、doubleTop、longTop、swipe、swipeLeft/Right/Up/Down

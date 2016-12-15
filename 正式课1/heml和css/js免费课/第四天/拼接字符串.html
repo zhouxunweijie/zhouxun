@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: peachpuff;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script type="text/javascript">
+    var oBox=document.getElementsByClassName('box')[0];
+    var str="";
+    for(var i=0;i<10;i++){
+        str+="<p class='bg"+(i%2)+"'>我是段落标签</p>";
+    }
+    oBox.innerHTML=str;
+
+
+
+    //字符串拼接就是指当字符串遇到加号的时候，可以拼接出来我们想要的新的新的字符串
+    //字符串拼接第一步，定义一个空字符串，这个空字符串里面一直进行拼接累加
+    //向这个空字符串中一步步的拼接我们先要的内容，这些内容都要放在引号里
+    //向我们想要这些字符串显示在的地方，打印出来（innerHTML是对象的内置属性，他的属性值就是整个元素，包括标签和内容）
+    //<h3>小米电视3S 48英寸</h3>
+    //<p>原装液晶屏，金属机身</p>
+    //<div id="box"></div> 就是字符串最终归属
+    //var oBox=document.getElementsByClassName('box')[2];
+    //var str=null;(错误的 加号遇到字符串，就会将整个语句都变成字符串)
+    //=赋值 ==比较 ===绝对比较  +=在原来的基础上添加 -= *= !=不等
+    //str+="null"+"<h3>小米电视3S 48英寸</h3>";
+    //str+="<p>原装液晶屏，金属机身</p>";
+    //oBox.innerHTML=str;
+    //var str="";
+    //for(var i=1;i<7;i++){
+        //在拼接字符串的时候 变量不能放在引号里面
+        //遇到变量，那么变量前面应该是一个单独的字符串 变量后面是一个单独的字符串 这些字符串再和变量进行拼接
+        //<hi>我是hi标签</hi>
+        //"<h"  i  ">我是h"  i  "标签</h"  i  ">"
+        //str+="<h"+i+">"+"我是h"+i+"标签"+"</h"+i+">";
+        //str+="<h"+i+">我是h"+i+"标签</h"+i+">";
+        //str+="<hi>我是hi标签</hi>"
+    //}
+    //oBox.innerHTML=str;
+
+
+</script>
+</body>
+</html>

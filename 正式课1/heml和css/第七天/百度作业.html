@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #555;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .clear:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        .box {
+            height: 32px;
+            line-height: 32px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        ul {
+            float: right;
+        }
+
+        li {
+            float: left;
+            margin-left: 23px;
+            font-weight: 900;
+        }
+
+        .noW {
+            position: relative;
+            font-weight: 500;
+        }
+
+        .hidden {
+            position: absolute;
+            border: 1px solid #ccc;
+            width: 68px;
+            background: #fff;
+            box-shadow: 1px 2px 10px rgb(227, 227, 227);
+            top: 32px;
+            left: -18px;
+            display: none;
+        }
+
+        .hidden a {
+            line-height: 24px;
+            color: #000;
+            padding-left: 8px;
+            text-decoration: none;
+            display: block;
+        }
+
+        span {
+            position: absolute;
+            border: 5px solid #ccc;
+            border-color: transparent transparent #ccc transparent;
+            top: -11px;
+            left: 50%;
+            margin-left: -5px;
+        }
+
+        .col {
+            border-bottom-color: #fff;
+            top: -10px;
+        }
+
+        /*.hidden:hover{display: block;}*/
+        .noW:hover .hidden {
+            display: block;
+        }
+
+        .hidden a:hover {
+            color: #fff;
+            background: #000099;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="nav clear">
+        <li><a href="javascript:;">糯米</a></li>
+        <li><a href="javascript:;">新闻</a></li>
+        <li><a href="javascript:;">hao123</a></li>
+        <li><a href="javascript:;">地图</a></li>
+        <li><a href="javascript:;">视频</a></li>
+        <li><a href="javascript:;">贴吧</a></li>
+        <li class="noW">
+            <a href="javascript:;">登录</a>
+
+            <div class="hidden">
+                <span></span>
+                <span class="col"></span>
+                <a href="javascript:;">我的VIP</a>
+                <a href="javascript:;">我的VIP</a>
+                <a href="javascript:;">我的VIP</a>
+                <a href="javascript:;">我的VIP</a>
+                <a href="javascript:;">我的VIP</a>
+            </div>
+        </li>
+        <li class="noW"><a href="javascript:;">设置</a></li>
+    </ul>
+</div>
+
+
+</body>
+</html>

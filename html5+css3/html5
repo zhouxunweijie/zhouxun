@@ -1,0 +1,76 @@
+html5 + css3 +js进行的移动端页面开发
+
+HTML5
+    《图解css》  大漠
+
+HTML5新增的语义化标签（结构标签）
+表单种类
+表单属性
+全局的属性
+
+
+语义化标签 ：用合理的标签做合理的事情
+
+section  一块区域（和div的用途一样）  塞克什
+header  页面或者区域的头部部分
+main   主体部分
+footer  页面或者区域的尾部部分
+article  完整的独立的区域（强调独立性），一般情况下表示文章的部分   爱的扣
+nav  导航（习惯性的用在主导航上）
+aside  主题内容的辅助信息，表示无关的内容，去掉与否对主题内容不会产生影响   呃赛的
+figure  配图区域    菲戈
+figcaption  图题（对图片的描述)  菲戈卡普什
+
+ie浏览器条件注释
+      it  小于
+      gt  大于
+      Ift  小于等于
+      gte  大于等于
+
+表单种类
+
+search  键盘右下角向右的箭头变为搜索两个字
+tel   手机号码 数字键盘
+url  url地址
+email  邮箱地址
+number   数字输入框
+range  数值选择器 通过滑动来改变数值并且可以设置数值的范围的
+color   颜色数值器
+datetime-local  日期和时间（本地时间）
+time  时间
+month   日期选择到月
+week    日期选择到周
+
+表单属性
+autocomplete  是否保存用户的信息   on 保存   off不保存  凹凸抗普雷特
+autofocus 光标聚焦                      凹凸否克斯
+placeholder  在输入前提示用户输入信息   普雷斯后的
+required  必须输入内容                  瑞快尔特
+form  保证表单元素可以放置在任何位置
+formnovalidate  设置在submit类型的按钮上
+novalidate  设置在form标签上             no 喔类得什
+上面两个都是不用验证就可以提交
+pattern  通过正则设置验证信息
+setCustomValidity   可以更改系统自带的提示信息
+
+data-zf = "zf"
+console,log(oP.data-zf）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

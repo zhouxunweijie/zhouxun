@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*将元素自带的margin padding值归零*/
+ul, ol {
+    list-style: none;
+}
+
+/*去掉列表默认样式*/
+body {
+    font: 12px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", Arial, sans-serif
+}
+
+/*全局都继承字体样式和大小 行高*/
+a {
+    text-decoration: none;
+}
+
+/*去掉a自带的下划线*/
+img {
+    vertical-align: top;
+}
+
+/*改变图片的垂直对齐方式*/
+i, em {
+    font-style: normal;
+}
+
+/*将斜体扶正*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+/*100-900 500是正常粗细*/
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/*全局样式重置*/
+.banner {
+    position: relative;
+    margin: 0 auto;
+    width: 1226px;
+    height: 460px;
+}
+
+.bannerList li {
+    display: none;
+}
+
+.bannerList .on {
+    display: block;
+}
+
+.subList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    width: 234px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.subList .list {
+    height: 42px;
+    line-height: 42px;
+}
+
+.subList .list > a {
+    display: block;
+    padding: 0 24px 0 30px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.subList .list > a span {
+    float: right;
+}
+
+.subList .list > a:hover {
+    background-color: #ff6700;
+}
+
+.iconList {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 100px;
+    height: 10px;
+}
+
+.iconList li {
+    float: left;
+    margin-right: 10px;
+    border: 2px solid #4c856f;
+    background-color: rgba(0, 0, 0, .6);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.iconList li:hover {
+    border-color: #3d6e5b;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+/*cursor: pointer; 鼠标光标变小手*/
+.btnL, .btnR {
+    position: absolute;
+    top: 195px;
+    width: 41px;
+    height: 69px;
+    color: #fff;
+    font-size: 50px;
+    line-height: 69px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnL {
+    left: 234px;
+}
+
+.btnR {
+    right: 0;
+}
+
+.btnL:hover {
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 0 3px 3px 0;
+}
+
+.btnR:hover {
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 3px 0 0 3px;
+}
+
+.product {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    background-color: #fff;
+    width: 265px;
+    height: 458px;
+}
+
+.productList {
+    float: left;
+    padding: 20px 10px 0 20px;
+    width: 235px;
+}
+
+.productList li {
+    margin-bottom: 37px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.productList .title img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.productList .title {
+    font-size: 12px;
+    color: #333;
+}
+
+.productList .title:hover {
+    color: #ff6700;
+}
+
+.productList .bton {
+    float: right;
+    margin-top: 8px;
+    border: 1px solid #ff6700;
+    width: 58px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #ff6700;
+}
+
+.productList .bton:hover {
+    background-color: #ff6700;
+    color: #ffffff;
+}
+
+.list:hover .product {
+    display: block;
+}
+
+.two {
+    width: 530px
+}
+
+
+
+
+
+

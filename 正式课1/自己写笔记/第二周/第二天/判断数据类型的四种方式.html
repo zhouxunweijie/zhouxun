@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /*
+    * typeof: "number"  "string" "boolean"  "object"  "undefined"   "function"
+    * 缺点：不能很好地区分引用数据类型，引用数据类型都返回“object”
+    *
+    * instanceof  判断实例是否属于一个类
+    *   缺点：只能用在引用数据类型，对于基本数据类型的判断是不准确的
+    *
+    * constructor  => f.constructor  f 的构造函数
+    * 缺点 ：construction属性是定义在类的原型上的，原型都可以被修改，那么construction必然也有可能被修改，
+    *
+    *  object。prototype。toString.call()  => "[object Object]"
+    *      第一个小写的object代表的是数据类型
+    *      第二个代表的是属于哪个类
+    */
+     Object.prototype.toString.call("");
+     //"[object String]"
+     Object.prototype.toString.call(null);
+     //"[object Null]"
+     Object.prototype.toString.call(undefined);
+     //"[object Undefined]"
+     Object.prototype.toString.call(true);
+     //"[object Boolean]"
+     Object.prototype.toString.call(/6/);
+     //"[object RegExp]"
+     Object.prototype.toString.call(document.body);
+     //"[object HTMLBodyElement]";
+
+</script>
+</body>
+</html>

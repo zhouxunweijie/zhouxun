@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            border-bottom: 1px solid #000;
+        }
+        p{
+            background: red;
+        }
+        div{
+            display: none;
+            background: green;
+        }
+        /*A:hover B{} A元素中包含B元素*/
+        li:hover p{
+            display: none;
+        }
+        li:hover div{
+            display: block;
+        }
+
+        /*div{
+            position: relative;
+            /!*z-index: 1;*!/
+            display: none;
+            background: green;
+        }
+        li:hover div{
+            display: block;
+            margin-top: -30px;
+        }*/
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <p>1111111</p>
+        <div>22222<br>222222</div>
+    </li>
+    <li>
+        <p>1111111</p>
+        <div>22222<br>222222</div>
+    </li>
+    <li>
+        <p>1111111</p>
+        <div>22222<br>222222</div>
+    </li>
+</ul>
+</body>
+</html>

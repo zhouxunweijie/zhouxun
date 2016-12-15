@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        html,body{
+            width: 100%;
+        }
+        ul{
+            width: 30%;
+            float: left;
+            _height: 300px;
+        }
+        /*css3属性第二个ul*/
+        ul:nth-child(1){
+            _background: lightblue;
+        }
+        ul:nth-child(2){
+            margin: 0 5%;
+            _background: deeppink;
+        }
+        ul:nth-child(3){
+            _background: darkslategray;
+        }
+        </style>
+</head>
+<body>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+<script>
+var uls = document.getElementsByTagName("ul");
+    var ulsAry= listToArray(uls);
+
+function listLiToUl(){
+    for(var i=0;i<50;i++){
+        ulsAry.sort(function(a,b){
+            return a.clientHeight - b.clientHeight;
+        });
+        var li = createLi();
+        ulsAry[0].appendChild(li);
+    }
+}
+listLiToUl();
+window.onscroll=function(){
+    var fel = scroll('scrollTop');
+
+    if(fel>document.body.scrollHeight - 1000){
+        listLiToUl();
+    }
+}
+function createLi(){
+    var li = document.createElement("li");
+    li.style.height=tandom(100,200)+"px";
+    li.style.background = "rgb("+tandom(0,255)+","+tandom(0,255)+","+tandom(0,255)+")";
+    return li
+}
+function tandom(n,m){
+    var n = Number(n);
+    var m = Number(m);
+    if(isNaN(n)||isNaN(m)){
+        return Math.random();
+    }
+    if(n>m){
+        var temp = n;
+        n = m;
+        m = temp;
+    }
+    return Math.round(Math.random()*(m-n)+n);
+}
+    function listToArray(likeAry){
+        try{
+            return Array.prototype.slice.call(likeAry);
+        }catch(e){
+            var ary = [];
+            for(var i=0;i<likeAry.length;i++){
+                ary.push(likeAry[i])
+            }
+            return ary;
+        }
+    }
+    function scroll(attr,avl){
+
+        if(typeof avl !='undefined'){
+            document.documentElement[attr]=avl;
+            document.body[attr]=avl
+        }
+
+       return document.documentElement[attr]||document.body[attr]
+
+    }
+</script>
+</body>
+</html>

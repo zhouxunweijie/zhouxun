@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-weight: normal
+}
+
+img, input, select {
+    border: none;
+    vertical-align: middle;
+}
+
+i, em {
+    font-style: normal
+}
+
+.clear:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+body {
+    font: 12px/1.5 "Microsoft YaHei"
+}
+
+.head {
+    height: 80px;
+    background-color: #57c7f9;
+    text-align: center;
+}
+
+.headleft {
+    height: 33px;
+    padding: 0 33px;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e5;
+    border-color: transparent transparent #e5e5e5 transparent;
+}
+
+.headleft1 > li {
+    line-height: 33px;
+    float: left;
+    margin-right: 20px
+}
+
+.headleft a:hover {
+    color: red
+}
+
+.headright {
+    float: right;
+}
+
+.headright li {
+    float: left;
+}
+
+.headright a:hover {
+    color: red
+}
+
+.headright a {
+    line-height: 33px;
+    margin-left: 20px;
+}
+
+.headright1 {
+    margin-right: -9px;
+    margin-left: 13px;
+}
+
+.headright i {
+    border: 3px solid #999;
+    border-color: #999 transparent transparent transparent;
+    display: inline-block;
+
+    transform-origin: 50% 20%;
+}
+
+.headright li:hover .headright i {
+    transition: transform 1s;
+    transform: rotate(180deg);
+}
+
+.headright b {
+    width: 12px;
+    height: 12px;
+    background: url("tianmao.png") no-repeat;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.headright li .zx1 {
+    background-position: -12px 0
+}
+
+.headright li .zx2 {
+    background-position: -24px 0
+}
+
+. li .zx4 {
+    background-position: -48px 0
+}
+
+.za1 {
+    z-index: 1;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.za1:hover .headleft2 {
+    display: block
+}
+
+.za2:hover .headleft2 {
+    display: block
+}
+
+.za3:hover .headleft2 {
+    display: block
+}
+
+.za1:hover, .za2:hover, .za3:hover, .za4:hover {
+    background-color: white
+}
+
+.headright li:hover a {
+    color: red
+}
+
+.headright2 span:hover {
+    color: red
+}
+
+.headleft2 {
+    position: absolute;
+    display: none;
+    width: 74px;
+    padding: 12px;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-color: transparent #e5e5e5 #e5e5e5 #e5e5e5;
+}
+
+ul .headleft2 span {
+    display: inline-block;
+    line-height: 20px;
+
+}
+
+.headleft2 span:hover {
+    color: red
+}
+
+.dea {
+
+    left: 0;
+    width: 488px;
+    height: 275px;
+    position: relative;
+    text-align: center;
+}
+
+.aq {
+    left: 0;
+    position: absolute;
+    width: 488px;
+    height: 275px;
+
+}
+
+.xd img {
+    width: 70px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    top: 103px;
+    left: 214px;
+}
+
+.sd {
+    position: absolute;
+    width: 49px;
+    height: 20px;
+    right: 16px;
+    top: 15px;
+    border-radius: 30%;
+    background-color: #293f49;
+    /*text-align: center;*/
+    color: #ffffff;
+}
+
+.sd i {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 2px;
+
+}
+
+.hea {
+    position: absolute;
+    width: 732px;
+    height: 437px;
+    float: right;
+
+}
+
+.as {
+    float: left;
+    position: relative;
+    border: 1px solid #999;
+    margin: 1px;
+
+}
+
+.as img {
+    width: 122px;
+    height: 107px;
+}
+
+.zxc {
+    width: 122px;
+    height: 107px;
+    background-color: rgba(0, 0, 0, .7);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.as .zxc p {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 11px;
+}
+
+.zxc2 {
+    width: 63px;
+    height: 18px;
+    display: block;
+    font-size: 11px;
+    background-color: red;
+    border-radius: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.as:hover .zxc {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.qw {
+
+    width: 63px;
+    height: 18px;
+    border-radius: 30px;
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    border: 1px solid black;
+}
+
+.qwe {
+
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline;
+}
+
+.dea p {
+    position: absolute;
+    font-size: 23px;
+    color: white;
+    bottom: 47px;
+    left: 124px;
+
+}
+
+/*.head1{background-color: #57c7f9; height: 80px;text-align: center}*/
+/*.head2{color: #999;background-color: #f2f2f2;border-bottom:1px solid #e5e5e5; line-height: 33px;height: 33px;padding:0 33px;position: relative;}*/
+/*.headleft{float: left}*/
+/*.headright{float: right}*/
+/*.headright li:hover a{color: red}*/
+/*.headleft a:hover{color: red}*/
+/*.headleft>li{display: inline-block}*/
+/*.headright>li{display: inline-block}*/
+/*.headleft1{margin-left: 20px}*/
+/*.headright>li{margin-left:20px}*/
+/*.head2 a{color: #999}*/
+/*.sanjiao{border:3px solid #999;border-color: #999 transparent transparent transparent;display:inline-block}*/
+/*.headright b{width: 12px;height:12px;background: url("tianmao.png");display: inline-block;vertical-align: middle;}*/
+/*.zc1{position:absolute;width: 84px;height: 57px;border: 1px solid #999;border-color: transparent #999 #999 #999;display: none;margin-top: -1px}*/
+/*!*.zx:hover{background-color: white;}*!*/
+/*!*.zx:hover .zc1{display: block}*!*/
+/*!*.zx:hover> .zx1{display: block}*!*/
+/*.zx1:hover{background-color: white;border-left: 1px solid #999}*/
+/*.zx1:hover .zc1{display: block}*/
+/*.zc2{padding-top: 15px}*/

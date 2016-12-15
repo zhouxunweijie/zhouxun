@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container" ng-controller="panelCtrl">
+<!--保留指令之间夹着的内容-->
+<panel t="title" f="{{tail}}">bfhgj uoewjfwagfiuwhfkw gi</panel>
+
+
+
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('panelCtrl',function($scope){
+        $scope.title = 'hehe';//这个参数用= 号取
+        $scope.tail = 'haha';//这个用@ 取
+        $scope.say = function(){
+            alert('1');
+        }
+    })
+    app.directive('panel',function(){
+        return{
+            restrict:'E',//不能够写C，因为class的名字也有叫panel的
+            templateUrl:'tmpl/panel.html',//ajax将文件读取过来插入到模板当中
+            transclude:true,//想让内容放在什么位置上，就要在放值的标签上添加上ng-transclude属性，带有这个属性的标签会产生一个作用域
+//            link:function(acope,element,attrs){
+//                acope.tit = attrs.title;
+//            },
+            //让指令用于自己的家
+            scope:{
+                title:'=t',//$scope.tit = attrs.title  取得是指令上属性对应的字符串，如果在当前作用域下声明的名字和属性名相同的@符引用不用加名字
+                tail:'@f'
+            },//{ }和 true是有区别的
+        }
+    })
+</script>
+</body>
+</html>

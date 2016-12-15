@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding:0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .banner{
+            width: 600px;
+            height: 400px;
+            position: relative;
+            margin: 20px auto;
+        }
+        .bannerInner{
+            width: 100%;
+            height: 100%;
+        }
+        .bannerInner div{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+        }
+        .bannerInner div img{
+            width: 100%;
+            height: 100%;
+            border:none;
+            vertical-align: top;
+        }
+        .list{
+            position: absolute;
+            bottom:10px;
+            left: 50%;
+            margin-left:-50px ;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .list li{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border:2px solid red;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;margin-left: 5px;
+        }
+        .list li.selected{
+            background-color: #00aced;
+        }
+        a{
+            width: 28px;
+            height: 45px;
+            display: block;
+            position: absolute;
+            top:50%;
+            margin-top: -22.5px;
+            background: url("img/pre.png")no-repeat;
+        }
+        .left{
+            left: 0;
+            background-position: 0 0;
+        }
+        .right{
+            right: 0;
+            background-position: -50px 0;
+        }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+
+<slider data="arr"></slider>
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('myCtrl',function($scope,$rootScope){
+        $rootScope.arr = ['img/1.jpg','img/2.jpg','img/3.jpg'];
+
+    });
+
+
+    app.directive('slider',function(){
+        return{
+            restrict:'E',
+            replace:true,
+            scope:{
+                arr:'=data'
+            },
+            template:`<div class="banner">
+                            <div class="bannerInner">
+                                <div ng-repeat="a in arr track by $index"><img src="{{a}}" alt=""></div>
+                            </div>
+                            <ul class="list">
+                                <li  ng-repeat="b in arr track by $index" ng-bind="{{$index+1}}"></li>
+                            </ul>
+                            <a href="javascript:; void 0" class="left" ng-click="left()"></a>
+                            <a href="javascript:; void 0" class="right"></a>
+                        </div>`,
+            link:function($scope,element,attrs){
+                var $left = element.children('.left')[2],
+                    $right = element.children('.right')[3],
+                    $list1 = element.children('.bannerInner')[0],
+                    $list = element.find('div').children('div');
+                    step = 0,
+                    timer = null;
+                console.log($list);
+
+//                $list.each(function(index,item){
+//                    console.log(arguments);
+//                })
+
+
+            }
+
+        }
+    })
+</script>
+</body>
+</html>

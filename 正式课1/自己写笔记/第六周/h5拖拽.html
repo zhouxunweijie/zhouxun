@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    div{
+    margin: 0;
+    padding:0;
+    width: 100px;
+    height: 100px;
+    border-radius:50px ;
+    background-color: red;
+    position: absolute;
+    top:0;
+    left:0;
+    }
+        .div2{
+            left:100px;
+        }  .div3{
+            left:200px;
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+</body>
+</html>
+<script src="event-4.0.js"></script>
+<script>
+    var div1 = document.getElementsByClassName("div1")[0];
+    var div2 = document.getElementsByClassName("div2")[0];
+    var div3 = document.getElementsByClassName("div3")[0];
+    on(div1,"mousedown",down);
+    on(div2,"mousedown",down);
+    on(div3,"mousedown",down);
+    function down(e){
+        window.clearInterval(this.timerDrop);
+        window.clearInterval(this.timerFly);
+        this.l = e.pageX - this.offsetLeft;
+        this.t = e.pageY - this.offsetTop;
+        if(this.setCapture){
+            this.setCapture();
+            on(this,"mousumove",move);
+            on(this,"mouseup",up);
+        }else{
+            var that = this;
+            this.MOVE = function(e){
+                move.call(that,e);
+            }
+            this.UP = function(e){
+                up.call(that,e);
+            }
+            on(document,"mousemove",this.MOVE);
+            on(document,"mouseup",this.UP);
+        }
+    }
+    function move(e){
+        var l = e.pageX -this.l;
+        var t = e.pageY - this.t;
+        var minL = 0, minT = 0;
+        var maxL = (document.documentElement.clientWidth || document.body.clientWidth) - this.offsetWidth;
+        var maxT = (document.documentElement.clientHeight || document.body.clientHeight) - this.offsetHeight;
+        l = l < minL? minL: l > maxL?maxL:l;
+        t = t < minT? minT: t > maxT?maxT:t;
+        this.style.left = l + "px";
+        this.style.top = t + "px";
+        e.preventDefault();
+        if(!this.isload){
+            this.isload = this.offsetLeft;
+        }else{
+            this.seedFly = this.offsetLeft - this.isload;
+            this.isload = this.offsetLeft;
+        }
+    }
+    function up(e){
+        if(this.releaseCapture){
+            this.releaseCapture();
+            off(this,"mousemove",move);
+            off(this,"mouseup",up)
+        }else{
+            off(document,"mousemove",this.MOVE);
+            off(document,"mouseup",this.UP);
+        }
+        fly.call(this);
+        drop.call(this)
+    }
+    function fly(e){
+        var that = this;
+        this.timerFly = window.setInterval(function(){
+            that.seedFly *=0.98;
+            if(Math.abs(that.seedFly)< 0.5){
+                window.clearInterval(that.timerFly);
+                return;
+            }
+            var leftFly = that.offsetLeft;
+          console.log(that.seedFly);
+            leftFly += that.seedFly;
+            var minL = 0;
+            var maxL = (document.documentElement.offsetWidth || document.body.offsetWidth) - that.offsetWidth;
+            if(leftFly > maxL){
+                that.seedFly*=-1;
+                that.style.left = maxL + "px"
+            }
+            if(leftFly < minL){
+                that.seedFly*=-1;
+                that.style.left = minL + "px";
+            }else{
+                that.style.left = leftFly + "px";
+            }
+        },10)
+    }
+    function drop(e){
+        var that = this;
+        this.timerDrop = window.setInterval(function(){
+            if(that.isload ==2){
+                window.clearInterval(that.timerDrop);
+                return;
+            }
+            var curTop = that.offsetTop;
+            that.seedY = !that.seedY ? 9.8 : that.seedY + 9.8;
+            that.seedY *=0.98;
+            var maxT = (document.documentElement.clientHeight || document.body.clientHeight) - that.offsetHeight;
+            curTop += that.seedY;
+            if(curTop> maxT){
+                that.style.top = maxT + "px";
+                that.seedY *= -1;
+                that.isload ++;
+            }else{
+                that.style.top = curTop + "px";
+                that.isload = 0;
+            }
+        },10)
+
+    }
+</script>

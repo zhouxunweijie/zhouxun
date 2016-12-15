@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //1 document,getElementById("id")  通过ID获取元素，返回值是一个dom对象。在整个document内饰唯一的，所以 只有document才能使用这个方法；
+
+//    2  context.getElementByTagName(),context这个是上下文，把context可以理解是一个范围。获取回来是一组元素，即使只有一个也需要通过索引0来获取；
+//    3 context.getElementsByClassName()通过类名获取元素，同样也是把context理解为在那个范围内获取。获取回来是一组元素，这个方法在低版本ie不兼容；
+//    4 document.getElementsByName()  一般应用于表单元素，name这个属性如果给div等非表单元素虽然不起作用，但是在标准
+
+  //  元素的创建，增加，修改，删除等；
+//    创建
+//    var p =document.createElement("p");把p添加到bo
+
+
+//   0 document.body.removeChild(img);  删除元素，同样需要父亲节点来调用
+
+    //替换元素  replaceChild
+    var video=document.createElement("video");//视频  h5
+    var audio=document.createElement("audio");  //音频  H5
+
+    document.body.replaceChild(video,img);//是使用video把img替换掉，注意下参数的位置。同样也是有父元素来调用
+
+    //cloneNode()  克隆元素
+    video.cloneNode(true);//参数是一个布尔值。默认是false,如果是true那么是带着子孙后代元素一起克隆
+
+//    节点：元素 文本 换行 注释 等 都可以叫做节点=》节点不一定是元素
+
+    //描述节点关系的属性
+
+   // parentNode  包含着元素的父元素
+    //body.parentNode=>html
+//    html.parentNode=>document
+//    document.parentNode=>null
+
+//    childNodes  所有的子节点（这里面有 元素 注释 文本 换行 等）
+//    children  所有的元素子节点（全是元素）  不兼容
+//    childNodes和children都是一个集合，也就是一个有length和索引的类数组
+    /**
+     *
+     * @param ele  获取的就是ele的元素子节点。这个在执行的时候赋值为那个元素就是获取哪个元素的所有元素子节点
+     *
+     *             元素               文本              注释
+     * nodeType      1                  3                 8
+     *
+     *
+     * nodeName   大写的标签名        #text          #comment
+     *
+     *
+     * nodeValue    null            文本内容           注释内容
+     */
+
+
+
+
+    //setAttribute(‘属性名’，‘属性值’)
+
+    //
+//sort   升序 ： sort(function(a,b){return a-b})
+//    a和b就是代表比较时候的那两项
+//
+</script>
+</body>
+</html>

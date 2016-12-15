@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .box{
+            width: 400px;
+            height:100px;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            -webkit-user-select: none;
+            cursor: pointer;
+            margin: 0 auto;
+            background-color: #3b87c4;
+        }
+    </style>
+</head>
+<body>
+<div class="box">j89k
+</div>
+<script>
+    var box=document.getElementsByClassName("box")[0];
+    //innnerHTML  box里面所有的HTML代码
+    var strRange="123456789zaqxswcdevfrbgtnhyjukilopZAQXSWCDEVFRBGTNHYMJUKKILOP";
+    //这个字符串就是验证码的取值范围。
+    Math.round(Math.random()*61);//获取0-61之间的随机整数，如果把0-61之间的随机数作为索引值，那么通过这个索引值拿出来的字符也是随机字符，，然后把4个随机字符累加在一起就是一个4位的随机字符串，然后再赋值给box.innerTHML
+    for(var i=0;i<4;i++){
+        var ran=Math.round(Math.random()*61);
+        var ranChar= strRange.charAt(ran);
+        if(codeHtml.toLowerCase().indexOf(ranChar.toLocaleLowerCase())===1)
+    }
+
+
+
+    /*
+    * 绑定事件的本质：
+    * 1.box.onclick=function(){} 就是把一个函数赋值（是赋值）给box的onclick属性；
+    * 2.我们知道函数是一个引用数据类型的，引用数据类型其实就是一个地址。我们也知道函数名字存放的就是那个函数的引用地址。
+    * 3，box.onclick=fn ;如果fn能代表一个函数，那么这就是把函数赋值给box的onclick属性，那么就是绑定事件
+    *
+    * */
+
+</script>
+</body>
+</html>

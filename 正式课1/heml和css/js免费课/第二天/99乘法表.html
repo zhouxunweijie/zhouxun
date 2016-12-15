@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            line-height: 40px;
+        }
+        span{
+            padding: 0 20px;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <!--<li>
+        <span>1*1=1</span>
+    </li>
+    <li>
+        <span>1*2=2</span><span>2*2=4</span>
+    </li>-->
+</ul>
+
+<script>
+    //首先需要一个空间存储我们即将要拼接的所有内容
+    //循环所有的行 --  同时进行li（行）的字符串拼接
+    //循环所有的列 --  同时进行span（列）的字符串拼接
+    //在每一个span里面进行列*行的计算
+    //将存到这个空间里面的所有代码打印到list里面
+
+    var str="";
+    for(var i=1;i<=9;i++){
+        str+="<li class='bg"+(i%2)+"'>";
+            for(var j=1;j<=i;j++){
+                /*str+="<span>";
+                str+=j+ "*" +i+ "=" +(j*i);
+                str+="</span>";*/
+                str+="<span>" +j+ "*" +i+ "=" +(j*i)+ "</span>";
+            }
+        str+="</li>";
+    }
+    list.innerHTML=str;
+    var oLis=document.getElementsByTagName('li');
+
+
+
+
+
+
+    //9行9列  9个li
+    //现有行再有列 第一行有一列 第二行有两列...
+    /*var str="";
+    str+="<li>1</li>";
+    str+="<li>2</li>";
+    list.innerHTML=str;*/
+    /*var str="";
+    for(var i=0;i<9;i++){
+        //每次循环的时候都创造一对li 用字符串拼接的方式
+        //var str="";//每次循环都会执行这行代码,所以不能放在这个里面
+        //str+="<li>"+i+"</li>";
+        str+="<li>";
+        for(var j=0;j<=i;j++){
+            str+="<span>";
+                str+=(j+1)+"*"+(i+1)+"="+(i+1)*(j+1);
+            str+="</span>"
+        }
+        str+="</li>";
+    }
+    list.innerHTML=str;*/
+</script>
+
+
+
+
+
+
+</body>
+</html>

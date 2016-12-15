@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {
+            list-style: none;
+            background: #ccc;
+        }
+
+        li {
+            padding-left: 20px;
+            line-height: 35px;
+            color: #fff;
+        }
+
+        .bg1 {
+            background: pink;
+        }
+
+        .bg2 {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+    <li>item 7</li>
+    <li>item 8</li>
+    <li>item 9</li>
+    <li>item 10</li>
+</ul>
+<script>
+    var oLis = document.getElementsByTagName('li');
+    for (var i = 0, len = oLis.length; i < len; i++) {
+        switch (i%2){
+            case 0:
+                oLis[i].className="bg1";
+                break;
+            default :
+                oLis[i].className="bg2";
+        }
+    }
+
+
+    //隔行变色就是奇数行一个颜色，偶数行一个颜色
+    //当前行数/2 可以整除的是偶数 余数为0 不可以整除的是奇数
+    //var oLis = document.getElementsByTagName('li');
+    /*for(var i=0;i<10;i++){
+     if(i%2===0){
+     oLis[i].className="bg1";
+     }else{
+     oLis[i].className="bg2";
+     }
+     }*/
+    /*for(var i=0;i<10;i++){
+     oLis[i].className="bg"+(i%2+1)+"";
+     }*/
+
+    /*for(var i=0;i<oLis.length;i++){
+     oLis[i].className="bg"+(i%2+1)+"";
+     }*/
+    //每一次循环的时候，都会重新获取这个集合的长度
+    //为了避免重复获取集合长度，我们可以获取一次将这个长度存起来
+    /*var oLisL=oLis.length;
+     for(var i=0;i<oLisL;i++){
+     oLis[i].className="bg"+(i%2+1)+"";
+     }*/
+    /*for (var i = 0, oLisL = oLis.length; i < oLisL; i++) {
+     oLis[i].className = "bg" + (i % 2 + 1) + "";
+     }*/
+
+
+</script>
+</body>
+</html>

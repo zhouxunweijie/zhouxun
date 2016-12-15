@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body,div{
+            margin:0;
+            padding: 0;
+        }
+        #div{
+            width: 200px;
+            height:200px;
+            background-color: #3f6bff;
+            position: absolute;
+            top:0;
+            left:200px;
+            opacity:0.8;/*可以写，但是在IE 6-8 中 不会生效  ，还能获取*/
+            haha:'xixi'/*只要是写就会存下来，，但是不会生效*/
+
+        }
+        #div:before{
+            content: "我是before";
+            background-color: yellow;
+            display: block;
+        }
+        #div:after{
+            content: "我是after";
+            display: block;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    var div1 = document.getElementById("div");
+   // div1.style.width=300+"px";
+    console.log(div1.style.width);//只能获取写在行内的样式
+
+
+    /*
+    * 通过JS来获取已经经过计算后的样式：
+    *   1  window。getComputedStyle(div1);=>div1经过计算后的样式。返回值是一个对象。
+    *     window。getComputedStyle(div1,''before) = > 获取div1 的伪类样式  =》before是一个字符串
+    *
+    *    2  IE 6-8
+    *    div1。currentStyle =>返回也是包含着N组样式属性的对象
+    *
+    * */
+    var res = window.getComputedStyle(div1);
+    console.log(res);//包含所有的默认样式
+
+
+//    获取伪类样式
+    var res1 = window.getComputedStyle(div1,"before");
+
+
+    /**
+     * getCss是用来获取元素经过计算过后的样式
+     * @param ele  就是要获取样式的元素    body div
+     * @param attr  就是要获取ele的attr样式  ps :width height opacity
+     */
+    function  getCss(ele,attr){//用来获取元素的样式 getComoputedStyle/currentStyle
+        if(window.getComputedStyle){  //要么是一个函数，要么是一个undefined
+            return window.getComputedStyle(ele,null)/*对象*/[attr]/*属性值*/;
+            return ;
+        }
+        return ele.currentStyle[attr];
+        //在标准浏览器ele是getComputedStyle的参数，ie6-8中
+        var reg = /-?\d+(\.\d+)?(px|pt|em|rem|deg)?/;
+        if()
+
+    }
+</script>
+</body>
+</html>

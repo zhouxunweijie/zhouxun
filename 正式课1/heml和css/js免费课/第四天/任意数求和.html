@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*var sum=function(){
+
+    }*/
+    function sum(){
+        //console.log(arguments);
+        var total=null;//var total=0;
+        //total+=1;
+        for(var i=0;i<arguments.length;i++){
+            //console.log(arguments[i]);
+            if(!isNaN(arguments[i])){
+                total+=Number(arguments[i]);
+            }
+        }
+        return total;//返回的是这个变量代表的值，而不是变量本身
+        //console.log(total);
+    }
+    sum(1,2,3,4,5,6,"7","abc");
+    console.log(sum(1,2,3,4,5,6,"7","abc"));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="myCtrl">
+<ul>
+    <!--ng-repeat时，如果只写value in arrs =>(key,value) in arrs-->
+    <li ng-repeat="a in arrs track by $index">{{a.name}}
+        <ul>
+            <li ng-repeat="k in a.type track by $index" >{{k}}
+            </li>
+        </ul>
+    </li>
+</ul>
+<script src="../node_modules/angular/angular.js">
+</script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('myCtrl',['$scope',function($s){
+        $s.arrs = [{name:'橡胶',type:['黄色','绿色']},
+                {name:'苹果',type:['金色','红色','绿色']},
+                {name:'橘子',type:['绿色']}];
+    }])
+</script>
+</body>
+</html>

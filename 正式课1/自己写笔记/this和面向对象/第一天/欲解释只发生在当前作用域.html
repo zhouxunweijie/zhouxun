@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*
+* 作用域：只要有代码执行我们就要给代码提供运行环境，也就是作用域。
+* window： 只要页面刷新就会提供一个全局作用域window，在欲解释阶段只会把window作用域内带var和functio的域解释，只要是           函数包起来的变量或者函数在全局阶段的欲解释是不会理会的。
+* 全局变量和私有变量：定义在全局作用域内的变量叫做全局变量。定义在函数里面的变量叫做私有变量
+*
+* ps 全局变量看任何位置都可以访问到，从而不安全的，私有变量除了函数体内部外界是不能访问的，那么相对比较安全的
+* ps：形参相当于函数体内定义的私有变量
+*
+*
+*全局作用域内的全局变量否可以理解为是window的一个属性
+*
+*ps ：这是一个赋值过程，在复制过程中如果有私有变量那么直接给自己的私有变量，如果没有
+*
+*
+*
+*
+* 区别: 1 在定义之前打印带var 会欲解释，否则不带var 的直接报错了；
+*       2. function（）{total=100}即使任何位置也没有定义过total那么默认
+*
+* */
+
+console.log(total);
+    function sum(n1,n2){
+        console.log(total);
+        total=n1+n2;
+        console.log(total);
+    }
+ var total=0;
+    sum(10,20);
+    console.log(total)
+
+</script>
+</body>
+</html>

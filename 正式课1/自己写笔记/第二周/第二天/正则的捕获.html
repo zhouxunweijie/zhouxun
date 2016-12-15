@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=/\d+/g; //g:全局全文在捕获的时候考比较多，如果这个g那么多次都会从字符串的开头（索引0）的位置开始捕获，那么如果存在
+    //    exec方法的返回值：
+    //      1 返回一个数组['2015'
+    // 2 index:7 捕获开始位置的索引
+    // 3 input : 原有被捕获字符串
+    // 4 如果exec没有捕获到字符串那么返回null
+    //     ps 正则存在一个listIndexs属性，这个属性记录的 就是下一次，不好的
+    var str = 'zhufeng2015peixun2016';
+
+    var res=reg.exec(str); //res就是每次捕获的变量，只要这个结果存在下次我还去捕获
+    var ary=[];//我要把捕获回来的结果放在ary中，我只需要捕获这个数组的第一项
+    while(res){ //只要res能捕获到结果，只要不是null那么就把第一项放到数组中去
+        ary.push(res[0]);
+        res = reg.exec(str);//捕获结束之后还要继续捕获，然后不断地 更新res这个变量，知道
+    }
+    console.log(ary);
+</script>
+</body>
+</html>

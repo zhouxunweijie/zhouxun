@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            margin: 0 auto;
+            width: 300px;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            background: greenyellow;
+            text-align: center;
+            cursor: pointer;
+        }
+        li.cur{
+            background: yellowgreen;
+        }
+        div{
+            display: none;
+            margin: 0 auto;
+            width: 300px;
+            height: 200px;
+            background: yellowgreen;
+        }
+        div.cur{
+            display: block;
+        }
+        .clear:after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<ul class="clear">
+    <li class="cur">第一项</li>
+    <li>第二项</li>
+    <li>第三项</li>
+</ul>
+<div class="cur">
+    box1
+</div>
+<div>
+    box2
+</div>
+<div>
+    box3
+</div>
+<script>
+    var oLis=document.getElementsByTagName('li');
+    var oDiv=document.getElementsByTagName('div');
+    var len=oLis.length;
+    //封装一个方法：去掉所有元素的类名，再给选中的元素添加上类名
+    //给每一个li绑定点击事件，点击的时候调用这个封装好的方法
+
+    function fn(n){
+        for(var i=0;i<len;i++){
+            oLis[i].className="";
+            oDiv[i].className="";
+        }
+        oLis[n].className="cur";
+        oDiv[n].className="cur";
+    }
+    //fn(n);
+    for(var i=0;i<len;i++){
+       /* oLis[i].index=i;*/
+        //oLis[0].index=0;
+        //oLis[1].index=1;
+        oLis[i].onclick=function(){
+            console.log(i);
+            fn(this.index);
+        }
+    }
+
+    //console.log(oDiv,oLis);
+    /*for(var i=0;i<len;i++){
+        oLis[i].index=i;
+        oLis[i].onclick=function(){
+            for(var k=0;k<len;k++){
+                oLis[k].className="";
+                oDiv[k].className="";
+            }
+            this.className="cur";
+            oDiv[this.index].className="cur";
+            //i=3
+        }
+    }*/
+</script>
+</body>
+</html>

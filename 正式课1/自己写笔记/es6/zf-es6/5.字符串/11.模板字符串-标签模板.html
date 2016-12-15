@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    let x = 'x';
+    let y = 'y';
+    let str = tagTemplet`12${x}3${y}`;
+
+    function tagTemplet (strArr, ...other) {
+        console.log(strArr, other);
+        let resStr = strArr[0] * 2 + strArr[2] * 2;
+        return '999';
+    }
+
+    console.log(str);
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 先使用Ajax获取数据
+    * var一个变量用来储存获取的数据值
+    * 用这个变量去获数据，用什么样的方式，哪个文件，用什么方法
+    * 给这个变量绑定一个状态改变就会触发的函数
+    * 判断这个这个数据是否已经获取到
+    * 如果获取到就将它赋值给window的一个变量
+    * XMLHttpRequsest()
+    *
+    *
+    * */
+    var taTa=null;
+    (function getData(){
+        var xml=new XMLHttpRequest();
+        xml.open("get","date.txt",false);
+        xml.onreadystatechenge=function(){
+            if(xml.readyState == 4 && xml.status == 200){
+                window.taTa=utils.jsonParse(xml.responseText)
+            }
+        };
+        xml.send(null);
+    })();
+console.log(taTa)
+</script>
+</body>
+</html>

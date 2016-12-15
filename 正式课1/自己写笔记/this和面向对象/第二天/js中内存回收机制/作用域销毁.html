@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ var obj={name:"zhouXun",age:18};
+    console.log(obj);
+    obj=10;
+    console.log(obj);
+    obj=null;
+ console.log(obj);
+/*
+* 堆内存释放：只要这个堆内存没有变量或者对象的属性占用那么这个堆内存就可以释放了，释放的动作就是浏览器的默认行为；
+*  一般我们想要主动释放某个堆内存我们一般赋值为null就可以
+*
+* 栈内存的释放：作用域的释放
+*          函数在执行的时候，如果函数中的某一部分（引用数据类型），被函数外变得变量或者对象的属性所占用。那么这个函数运行时产生的拿个作用域就不能被释放，所以在这个作用域内的私有变量也不用释放了。（不释放就相当于把这个私有变量保存下来了）
+*
+* 事件中作用域不被释放的条件另外的一种写法，div1虽然在这个自运行函数的内部，但是div代表的是页面中的DON对象，所以他是外部的对象。
+*
+*
+* （function(){
+* var n=100;
+* div1.onclick=function(){
+*
+* }
+* }）
+*
+* */
+function sum(){
+    var num=10;
+    return function(){
+        console.log(2+ ++)
+    }
+}
+
+</script>
+</body>
+</html>

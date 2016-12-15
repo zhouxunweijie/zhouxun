@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        *{margin:0;padding:0;}
+        /*div{position:absolute;border:3px solid black;width:200px;height:200px;background-color:red;}*/
+        /*.box1{z-index: 2;}*/
+        /*.box2{background-color: yellow;*/
+            /*top: 20px;left:20px;z-index: 1;}/!*ai bo se lu te*!/*/
+        /*.box1{position: absolute;}
+        .box2{position:absolute;right:0;width: 100px;height: 100px;background-color: yellow;}*/
+        .box3{background-color: blue;top:50px;}
+    </style>
+</head>
+<body>
+<!--div.className+tab-->
+<!--<div class="box1">一一一一一</div>
+<div class="box2">二</div>
+<div class="box3">三</div>
+<p style="height: 1000px;"></p>-->
+
+<!--<div class="box1">
+    &lt;!&ndash;<div class="box2"></div>&ndash;&gt;
+    <span class="box2"></span>
+</div>-->
+<style>
+    .box{position: absolute;
+        border: 2px solid red;
+        width: 600px;height: 600px;
+    }
+    .box1{position: relative;left: 0;width: 400px;height: 400px;background-color: yellow;}
+    .box2{width: 200px;height: 200px;background-color: black;position: absolute;left:100px;}
+</style>
+<div class="box">
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+</div>
+
+<!--
+1、脱离文档流
+2、定位的元素将文档流内的元素覆盖
+3、决对定位元素默认的参照物是它第一次读取的可视窗口的位置，如果这个页面加宽，加高，也不会改变定位元素的位置
+4、决对定位的参照物是可以人为设置的，{1）参照物需要是定位元素的父级元素；2）这个父级元素需要有position这个属性（相对行为、绝对定位、固定定位）}
+5、当有多个父级元素，都有定位属性的时候，决对定位元素找的参照物是最近的那个父级元素
+-->
+<!--
+脱离文档流的元素只影响下面的元素，不影响上面的元素
+-->
+</body>
+</html>

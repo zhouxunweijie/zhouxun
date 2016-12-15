@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        /*html,body{*/
+            /*background-color: black;*/
+        /*}*/
+        /*#div1{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*border-radius: 50%;*/
+            /*margin: 100px auto;*/
+            /*overflow: hidden;*/
+            /*background: url("images/img1.png")no-repeat center;*/
+            /*background-size: 100% 100%;*/
+           /*box-shadow: 0 0 0 50px rgba(0,0,0,1);*/
+
+            /*transition: box-shadow 1s ease;*/
+        /*}*/
+        /*#div1:hover{*/
+            /*box-shadow: 0 0 0 0 rgba(255,255,255,0.5);*/
+        /*}*/
+        /*.item{*/
+            /*width: 100px ;*/
+            /*height:100px;*/
+            /*margin: 200px auto;*/
+            /*background-color: red;*/
+        /*}*/
+        /*.list{*/
+            /*width: 300px;*/
+            /*height:300px;*/
+            /*margin: 100px auto;*/
+            /*overflow: hidden;*/
+        /*}*/
+        /*.list:hover img{*/
+            /*transition: transform 1s ;*/
+            /*transform: scale(15,15) ;*/
+        /*}*/
+        /*img{*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+        /*}*/
+        /*.div2{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*background: -webkit-radial-gradient(circle,red,deepskyblue);*/
+            /*background: radial-gradient(circle,red,deepskyblue);*/
+            /*border-radius: 50%;*/
+            /*-webkit-animation: move 1s 1 reverse;*/
+            /*animation: move 1s 1 reverse;*/
+        /*}*/
+        @keyframes move {
+            25%{
+                -webkit-transform: rotate(-35deg);
+                transform: rotate(-35deg);
+            }
+            75%{
+                -webkit-transform: rotate(35deg);
+                transform: rotate(35deg);
+            }
+        }
+        .list{
+            width: 60px;
+            height:60px;
+            margin: 50px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #008CD7;
+        }
+        .list b{
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url("images/yl.png")no-repeat;
+            background-position: -91px  -4px;
+
+        }
+        .list b:hover{
+            animation: move 0.5S infinite linear reverse;
+        }
+
+    </style>
+</head>
+<body>
+<div class="list"><b></b></div>
+<!--<div class="div2"></div>-->
+<!--<div class="list">-->
+    <!--<img src="images/5.jpg" alt=""/>-->
+<!--</div>-->
+<!--<div id="div1"></div>-->
+<!--<div class="item"></div>-->
+</body>
+</html>

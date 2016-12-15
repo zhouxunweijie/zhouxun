@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list{
+            width: 200px;
+            height: 50px;
+            font-size: 40px;
+            line-height: 50px;
+            border: 3px solid red;
+            margin: 20px auto 0;
+            text-align: center;
+            -webkit-user-select: none;
+            ;
+        }
+    </style>
+</head>
+<body>
+<div id="list">0z5H</div>
+<script>
+    var list=document.getElementById("list");
+    var lis="1234567890zaqxswcdevfrbgtnhymjukilopZAQXSWCDEVFRBGTHYMJUKILOP";
+    function sun(){
+        var bom="";
+        for(var i=0;i<4;i++){
+            var olist=Math.round(Math.random()*61);
+            var oli=lis.charAt(olist);
+            if(bom.toLowerCase().indexOf(oli.toLowerCase())===-1){
+                bom+=oli;
+                console.log(bom)
+            }else{
+                i--;
+            }
+        }
+        list.innerHTML=bom
+    }
+sun();
+    list.onclick=sun;
+
+</script>
+</body>
+</html>

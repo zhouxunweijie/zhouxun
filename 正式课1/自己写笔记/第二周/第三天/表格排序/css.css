@@ -1,0 +1,57 @@
+html,body,div,thead,tbody,tr,th,td{
+    margin: 0;
+    padding: 0;
+}
+.table{
+    width:500px;
+    padding: 20px;
+    /*box-sizing: border-box;  这个属性可以直接添加到内部*/
+    border:3px solid rgba(0,0,0,0.8);
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px #000;
+    margin: 30px auto;
+    font-family:"microsoft yahei";
+
+}
+.table thead{
+    background-color: #57c7f9;
+    -webkit-user-select: none;
+}
+.table thead th{
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+
+}
+.table tbody td{
+    width:100px;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+}
+.c0{
+    background-color: #3b87c4;
+}
+.c1{
+    background-color: #8f59bd;
+}
+.cursor{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

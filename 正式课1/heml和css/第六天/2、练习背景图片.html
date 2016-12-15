@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #616161;
+        }
+        ul {
+            list-style: none;
+        }
+
+        ul {
+            margin: 0 auto;
+            width: 1226px;
+        }
+
+        li {
+            float: left;
+            width: 20%;
+            height: 25px;
+            /*background: url("bg_01.png") no-repeat;*/
+            line-height: 25px;
+        }
+        span{
+            vertical-align: middle;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url("bg_02.png") no-repeat;
+        }
+        .list2{
+            background-position: -25px 0;
+        }
+        .list3{
+            background-position: -50px 0;
+        }
+        .list4{
+            background-position: -75px 0;
+        }
+        .list5{
+            background-position: -100px 0;
+        }
+        a:hover{
+            color: #ff6700;
+        }
+        a:hover .list1{
+            background-position: 0 -25px;
+        }
+        a:hover .list2{
+            background-position: -25px -25px;
+        }
+        a:hover .list3{
+            background-position: -50px -25px;
+        }
+        a:hover .list4{
+            background-position: -75px -25px;
+        }
+        a:hover .list5{
+            background-position: -100px -25px;
+        }
+    </style>
+</head>
+<body>
+<!--css雪碧图  一次引用 多次调用 减少http请求 加快页面的加载速度-->
+<ul>
+    <li><a href="javascript:;"><span class="list1"></span>1小时快修服务</a></li>
+    <li><a href="javascript:;"><span class="list2"></span>7天无理由退货</a></li>
+    <li><a href="javascript:;"><span class="list3"></span>15天免费换货</a></li>
+    <li><a href="javascript:;"><span class="list4"></span>满150元包邮</a></li>
+    <li><a href="javascript:;"><span class="list5"></span>520余家售后网点</a></li>
+</ul>
+
+
+<!--<p style="background: url('pic.jpg') no-repeat;width: 200px;height: 200px;padding-left: 50px;line-height: 50px;">
+    文字
+</p>-->
+
+
+</body>
+</html>

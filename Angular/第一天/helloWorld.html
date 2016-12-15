@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--告诉angular以那个模块来启动angularjs-->
+<html lang="en" ng-app="appModule">
+<head >
+    <!-- 默认ng-app全部加载到html上，表示整个项目都归angular管理-->
+    <!--指定ng-app后产生一个rootScope(window)全局作用域-->
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!---->
+<input type="text" ng-model="name"/>
+<style>
+    [ng-cloak]{
+        display: none;
+    }
+</style>
+<ul ng-cloak>
+    <!--现将ng-cloak的属性全部删掉，angular加载完后，将ng-cloak移除掉-->
+    <li>{{name}}hehe</li>
+    <li ng-bind="name"></li>
+    <li ng-controller="aCtrl"></li>
+</ul>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    //创建模块
+    //模块的名字
+    //模块的依赖,没有依赖的模块增加一个空数组
+    //写数组是创建，不写表示创建
+    //app代表的是当前模块
+    var app = angular.module('appModule',[]);
+    //创建子作用域，防止污染全局变量
+    //创建控制器（送一个作用域）
+    //1 控制器的名字 2 控制器的定义
+    app.controller('aCtrl',function($scope){
+        $scope.name = 'zfpx',//相当于挂在到当前的作用域下
+    })
+</script>
+<script>
+    //引入angular 后 提供一个angular对象
+    //只有表单元素可以实现双向绑定
+    //要创建一个入口，启动项目，提供一个根节点，从哪里
+</script>
+</body>
+</html>

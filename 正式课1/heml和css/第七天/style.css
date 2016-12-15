@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font: 12px/1.5 "Microsoft YaHei";
+    background-color: #f8fdff;
+}
+input{
+    border:none;
+}
+.clear:after{
+    display: block;
+    content:"";
+    clear: both;
+}
+
+.box{
+    margin: 20px auto;
+    width: 606px;
+}
+.title{
+    border-bottom: 1px solid #ddd;
+    height: 30px;
+}
+.title h3{
+    border-left: 3px solid #59afe4;
+    padding-left: 6px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    color: #616161;
+    font-weight: 500;
+}
+ul{
+    margin-top: 20px;
+}
+.btnTop{
+    position: relative;
+    margin-bottom: 15px;
+}
+.btnTop label,.name{
+    display: block;
+    float: left;
+    margin-right: 11px;
+    width: 115px;
+    text-align: right;
+    line-height: 35px;
+    font-size: 14px;
+    color: #333;
+}
+input[type=text],input[type=password]{
+    border: 1px solid #c0d1d5;
+    padding: 0 7px;
+    width: 284px;
+    height: 33px;
+    background-color: #f2f9fc;
+    border-radius: 3px;
+}
+input[type=text]:focus,input[type=password]:focus{
+    background-color: #fff;
+}
+.plas{
+    /*float: right;
+    padding-right: 11px;*/
+    position: absolute;
+    right: 11px;
+    top: 0;
+    color: #808080;
+    /*line-height: 16px;*/
+}
+.plas span{padding: 0 5px;}
+.plas a{color: #4199d7;}
+.name{
+    line-height: 23px;
+}
+input[type=radio]{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.p23 label{
+    line-height: 23px;
+    vertical-align: middle;
+}
+.mR30{
+    margin-right: 30px;
+}
+
+

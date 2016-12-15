@@ -1,0 +1,548 @@
+*{margin: 0px;padding: 0px}
+body{
+    font-family: "Microsoft Yahei";
+    font-size: 12px;
+    /*所有元素继承body元素设置的字体大小和样式*/
+}
+ul,ol{
+    list-style: none;
+    /*去掉自带列表样式*/
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight: normal;
+    /*去掉自带加粗属性*/
+}
+img,input,select{
+    /*都是特殊的行内元素 可以直接设置宽高*/
+    border: none;
+    /*去掉自带边框*/
+    vertical-align: middle;
+    /*改变垂直对齐方式*/
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    /*去掉自带下划线*/
+}
+i,em{
+    font-style: normal;
+    /*斜体扶正*/
+}
+.clear:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.clear{zoom: 1;}
+.beijingys{
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+.banner{
+    width: 100%;
+    height: 51px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 51px;
+    padding: 20px 31px 10px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    background-color: white;
+}
+.banner a img{
+    height: 59px;
+    display:inline-block;
+    float: left;
+}
+.banner ul{
+    margin-left: 607px;
+    display: inline-block;
+    float: left;
+}
+.banner ul li{float: left}
+.banner ul li a{
+    width: 58px;
+    height:40px;
+color: #1a1a1a;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.banner ul li a:hover{color:#8f59bd}
+.banner ul li .shou{
+    background-color: #8f59bd;
+    color: #fff;
+}
+.banner ul li .shou:hover{color: #fff}
+.banner .shou1{
+    margin-left: 42px;
+    width: 24px;
+    height:24px;
+    display: inline-block;
+    background: url("images/fdj_03.png");
+    margin-top: 14px;
+    float: left;
+}
+.banner .shou2{
+    margin-left: 93px;
+}
+.banner p{
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    color: #2a69d5;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 30px;
+}
+.banner p:hover{
+    background-color:  #2a69d5;
+    color: white;
+}
+.banner p:hover a{
+    color: white;
+}
+.beijing span{display: block;
+    margin-top: 90px;
+    width: 100%;
+height: 432px;
+}
+
+
+
+.beijing span{display: block;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 90px;
+    width: 100%;
+
+}
+.beijing img{
+height: 400px;
+width: 100%;
+}
+.beijing ul{
+    height: 32px;
+    margin-top: 8px;
+}
+.beijing ul li{
+    width: 83px;
+   margin: 0 auto;
+}
+.beijing ul li a{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 4px;
+    border: 1px solid #8f59bd;
+    display: inline-block;
+}
+.beijing ul li a:hover{
+    background-color:#8f59bd ;
+}
+.banxin{
+    width: 1140px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+.body{background-color: #f7f7f7}
+.timu{
+    margin-top: 7px;
+    height: 52px;
+    display: block;
+clear: both;
+}
+.timu a{
+    width: 377px;
+    height: 52px;
+    line-height: 52px;
+    display: inline-block;
+    font-size: 20px;
+    color: #9e9ea6;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+.timu a:hover{
+    border-bottom: 2px solid #8f59bd;
+    color: #8f59bd;
+}
+.tupian{
+    width: 1161px;
+    height: 1076px;
+    display:block;
+}
+.tupian li{
+    width: 367px;
+    height: 346px;
+    background-color: white;
+    float: left;
+    display: inline-block;
+    margin: 8px 18px 12px 0;
+
+}
+
+
+
+.tupian li a img{
+    width: 366px;
+    height:250px;
+
+}
+.tupian li h3{
+line-height: 59px;
+    font-size: 15px;
+    display: inline-block;
+    height: 59px;
+padding: 0 10px;
+}
+.tupian li h3 a{
+    color: #1a1a1a;
+}
+.tupian li h3 a:hover{color: #8f59bd;}
+.tupian li p{
+    line-height: 28px;
+    width: 93px;
+    display: inline-block;
+    padding-left: 12px;
+    font-size: 11px;
+    color: #bdc1c6;
+}
+.tupian li span{
+    width: 37px;
+    height: 28px;
+    display: inline-block;
+    line-height: 28px;
+    font-size: 9px;
+    color: #bdc1c6;
+    margin-left: 46px;
+
+}
+.tupian li span i{
+    width: 16px;
+    height:11px;
+    display: inline-block;
+    background: url("xbt-1.png")no-repeat;
+    background-position: 4px 0;
+    margin-right: 6px;
+}
+.tupian li span .xbt1{
+    background-position: -19px 0;
+}
+.tupian li span .xbt2{
+    background-position: -37px 0;
+}
+.body1 ul{
+    margin-top: 8px;
+    display: block;
+    width: 1140px;
+
+
+}
+.body1 ul li{
+    height: 57px;
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 2px;
+    background-color: #fff;
+
+}
+.body1 ul li>a{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    line-height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.body1 ul li>a img{
+    width: 55px;
+    height: 55px;
+}
+.body1 ul li div{
+    width: 760px;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+ }
+.body1 ul li div h3{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 27px;
+}
+.body1 ul li div h3 a{ color:#000;}
+.body1 ul li div h3 a:hover{color:#8f59bd }
+.body1 ul li div strong{
+
+    line-height: 36px;
+    color: #5c5c5c;
+}
+.body1 ul li div strong b{
+
+    margin-left: 20px;
+}
+.body1 ul li div strong>p{
+    display: inline-block;
+}
+.body1 ul li div strong .yue1{
+    position: absolute;
+    left: 380px;
+    top:28px;
+}
+.body1 ul li div strong .yue{
+    position: absolute;
+    left: 570px;
+    top:28px;}
+.body1 ul li span{
+    width: 251px;
+    display: inline-block;
+    height: 76px;
+    float: right;
+}
+.body1 ul li span>p{
+    width: 52px;
+    height: 23px;
+    border-radius: 3px;
+    background-color: #9db0af;
+    line-height: 23px;
+    text-align: center;
+    display: inline-block;
+}
+.wenzi{
+    height: 79px;
+    font-size: 25px;
+    color:#8f59bd ;
+    line-height: 79px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 900;
+}
+.body2 .tupian1{
+    height: 362px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.body2 .tupian1 li{
+    width: 369px;
+    height: 361px;
+    background-color: #fff;display: inline-block;
+}
+.body2 .tupian1 li a img{
+    width: 369px;
+    height: 252px;
+}
+.body2 .tupian1 li h3{
+    font-size: 14px;
+    line-height: 58px;
+    padding-left:10px;
+}
+.body2 .tupian1 li h3 a{
+    color:#000;
+}
+.body2 .tupian1 li h3 a:hover{
+    color:#8f59bd;
+}
+.body2 .tupian1 li b{
+    line-height: 18px;
+    color: #272727;
+    height: 18px;
+    width: 58px;
+    display: inline-block;
+    padding-left: 10px;
+}
+.body2 .tupian1 li p{
+    width: 278px;
+    line-height: 18px;
+    color: #999999;
+    display: inline-block;
+}
+.body2 .tupian1 li .mian{
+    padding-left: 10px;
+    margin-top: 3px;
+    line-height: 27px;
+}.body2 .tupian1 li span{
+     color: #999999
+ }
+.body3{
+    width: 1140px;
+    height: 379px;
+    display: block;
+    background-color: #fff;
+    padding: 20px 107px;
+    margin: 0 auto;
+}
+.body3 ul li{
+    width: 120px;
+    height:120px;
+display: inline-block;
+    margin-right: 67px;
+    margin-top: 20px;
+}
+.body3 ul li img{
+    width: 120px;
+    height: 120px;
+}
+.di{
+    width: 100%;
+    height: 362px;
+background-color:#8f59bd ;
+
+}
+.di ul{
+    width:1140px;
+    margin: 0 auto;
+    padding: 26px 113px 24px;
+
+}
+.di ul .di1{
+    width: 387px;
+    display: inline-block;
+float: left;
+}
+.di ul .di1 span{
+    width: 387px;
+    height: 68px;
+    display: inline-block;
+}
+.di ul .di1 span b{
+    width: 68px;
+    height: 68px;
+    display: inline-block;
+    border-radius: 50%;
+    background: url("fullstackLogin_small.png")no-repeat;
+    background-size:70px 70px;
+    margin-right: 8px;
+float: left;
+}
+.di ul .di1 span p{
+    display: inline-block;
+    font-size: 22px;
+    color: #be8fff;
+    line-height: 68px;
+    float: left;
+}
+.di ul .di1 div {
+    width: 388px;
+    margin: 13px;
+}
+.di ul .di1 div>a{
+    float: left;
+    width: 90px;
+    height: 29px;
+    display: inline-block;
+    line-height: 29px;
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    margin: 43px 100px 0 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.di ul .di1 div a:hover{
+    color: #a9a9a9;
+}
+
+
+.di ul .di2 a:hover{
+    color: #a9a9a9;
+}
+.di ul .di2{
+    width: 483px;
+    display: inline-block;
+    position: relative;
+    height: 336px;
+float: left;
+}
+.haoba{
+    font-size: 17px;
+    color: #be8fff;
+    margin-bottom: 6px;
+
+}
+.di ul .di2>a{
+    width: 158px;
+    height: 22px;
+    display: inline-block;
+    line-height: 22px;
+    color: #fff;
+}
+.di ul .di2 strong{
+    position: absolute;
+    bottom: 23px;
+    left: 6px;
+color: #000;
+}
+.di ul .di2 strong a{
+    color:#fff
+}
+.di ul .di2 strong a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+.di ul .di3{
+    width: 254px;
+    display: inline-block;
+}
+.di ul .di3 img{
+    width: 150px;
+    height: 150px;
+    margin-top: 8px;
+}
+.di ul .di3 a{
+    line-height: 28px;
+    color:#fff;
+    display: inline-block;
+}
+.fudong{
+    width: 40px;
+    height:81px;
+    position:fixed;
+    right: 20px;
+    bottom:20px;
+}
+.fudong a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+
+}
+.fudong .xiao{
+    background-color: #dadbdd;
+    transform:scale(1);
+    position: relative;
+}
+.fudong .xiao .img{
+    margin:11px 0 0 11px;
+}
+.fudong .xiao .img1{
+width: 209px;
+    height: 209px;
+    position: absolute;
+    bottom: -40px;
+    right: 40px;
+    display: none;
+
+}
+.fudong .xiao:hover .img1{
+    display: block;
+}
+.fudong .xiao1{
+    background-color: #6639b6;
+}
+.fudong .xiao1:hover{background-color:#a3a3a3 }
+.fudong .xiao1 img{
+margin: 14px 0 0 8px;
+}
+
+
+
+
+
+
+
+

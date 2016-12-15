@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--1、盒子模型：内容（content）【width height】 内边距（padding） 边框（border）外边距（margin）
+
+2、外边距：
+1）上下排布的盒子，上面的盒子是margin-bottom，下面的盒子是margin-top，那么不是取和，而是取两个值的最大值
+2）父子级元素，父级元素没有border、padding值的时候，子级元素的margin-top值会发生传递-->
+<!--兄弟元素四个方向都起作用，父子元素只能通过上和左改变盒子的位置-->
+<!--
+margin值是可以设置负值
+padding值不支持负值
+-->
+
+<div style="width: 200px;height: 200px;background-color: red;">
+    <p style="width: 100px;height: 100px;background-color: green;margin-top: 30px;margin-bottom: 150px;margin-right: 100px;padding: 10px;border: 2px dotted goldenrod;"></p>
+</div>
+<div style="width: 100px;height: 100px;background-color: yellow"></div>
+<!--内容溢出 不会影响基本布局的正常排布-->
+
+2、浮动
+浮动就是为了让元素在一行显示，摆脱块级元素和行内元素的一些弊端
+浮动元素可以识别它父级元素的宽度
+浮动元素会在尽可能的宽度内进行排布
+(当父子元素都有浮动属性的时候，如果子元素少，那么父级的宽度是子元素宽度的总和，如果子元素多，那么这个父元素就会去主动读取父元素的父元素宽度，进行排布)
+<style>
+    /*ul{list-style: none;margin: 0;padding: 0;}
+    /!*body 浏览器的宽度-左右自带的margin*!/
+    li{float: left;width: 200px;height: 300px;background-color: #ff0000;border:2px solid #cccccc;margin:10px;}*/
+</style>
+<!--<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>-->
+
+
+<style>
+    *{margin:0;padding: 0;}
+    div{
+        margin: 0 auto;
+        /*让一个有宽度的块级元素在其父级元素内水平方向居中*/
+        width: 1000px;
+        height: 500px;
+        background-color: red;
+    }
+    ul{list-style: none;}
+    p{float: left;width: 200px;height: 500px;background-color: #cccccc;}
+    ul,li{float: left;width: 400px;}
+    li{margin-left: 10px;margin-bottom:10px;width: 150px;height: 240px;background-color:yellow}
+</style>
+<div>
+    <p></p>
+    <ul>
+        <li>1</li>
+        <li style="width: 100px;height: 30px;">2</li>
+        <li style="width: 30px;height: 50px">3</li>
+        <li style="width: 70px;height: 30px">4</li>
+        <li style="width: 90px;height: 50px">5</li>
+        <!--<li style="width: 70px;height: 50px">6</li>-->
+    </ul>
+</div>
+
+
+</body>
+</html>

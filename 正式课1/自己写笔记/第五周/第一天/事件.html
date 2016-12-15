@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width:100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    /*事件对象： 当绑定一个点击事件click，当时间触发的时候，打印函数中的arguments[0],结果叫MouseEvent的对象，我们叫做（鼠标）时间对象
+      这个事件对象在IE6-8中是有兼容性问题的
+      标准：    形参e或者arguments[0]
+      IE6-8 :   window.event
+
+
+      e =  e || window.event  //事件对象的兼容性处理
+
+    * */
+//事件对象 ：只在真正绑定给的事件的函数中有
+    /*
+    * 事件对象包含哪些信息：e
+    *          e.clientX:当前鼠标点击距离(浏览器)左上角的X轴坐标
+    *          e.clientY:当前鼠标点击距离（浏览器）左上角的Y轴坐标
+    *          e.pageX:当前鼠标点击位置距离（页面，body）左上角的X轴坐标
+    *          e.pageY:当前鼠标点击位置距离（页面）左上角的Y轴坐标
+    *          ps ：e.pageX 和 e.pageY 在IE6-8中是不存在的
+    *
+    * 处理e.pageX在ie6-8中的兼容性问题，当前点击距离浏览器左上角的位置 + 浏览器已经滚出去的高度就可能了
+    * */
+    e.pageX = e.pageX || (document.documentElement.scrollLeft||document.body.scrollLeft)+ e.pageX;
+    e.pageY = e.pageY || (document.documentElement.scrollTop||document.body.scrollTop)+ e.pageY;
+
+    /*
+    e.preventDefault();  阻止默认行为  只是一个方法     标准浏览器
+    e.returnValue = false;  阻止默认行为                 ie6-8中
+    return false ；                   所有浏览器里直接阻止默认行为//
+
+    e.stopPropagation();  阻止事件传播，比如点击link的时候，link的祖先元素不会被触发点击事件
+    e.cancelBubble = true; 阻止事件冒泡传播     IE6 - 8 中
+    冒泡传播：从子元素传播到祖先元素
+
+
+    //*    e.type : 事件类型 点击事件 ： ‘click’没有 ‘on’
+    *
+    *
+    *    e.target  事件源，真正触发事件的那个元素，比如 ：给body绑定一个事件，那么点击任何一个body内的后代元素都会触发body的click事件，而e.target保存的是真正点击的元素
+    *    e.srcElement   在IE6-8中的事件源
+    *
+    * */
+    e.target = e.target || e.srcElement;
+
+    e.stopPropagation = e.stopPropagation || function(){
+                e.cancelBubble = true;
+            };
+    e.stopPropagation();
+
+    //鼠标事件对象的原型链结构：MouseEvent =>UIEvent => Event => Object
+
+
+    /*
+    * keyBoardEvent:  键盘事件对象
+    *      type : 'keyup' 事件类型
+    *      keyCode : 按键编码
+    *      Enter : 13
+    *      0-9 : 48 -57;
+    *      left :37
+    *      up : 38
+    *      right :39
+    *      down :40
+    *      space : 32
+    *      Backspace :8
+     *
+    * */
+    window.location.reload();//刷新页面
+    window.location.href = "网址"; //跳转页面
+    //比如：点击下载按钮的时候一直在跳转广告。。。
+
+
+    /*
+    * 事件委托
+    *
+    *
+    * */
+</script>
+</body>
+</html>

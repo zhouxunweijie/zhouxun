@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+        padding:0;
+        }
+        .list{
+            width: 310px;
+            height: 100px;
+            position: relative;
+            margin: 50px auto;
+            perspective: 2000px;
+        }
+        .item{
+            width: 100%;
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: 1s;
+        }
+        .item img{
+            position: absolute;
+            transform: translateZ(50px);
+        }
+        .item span{
+            position: absolute;
+            display: block;
+            padding: 10px;
+            width: 290px;
+            height: 80px;
+            background-color: #ccc;
+            border-radius: 5px;
+            transform: rotateX(-90deg) translateZ(50px);
+            overflow: hidden;
+        }
+        .list:hover .item{
+            transform: rotateX(90deg);
+
+        }
+    </style>
+</head>
+<body style="background-color: rgb(246,241,232)">
+<div class="list">
+    <div class="item">
+        <img src="images/chimpified.jpeg"/>
+        <span>adflkhasknaslksdnkklghuenefbwafjsajdvbasdsnng fhwjh</span>
+    </div>
+</div>
+</body>
+</html>

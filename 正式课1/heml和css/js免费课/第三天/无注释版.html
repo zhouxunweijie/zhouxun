@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            line-height: 30px;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: burlywood;
+        }
+        .bg2{
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body id="box">
+<script>
+    var oBox=document.getElementById('box');
+    var str="";
+    str+="<ul>";
+    for(var i=1;i<=10;i++){
+        str+="<li class='bg"+(i%2)+"'>我是第"+i+"个li</li>";
+        //"+i+"
+    }
+    str+="</ul>";
+    oBox.innerHTML=str;
+    var oLis=document.getElementsByTagName('li');
+    var bg=null;
+    for(var j=0;j<oLis.length;j++){
+        oLis[j].onmouseover=function(){
+            bg=this.className;
+            this.className="bg2";
+        };
+        oLis[j].onmouseout=function(){
+            this.className=bg;
+        };
+        oLis[j].onclick=function(){
+            alert(this.innerText);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

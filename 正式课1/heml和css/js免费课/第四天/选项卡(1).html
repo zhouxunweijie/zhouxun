@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            width: 300px;
+        }
+        li{
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #ffff00;
+        }
+        div{
+            margin: 0 auto;
+            display: none;
+            width: 300px;
+            background: #ff6900;
+            height: 300px;
+        }
+        li.cur{
+            background: #ff6900;
+        }
+        div.cur{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="cur">1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<div class="cur">11111111</div>
+<div>22222222</div>
+<div>3333333333333333333333</div>
+<script>
+    var oLis=document.getElementsByTagName('li');
+    var oDivs=document.getElementsByTagName('div');
+    //定义一个方法，这个方法中现将所有的类名去掉，然后在给我们操作的对应元素上添加这个类名
+    function tab(n){
+        for(var i=0;i<oLis.length;i++){
+            oLis[i].className='';
+            oDivs[i].className='';
+        }
+        oLis[n].className="cur";
+        oDivs[n].className='cur';
+    }
+    //tab(2);
+    for(var i=0;i<oDivs.length;i++){
+        /*oLis[0].index=0;
+        oLis[1].index=1;
+        oLis[2].index=2;*/
+        oLis[i].index=i;
+        oLis[i].onmouseover=function(){
+            //console.log(this.index);
+            tab(this.index);
+        }
+    }
+</script>
+
+
+
+
+
+
+</body>
+</html>

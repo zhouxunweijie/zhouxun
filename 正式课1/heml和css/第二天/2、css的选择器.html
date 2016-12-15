@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--css文件已经引入到了html文件中
+每一份样式如何作用到我们要操作的html元素，那么就用到了css的选择器-->
+<!--基本选择器-->
+<!--选择器的基本结构
+选择器{}
+选择器可以是标签名、类名、id名
+-->
+<style>
+    /*标签选择器*/
+    li{color:red;font-size:2em;}
+    /*选择当前文档下所有的li标签，使每一个li标签中的内容颜色为红色，字体大小是默认大小的2倍*/
+    /*{}中的属性之间用分号隔开，属性名和属性值之间用冒号连接（每一个符号都是英文状态）*/
+</style>
+<style>
+    /*id选择器  利用标签中的id属性 取id的属性值，利用属性值来区分元素，得到元素*/
+    /*#idName{} 基本格式*/
+    #list1{color:yellow;}
+    /*id选择器具有唯一性 在一个文档下只能出现一次*/
+</style>
+<style>
+    /*类选择器 标签中的class属性，class属性的属性值就是我们的类名，我们可以通过类名来去选择我们要操作的这个元素，类名是我们自己取的名字，需要遵守（1）严格区分大小写（2）不能用汉字、数字命名*/
+    /*.className{} 基本格式*/
+    .list2{color:blue;}
+</style>
+<style>
+    /*通配符选择器 将整个文档下面所有的标签选择到 不推荐使用 这种选择器比较耗费性能*/
+    *{display: none;}
+</style>
+<div>
+    <ul>
+        <li>1</li>
+        <li id="list1" class="list2">2</li>
+        <li>3</li>
+    </ul>
+</div>
+<div>
+    <ul>
+        <li>1</li>
+        <li class="list2">2</li>
+        <li>3</li>
+    </ul>
+</div>
+<div>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+</div>
+
+
+<!--
+选择器的优点：
+1、可以批量选择要操作的html元素
+-->
+<!--
+选择器的权重：
+css属性的继承 0.1  （子元素从父级元素上继承的css属性）
+标签选择器    1           姓
+类选择器      10          名
+id选择器      100         身份证号码
+作用于同一个元素的不同选择器，谁的权重大就听谁的
+存在比较的时候要满足两个条件：
+1、同一个元素
+2、同一个css属性{
+    选择器权重大的会覆盖掉选择器权重小的值
+    选择器权重相同的时候，谁离元素近谁就起作用（就近原则）
+
+    伪类选择器  a:hover{font-size:20px;}
+    类型选择器  标签名[type=value]{}
+
+}
+css可继承的相关属性：http://www.zhufengpeixun.com/qianduanjishuziliao/qianduanCSSziliao/2016-07-24/530.html
+和文字挂钩的都是可继承的
+-->
+<div></div>
+<ul class="list"><li>1</li></ul>
+<ol id="list" class="list"><li>1</li></ol>
+<style>
+    #list{color: yellow;}
+    .list{color: red;font-size: 12px;}
+</style>
+</body>
+</html>

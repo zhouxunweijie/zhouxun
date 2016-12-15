@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+            <head>
+            <meta charset="UTF-8">111
+            <title>Title</title>
+            </head>
+            <body>
+
+            <script>
+                /*
+                 通过dom的方式获取回来的元素都是一个对象数据类型的，（不是只有{}才是对象，只要是一个对象数据类型甚至是引用数据类型都可以在身上添加属性。）
+                 * 通过id获取元素
+                 *    1  只能通过document,getElementById来调用，其他的任何dom元素都不行
+                 *    2  如果页面内不存在这个id默认获取回来的null
+                 *    3  如果页面真的存在两个id,那么他会获取第一个
+                 *   4 在某些低版本ie浏览器name可能会当做id来使用，name属性和id不要写成一样的；
+                 *   5尽量不要写大小写不同的id
+                 * */
+
+
+
+//    2  通过标签名字获取元素  getElementByTagName("标签名")
+//
+//    1通过标签获取元素获取回来的是一组元素，即使这一组元素中只有一个li.也不会默认选中第一个，如果想获取通过索引值0来拿；
+//    2  这个方法是可以规定范围的，也就是再具体范围内查找
+//    类数组：有length属性，有索引
+
+
+                /*
+                 * 通过类名获取元素     不兼容在IE6-8
+                 * 1.和标签名一样也可以出现多次，所以回来的也是一组元素。和标签一样也可以给规定范围，
+                 *
+                 * /
+
+
+                 /*
+                 * 通过name获取元素
+                 *  1  一般应用于表单元素  input
+                 *  2  在标准浏览器内给div添加了一个name属性虽然没用，但是可以通过name来获取元素，在ie9以下就不可以
+                 * */
+
+                /*
+                 * 获取html和body的方式：都是标签可以通过标签名字获取。麻烦
+                 * html  :document.documentElement就是HTML
+                 * body  ：ｄｏｃｕｍｅｎｔ．ｂｏｄｙ　　就是ｂｏｄｙ
+                 *
+                 *
+                 * */
+//    获取浏览器可视窗口的宽度和高度：重要
+
+//    document.documentElement.clientWidth//document..body.clientWidth  获取当前窗口宽度
+//    document.documentElement.clientWidth//document..body.clientWidth 获取当前窗口高度
+            1
+    //var a=null // 8;或者可以保证至少有一个值
+
+
+    /*不兼容     移动端使用
+     * document,queryselector()   //获取一个
+     * document,queryselectorAll()   //获取全部
+     *
+     *
+     *
+     * */
+
+
+
+</script>
+</body>
+
+</html>

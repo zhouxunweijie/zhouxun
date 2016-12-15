@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <style>
+        [ng-cloak]{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<table class="table table-bordered" ng-controller="cartCtrl">
+    <tr>
+        <th><input type="checkbox" ng-model="selecAll" ng-click="all()"/>全选</th>
+        <th>商品</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>小计</th>
+        <th>操作</th>
+    </tr>
+    <tr ng-repeat="a in products track by $index">
+        <!--在angular中所有的input元素中，设置值，都是从ng-model获取到的-->
+        <td><input type="checkbox" ng-model="a.isSelected" ng-click="all1()"/></td>
+        <td>{{a.name}}</td>
+        <td>{{a.price}}</td>
+        <td>
+            <button ng-click="products.count=products.count-1" ng-disabled="products.count<=1">-</button>
+            <input type="text" ng-model="a.count" ng-readonly="true"/>
+            <button ng-click="products.count=products.count+1">+</button>
+        </td>
+        <td>{{a.price * a.count}}</td>
+        <td><button class="btn btn-danger" ng-click="fn(a)">删除</button></td>
+        <!--成功绿色-->
+    </tr>
+    <tr>
+        <td>
+            <button ng-click="remove()" class="btn">删除</button>
+            <select ng-model="selected">
+                <option value="{{c.tech}}" ng-repeat="c in coast">{{c.client}}</option>
+            </select>
+        </td>
+    </tr>
+
+</table>
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    app.controller('cartCtrl',['$scope',function($scope){  //$scope 是viewModel
+        $scope.products = [
+            {isSelected:true,name:'iphone6s',price:3000,count:1,id:1},
+            {isSelected:true,name:'iphone5s',price:2000,count:2,id:2},
+            {isSelected:true,name:'iphone4s',price:1000,count:3,id:3},
+            {isSelected:true,name:'iphone7s',price:5000,count:4,id:4}
+        ];
+        $scope.coast = [{client:'一折',tech:'0.1'},{client:'五折',tech:'0.5'}]
+
+        $scope.fn=function(a){
+            $scope.products = $scope.products.filter(function(item){
+                return item != a;
+            })
+        };
+        $scope.all = function(){
+            $scope.products.forEach(function(item){
+                item.isSelected = $scope.selecAll;
+            })
+        };
+
+        $scope.all1 = function(){
+            var flat = true;
+            $scope.products.forEach(function(item){
+                    //var add = item.isSelected;
+                    if(!item.isSelected){
+                        flat = false;
+                    }
+                    $scope.selecAll = flat;
+            })
+        };
+        $scope.all1();
+        $scope.remove = function(){
+            $scope.products = $scope.products.filter(function(item){
+                return !item.isSelected;
+            })
+
+        }
+
+
+    }])
+</script>
+</body>
+</html>

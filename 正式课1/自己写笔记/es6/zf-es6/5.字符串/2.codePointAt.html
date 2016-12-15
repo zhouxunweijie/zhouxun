@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="at.js"></script>
+<script>
+
+    'use strict';
+    let es6EmojiCode = "\u{1f602}\u0041";
+    let str = "😂A"; // 等同于上面
+    console.log(es6EmojiCode.codePointAt(0), es6EmojiCode.codePointAt(1), es6EmojiCode.codePointAt(2));
+    console.log(es6EmojiCode.charCodeAt(0), es6EmojiCode.charCodeAt(1), es6EmojiCode.charCodeAt(2));
+
+    console.log('===');
+    console.log(es6EmojiCode.charAt(0), es6EmojiCode.charAt(1), es6EmojiCode.charAt(2));
+    console.log(es6EmojiCode.at(0), es6EmojiCode.at(1), es6EmojiCode.at(2));
+
+    let s = 'abc';
+    // console.log(s.charCodeAt(0), s.codePointAt(0), s.charAt(0));
+</script>
+</body>
+</html>

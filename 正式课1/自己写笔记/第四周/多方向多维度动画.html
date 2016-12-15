@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #div1{
+            width: 100px;
+            height:100px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+
+<script>
+    /**
+     * ele要在duratio时间内运动到target
+     * @param ele    是要运动的元素
+     * @param target   运动终点
+     * @param duration    在多长时间内完成运动
+     *
+     */
+    function animate(ele,target,duration){
+        var begin = {},change = {};
+        for(var key in target){
+            begin[key] = utils.css(ele,key);
+            change[key] = target[key] - begin[key];
+        }
+    }
+
+</script>
+</body>
+</html>

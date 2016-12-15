@@ -1,0 +1,5 @@
+﻿1、html5的基本结构，结构中每一个标签都是什么意义？
+2、html常用标签背下来 html标签分为什么 他们的特点分别是什么？
+http://www.zhufengpeixun.com/qianduanjishuziliao/qianduanCSSziliao/2016-06-29/456.html
+3、将标签语义化理解为自己的东西
+4、标签属性   <img src="url" alt="描述" class="" id="" style="width:100px;height:100px;" />

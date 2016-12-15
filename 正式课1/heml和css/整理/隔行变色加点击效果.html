@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+.c1{
+    background-color: #ebff04;}
+        .c2{background-color: #2a69d5}
+        .c3{background-color: red}
+
+
+    </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    /*
+    * 1,先获取所有的li；
+    * 2循环所有的li，将他们的索引值除以2，余数为1的变为黄色，余数为二的变成蓝色；
+    * 3，添加一个划过执行函数，划过时将他们的颜色变为红色，在划过之前用自定义属性将划过之前的颜色储存起来，
+    * 4，添加一个划出执行函数，划出时将之前保存的颜色释放出来；
+    * 5，添加一个点击效果，在alert里将他自身所代表的索引数释放出来
+    * */
+    var bon="";
+    for(f=1;f<=10;f++){
+        bon+="<li>我是第"+f+"个</li>"
+    }
+    list.innerHTML=bon;
+
+    var oList=document.getElementById("list").getElementsByTagName("li");
+    for (var i=0;i<oList.length;i++){
+        oList[i].indexc=i;
+        i%2===1?(oList[i].className="c1"):(oList[i].className="c2");
+
+    oList[i].onmouseover=function(){
+        bg=this.className;
+        this.className="c3";
+    };
+    oList[i].onmouseout=function(){
+        this.className=bg;
+    };
+    oList[i].onclick=function(){
+        alert("我是第"+(this.indexc+1)+"个li");
+    }
+    }
+
+</script>
+
+</body>
+</html>

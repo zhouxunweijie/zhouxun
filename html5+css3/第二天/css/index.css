@@ -1,0 +1,298 @@
+.header{
+    width: 100%;
+    height: 580px;
+    position: relative;
+    background-color: orange;
+}
+.banner{
+    width: 100%;
+    height: 580px;
+    background-color: orange;
+}
+.headerWarp{
+    width: 100%;
+    height: 89px;
+    background: url("../img/nav-b.png") repeat-x;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 555;
+    border-bottom: 1px solid #ccc;
+}
+.headerCon{
+    width:100%;
+}
+.logo{
+    float: left;
+    margin-top: 18px;
+    line-height: 89px;
+    display: block;
+}
+.logo img{
+    height: 100%;
+    margin-left: 10px;
+}
+.headerCon ul{
+    float: right;
+    line-height: 89px;
+}
+.headerCon ul li{
+    float: left;
+    position: relative;
+}
+.headerCon ul li span{
+    position: absolute;
+    width: 100%;
+    height: 89px;
+    top:0;
+    background-color:rgba(0,0,0,0.2);
+    left:0;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+    z-index: -1;
+}
+.headerCon ul li:hover span{
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    -webkit-transition: transform 0.3s;
+    transition: transform 0.3s;
+}
+.headerCon ul li:hover a{
+    opacity: 1;
+}
+.headerCon ul li a{
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding:0 18px;
+    opacity: 0.8;
+}
+.bannerInner{
+    width: 100%;
+    height:580px;
+}
+.bannerInner>div{
+    width: 100%;
+    height: 580px;
+    position: absolute;
+    top:0;
+    left: 0;
+    _opacity: 0;
+    _display: none;
+}
+.bannerInner .list1{
+    background-color: #183e84;
+}
+.bannerInner .list1 div a img{
+    display: block;
+    position: absolute;
+    left:40px;
+    animation:move2 0.5s linear 0.3s;
+}
+
+@keyframes move2 {
+    0%{
+        left:-10px;
+    }
+    100%{
+        left:40px;
+    }
+}
+
+.bannerInner .list1 span{
+    position: absolute;
+    top:228px;
+    left: 50%;
+    animation:move3 0.5s linear 0.3s;
+}
+.bannerInner .list1 span img{
+    display: inline-block;
+}
+@keyframes move3 {
+     0%{
+         left:55%;
+     }
+     100%{
+         left:50%;
+     }
+ }
+.bannerInner .list1 span p{
+    font-size: 18px;
+    display: block;
+    font-weight: 800;
+    color:#fff;
+}
+
+.bannerInner .list2{
+    background-color: #ff6a00;
+}
+
+.bannerInner .list2 div img{
+    position: absolute;
+    left:50%;
+    margin-left: -476px;
+    top:100px;
+    display: block;
+    animation: move 0.5s linear ;
+}
+
+@keyframes move {
+    0%{
+        margin-left: -376px;
+    }
+    100%{
+        margin-left: -476px;
+    }
+}
+.bannerInner .list2 span{
+    width: 950px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    bottom:45px;
+    left:50%;
+    margin-left: -475px;
+}
+.bannerInner .list2 span img{
+    display: block;
+    margin: 0 auto;
+    animation: move1 0.5s linear;
+}
+@keyframes move1 {
+    0%{
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.banner ul{
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top:550px;
+    text-align: center;
+}
+.banner ul li{
+    display: inline-block;
+    width: 25px;
+    height: 5px;
+    margin: 0 5px;
+    background-color: #444;
+    cursor: pointer;
+}
+.banner ul li.selected{
+    background-color: #FFFFFF;
+}
+.banner>a{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top:50%;
+    margin-top: -22px;
+    opacity: 0.7;
+    display: none;
+}
+.banner:hover a{
+    display: block;
+}
+.banner>a:hover{
+    opacity: 1;
+}
+.banner .left{
+    background: url("../img/l-btn.png")no-repeat;
+    left: 70px;
+}
+.banner .right{
+    background: url("../img/r-btn.png")no-repeat;
+    right: 70px;
+}
+.list{
+    width: 100%;
+    padding-top:30px;
+}
+.list ul{
+    width: 100%;
+    text-align: center;
+}
+.list ul li{
+    width: 23%;
+    display: inline-block;
+    vertical-align: top;
+}
+.list ul li span{
+    width: 152px;
+    height: 124px;
+    display: block;
+    margin: 0 auto;
+    background: url("../img/icon-24.png")no-repeat;
+    background-position: 0 -128px;
+}
+.list ul li span.pic2{
+    background-position: -300px -128px;
+}
+.list ul li span.pic3{
+    background-position: -604px -128px;
+}
+.list ul li h4{
+    font-size: 18px;
+    color: #f60;
+    padding:10px 0 0 0 ;
+}
+.list ul li p{
+    height: 24px;
+    color:#333;
+    padding:5px 0;
+}
+.channel ul{
+    text-align: center;
+}
+.channel ul li{
+    display: inline-block;
+    max-width: 20%;
+    margin: 0 1%;
+}
+.channel ul li img{
+    width: 100%;
+}
+@media all and (min-width: 1000px) {
+    .headerCon{
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 760px) {
+    .headerWarp{
+        height:49px;
+    }
+    .logo{
+        line-height: 49px;
+        margin-top: 5px;
+    }
+    .logo img{
+        height: 28px;
+    }
+    .headerCon ul{
+        display: none;
+    }
+    .banner>a{
+        display: none;
+    }
+    .list ul li span{
+        width: 76px;
+        height: 64px;
+        background-size: 370px 126px;
+    }
+    .list ul li span.pic1{
+        background-position: 0 -64px;
+    }
+    .list ul li span.pic2{
+        background-position: -160px -64px;
+    }
+    .list ul li span.pic3{
+        background-position: -312px -64px;
+    }
+    .list ul li h4{
+        font-size: 14px;
+    }
+}

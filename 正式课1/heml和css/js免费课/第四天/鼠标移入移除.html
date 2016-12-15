@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{line-height: 40px;}
+        .bg0{
+            background: #ff6900;
+        }
+        .bg1{
+            background: #ffff00;
+        }
+        .bg2{
+            background: palegreen;
+        }
+    </style>
+</head>
+<body id="box">
+<script>
+    var str="";
+    str+="<ul>";
+    for(var i=0;i<10;i++){
+        str+="<li class='bg"+(i%2)+"'>我是一个列表项</li>";
+    }
+    str+="</ul>";
+    box.innerHTML=str;//将str这个变量中存储的值赋值给box这个对象的innerHTML属性
+    var oLis=document.getElementsByTagName('li');
+    //oLis.className=""//给十个li的整体添加了一个className的属性
+    //console.log(oLis);
+    for(var i=0;i<oLis.length;i++){
+        //var=0 对象["属性名"]的形式获取属性值 也就是每一个li
+        //oLis[i].className="bg0";
+        /*if(i%2===0){
+            oLis[i].className="bg0";//className 是这个对象天生自带的内置属性
+            oLis[i].bg="bg0";//所有奇数行的li这个对象中的bg这个属性中存的是bg0这个类名
+        }else{
+            oLis[i].className="bg1";
+            oLis[i].bg="bg1";
+        }*/
+        //oLis[li,li,li]
+        if(i%2===0){
+            oLis[i].bg="bg0";
+        }else{
+            oLis[i].bg="bg1";
+        }
+        //var bg=null;//bg=bg0/bg=bg1
+        //oLis[i].old=i;
+        var bg='';
+        oLis[i].onmouseover=function(){
+            bg=this.className;
+            this.className='bg2';
+        };
+        oLis[i].onmouseout=function(){
+            //this.className="bg"+(this.old%2);
+            this.className=bg;
+            //this.className=this.bg;
+        }
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

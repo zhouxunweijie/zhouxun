@@ -1,0 +1,42 @@
+global 全局对象
+在NODE中global对象的属性可能在程序的任何地方被访问到
+能在程序的任何地方访问到的对象都是global的属性
+
+console.log('log')
+console,info('info')
+console.error('error')
+console.warn('warn')
+console.time('cost') 启用一个计时器
+
+  console.timeEnd ('cost')计时器结束，会输出
+console.log(__)
+
+//把参数函数放在下一个事件环中执行
+setImmediate(function(){
+
+})
+
+process  当前NODE 的进程对象
+process.cwd()   当前的工作的目录
+        chdir('..')  修改当前的工作目录
+        memoryUsage()   rss: 常驻内存  heapTotal : 堆的总内存  heapUsed:堆已经使用的内存量
+        nextTick(function(){ })   放在当前任务页的底部
+
+var util = require('util');//将util模块引进来
+util.inherits(子类，夫类) //子类可以继承夫类的原型上的方法
+子类.protoType =new 夫类.protoType
+
+consoe.log(util.inspect(child))  将child对象的
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            height: 100%;
+            /*显示窗口的高度*/
+        }
+    </style>
+</head>
+<body id="box">
+<!--
+html和body是根元素，他们两个也是块级元素，块级元素在没有设置高度的情况下默认的高度是内容的高度
+
+-->
+<script>
+    var oBox=document.getElementById('box');
+    oBox.onclick=function(){
+        //oBox.style.backgroundColor="red";
+        //oBox.style.backgroundColor 仅仅是向行内添加css样式
+        //background-color  在js中不能使用-进行连接 只能用backgroundColor这种方式进行添加
+        //默认打开页面保持默认状态，点击body变成红色，再点击body变成黑色
+        /*if(oBox.style.backgroundColor=="#ff0000"){
+            //"rgb(255,0,0)"=="#ff0000"
+            oBox.style.backgroundColor="#000000";
+        }else{
+            oBox.style.backgroundColor="#ff0000";
+        }*/
+        /*if(oBox.style.backgroundColor=="red"){
+            oBox.style.backgroundColor="black";
+        }else{
+            oBox.style.backgroundColor="red";
+        }*/
+        switch (oBox.style.backgroundColor){
+            case "red":
+                oBox.style.backgroundColor="black";
+                break;
+            default :
+                oBox.style.backgroundColor="red";
+        }
+    };
+    /*var val=3;
+    if((val<6)&&(val=6)){
+    val<6  在满足小于6的情况下 我将val这个变量重新赋值 val=6
+    //console.log(val)
+        alert("yes");
+    }else{
+        alert("no");
+    }*/
+    /*var val=3;
+    if((val<6)&&(val==6)){
+        //val 既要小于6 又要等于6
+        alert("yes");
+    }else{
+        alert("no");
+    }*/
+    //var val=3;
+    //(val<6)&&(val==6)?alert("yes"):alert("no");
+</script>
+</body>
+</html>

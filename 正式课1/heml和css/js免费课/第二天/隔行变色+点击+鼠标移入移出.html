@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            background: #cccccc;
+        }
+        li{
+            cursor: pointer;
+            padding-left: 30px;
+            line-height: 35px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: pink;
+        }
+        .bg2{
+            background: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>我是列表项1</li>
+    <li>我是列表项2</li>
+    <li>我是列表项3</li>
+    <li>我是列表项4</li>
+    <li>我是列表项5</li>
+    <li>我是列表项6</li>
+    <li>我是列表项7</li>
+    <li>我是列表项8</li>
+    <li>我是列表项9</li>
+    <li>我是列表项10</li>
+</ul>
+<script>
+    var oList=document.getElementById('list');
+    var oLis=oList.getElementsByTagName('li');
+    var i=0;
+    while(i<oLis.length){
+        /*switch (i%2){
+            case 0:
+                oLis[i].className="bg0";
+                oLis[i].oldBg="bg0";
+                break;
+            default :
+                oLis[i].className="bg1";
+                oLis[i].oldBg="bg1";
+        }*/
+        i%2===0?(oLis[i].className="bg0",oLis[i].oldBg="bg0"):(oLis[i].className="bg1",oLis[i].oldBg="bg1");
+        oLis[i].index=i;
+        /*oLis[0].index=0;
+        oLis[1].index=1;
+        oLis[2].index=2;
+        .
+        .
+        .
+        oLis[9].index=9;*/
+        oLis[i].onclick=function(){
+            //console.log(i);//10  因为页面加载的时候，循环是不需要触发就会执行的，所以在页面加载完成的时候，循环已经结束，这个时候我们定义的这个i的变量，已经是一个最终值
+            //当你点击触发这个函数执行的时候，循环早已结束，所以这个函数中得到的i是一个最终值--10
+            alert("我是第"+(this.index+1)+"li");
+        };
+        oLis[i].onmouseover=function(){
+            this.className="bg2";
+        };
+        oLis[i].onmouseout=function(){
+            this.className=this.oldBg;
+            /*if(this.index%2===0){
+                this.className="bg0";
+            }else{
+                this.className="bg1";
+            }*/
+        };
+        i++;
+    }
+</script>
+</body>
+</html>

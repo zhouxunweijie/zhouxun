@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+</head>
+<style>
+    ul,li,span{
+        margin:0;
+        padding:0;
+    }
+    ul{
+        border:1px solid red;
+        margin:20px auto 0;
+    }
+    li{
+
+    }
+    span{
+        width: 88px;
+        line-height: 30px;
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    var str="";
+    for (var i=1;i<=9;i++){
+        str+="<li>";
+            for(var f=1;f<=i;f++){
+                str+="<span>"+f+"*"+i+"="+(f*i)+"</span>";
+            }
+        str+="</li>"
+    }
+    list.innerHTML=str;
+var olist=document.getElementsByTagName("span");
+    var bg=null;
+    for(var k=0;k<olist.length;k++){
+        if(k%2===0){
+            olist[k].style.backgroundColor="red";
+        }else{
+            olist[k].style.backgroundColor="#ccffdd";
+        }
+        olist[k].onmouseover=function(){
+            bg=this.style.backgroundColor;
+            this.style.backgroundColor="black";
+        };
+        olist[k].onmouseout=function(){
+          this.style.backgroundColor=bg;
+        };
+        olist[k].onclick=function(){
+            alert(this.innerHTML)
+        }
+        }
+
+
+
+
+</script>
+</body>
+</html>

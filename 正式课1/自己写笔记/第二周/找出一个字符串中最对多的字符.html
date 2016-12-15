@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'aadddsssnnnnns';
+    var obj ={};//    一开始声明一个对象，属性名字和属性值来帮助保存那个字符出现的次数最多
+    for(var i=0;i<str.length;i++){
+        var curChar = str[i];
+        if(obj[curChar]>=1){
+            obj[curChar] +=1;
+        }else{
+            obj[curChar] = 1
+        }
+    }
+    var max=0;
+    for(var key in obj){
+        if(obj[key]>max){
+            max=obj[key];
+        }
+    }
+    console.log(obj);
+    var ary = [];
+    for(var key in obj){
+        if(obj[key]==max){
+            ary.push(key)
+        }
+    }
+    var std="出现最多的是"+ary.join()+"出现"+max+"次";
+    var aty = std.split(" ");
+    var n = 0;
+    var timer=window.setInterval(function(){
+        document.body.innerHTML+=std[n];
+        n++;
+        if(n == std.length){
+            window.clearInterval(timer);
+        }
+    },300)
+</script>
+</body>
+</html>

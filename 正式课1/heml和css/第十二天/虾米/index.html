@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>虾米</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+<div class="header">
+    <div class="main">
+        <h1 class="logo"><a href="###"></a></h1>
+        <ul class="nav">
+            <li class="on"><a href="###">发现音乐</a></li>
+            <li><a href="###">我的音乐</a></li>
+        </ul>
+        <div class="subNav">
+            <a href="###">精选集</a>
+            <a href="###">电台</a>
+            <a href="###">音乐人</a>
+            <a href="###">APP</a>
+            <!--<a href="###" class="noBor">APP</a>-->
+        </div>
+        <form action="" method="get" class="search">
+            <input type="text" placeholder="音乐搜索，找人..."/>
+            <input type="button"/>
+        </form>
+        <div class="login">
+            <a href="###" class="register">免费注册</a>
+            <p>
+                <a href="###" class="loginBar">立即登录</a>
+                <a href="###" class="web"><i class="icon"></i></a>
+                <a href="###" class="qq"><i class="icon"></i></a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="mainNav">
+    <div class="main">
+        <ul class="left">
+            <li><a href="###" class="hot">热门</a></li>
+            <li><a href="###">排行榜</a></li>
+            <li><a href="###">专辑</a></li>
+            <li><a href="###">艺人</a></li>
+            <li><a href="###">风格</a></li>
+            <li><a href="###">阿里音乐排行榜</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="###"><i class="icon vipP"></i>VIP会员</a></li>
+            <li><a href="###"><i class="icon play"></i>最近播放</a></li>
+            <li><a href="###"><i class="icon down"></i>下载客户端</a></li>
+        </ul>
+    </div>
+</div>
+<div class="warp">
+    <div class="main clear">
+        <div class="conL">
+            <div class="banner">
+                <ul id="imgList">
+                    <li class="on"><a href="###"><img src="images/zgr.jpg"/></a></li>
+                    <li><a href="###"><img src="images/banner.jpg"/></a></li>
+                    <li><a href="###"><img src="images/banner1.jpg" alt=""/></a></li>
+                    <li><a href="###"><img src="images/banner3.jpeg"/></a></li>
+                    <li><a href="###"><img src="images/banner.jpg"/></a></li>
+                </ul>
+                <ol id="btn">
+                    <li class="on"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+            <div class="title">
+                <h2>
+                    新碟首发<span>&nbsp;/&nbsp;</span><a href="###">更多</a>
+                </h2>
+                <ul class="list">
+                    <li><a href="###">全部</a></li>
+                    <li class="line">|</li>
+                    <li><a href="###">华语</a></li>
+                    <li class="line">|</li>
+                    <li><a href="###">欧美</a></li>
+                    <li class="line">|</li>
+                    <li><a href="###">日本</a></li>
+                    <li class="line">|</li>
+                    <li><a href="###">韩国</a></li>
+                </ul>
+            </div>
+            <div class="video clear">
+                <ul>
+                    <li class="songSheet">
+                        <div class="top">
+                            <div class="imgList clear">
+                                <img src="images/bzd.jpg"/>
+                                <img src="images/dzq2.jpg"/>
+                                <img src="images/aln.jpeg"/>
+                                <img src="images/ljr.jpg"/>
+                            </div>
+                            <p>基于你最近听的音乐</p>
+                            <a href="###" class="play"></a>
+                        </div>
+                        <div class="sum">
+                            <a href="###">今日推荐歌单</a>
+                        </div>
+                    </li>
+                    <li class="like">
+                        <div class="img">
+                            <img src="images/ycl.png"/>
+                            <div class="likeHid">
+
+                            </div>
+                        </div>
+                        <div class="sum">
+                            基于你最近听的音乐
+                            <div class="hidden">
+
+                            </div>
+                        </div>
+                        <h4 class="songName"><a href="###">倩女幽魂</a></h4>
+                        <p class="singer"><a href="###">张国荣</a></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- left end-->
+        <div class="conR">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+<script>
+    var oLists=document.getElementById("imgList").getElementsByTagName("li");
+    var oBtn=document.getElementById("btn").getElementsByTagName("li");
+    for(var i=0;i<oLists.length;i++){
+        oBtn[i].index=i;
+        oBtn[i].onclick=function(){
+            for(var j= 0;j<oLists.length;j++){
+                oLists[j].className="";
+                oBtn[j].className="";
+            }
+            this.className="on";
+            oLists[this.index].className="on";
+        }
+    }
+</script>
+
+<!--.video .like .sum:hover .like .hidden{}
+
+<div class="video">
+    <div class="like">
+        <div class="sum">
+            <div class="like">
+                <div class="hidden"></div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+
+

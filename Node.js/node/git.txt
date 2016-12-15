@@ -1,0 +1,60 @@
+在命令行配置用户名和密码
+git config --global user.name "用户名"
+git config --global user.email "密码"
+
+ 初始化仓库
+ mkdir 2016node   创建一个空目录
+ cd 2016node       进入此文件夹
+ git init       初始化git仓库
+
+ 创建一个.gitignore文件，这里面放的是不需要向服务器提交的文件夹名称
+ git ls    显示所有的文件
+  touch 2016  新建一个文件
+
+ git add 要添加的文件名       提交到暂存区内
+ git commit -m '描述本次事件的作用'    提交到历史区内
+ git log 查看历史
+
+ pwd 显示当前的文件目录
+ cd ../  返回上一级的目录
+ cd  目录名  显示指定的目录名
+
+ git clone 地址  克隆项目
+
+ 提交作业s
+ 1.首先在克隆好的文件夹内新建一个文件夹
+ 2.把文件添加到工作区内  git add -A
+ 3.提交到历史区    git commit -m '描述'
+ 4.将文件推送到仓库上  git push origin master
+ 5.输入用户名和密码
+
+
+ git remote -v 查看当前所有仓库的名字
+ git log --oneline 显示所有的历史记录
+ git reset --head 版本号   回归到当时提交时的状态
+
+组长提交作业：
+ 组长fock讲师的目录
+1. git  clone  先克隆组长自己的仓库
+2. git remote add teacher 从老师的仓库中拉取代码到本地
+3. git pull teacher master  将自己的作业放进去
+4. git add -A  添加并提交
+5 git commit -m '提交作业'
+6. git push origin master 推送到自己的仓库中z
+6. git remove -v
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

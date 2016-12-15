@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            border:3px solid red;
+            border-radius:2px;
+            margin: 50px auto 0;
+            text-align: center;
+            font-size: 30px;
+            color:royalblue;
+            line-height: 50px;
+            -webkit-user-select: none;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="div">8pQ1</div>
+</body>
+<script>
+    /*
+    * 1. 先获取div元素，
+    * 2，先var一个变量用来储存验证码的随机数
+    * 3，在var一个空字符串，用来储存四位验证码；
+    *    设置一个执行函数
+    * 4，设置一个循环，共循环四次，每一次出一个随机数字
+    * 5，var一个变量用来储存每次获取随机数的索引值，一共有61位数，所以将他们作为每一项的索引值，然后通过索引值来获取一个值
+    * 6，然后将随机数转化为小写和空字符串中储存的值进行比较，如果出现过就在循环一次，没有出现过就添加到空字符串中；
+    * 7，将字符串输出；
+    * 8.将函数执行
+    *
+    *
+    * */
+
+    var oList=document.getElementsByClassName("div")[0];
+    var bom="0123456789zaqxswcdevfrbgtnhymjukilopZAQXSWCDEVFRBGTNHYMJUKILOP";
+        function fn(){
+            var dom="";
+            for(var i=0;i<4;i++) {
+               var tou=Math.round(Math.random()*61);
+                var total= bom.charAt(tou);
+                    if(dom.indexOf(total.toLowerCase()) === -1){
+                        dom += total;
+                }
+                    else{
+                        i--;
+                    }
+            }
+            oList.innerHTML=dom;
+        }
+    fn();
+oList.onclick=fn;
+
+
+</script>
+
+
+
+
+
+
+
+</html>

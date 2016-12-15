@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.table{
+    width:400px ;
+    border: 3px solid #3b87c4;
+    margin: 20px auto;
+    padding: 10px;
+    -webkit-user-select: none;
+}
+
+.table table thead {
+    height: 50px
+}
+.table table thead th{
+    width: 80px;
+    text-align: center;
+    color: red;
+    background-color: #8f59bd;
+    line-height: 30px;
+    font-size: 18px;
+}
+.table tbody tr{
+    height: 30px;
+}
+.table tbody td{
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 0;
+}
+.c1{
+    background-color:#57c7f9}
+.c0{
+    background-color: #4c856f;
+}
+.cursor{
+    cursor: pointer;
+}

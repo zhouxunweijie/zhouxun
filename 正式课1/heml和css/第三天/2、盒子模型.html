@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>重点</title>
+    <style>
+        div{width:auto;height:auto;}
+    </style>
+</head>
+<body>--
+css中的盒子模型，是由几个属性组成的 content  padding  border  margin
+content指的是内容的宽度和高度（width和height）
+padding（内边距）指的是内容距离盒子边框内边缘的距离 它有四个方向
+border（边框）边框包裹着内容和内边距 边框可以有宽度 它有四个方向
+margin（外边距）不同的盒子边框外边缘距离另一个盒子边框外边缘的距离
+
+
+盒子模型的兼容问题：
+1、margin值：如果两个盒子上下排布，上面的盒子给值margin-bottom，下面的盒子给值margin-top，那么盒子和盒子之间的距离不是他们两个的和，而是去其中的最大值；
+解决方式：只将值给一个盒子；将第二个盒子浮动起来，让第二个盒子脱离文档流
+2、margin值：当盒子之间是父子级关系的时候，如果父级盒子没有边框值，没有padding值，那么就会发生子级盒子的margin-top值传递给其父级盒子
+怎么解决这个问题：给父级盒子overflow:hidden;这个属性（溢出隐藏）,这里面不是进行隐藏，而是将超出盒子的部分收回来
+
+计算盒子的大小：
+一个盒子的总宽度=width+padding-left+padding-right+border-left+border-right
+一个盒子的总高度=height+padding-top+padding-bottom+border-top+border-bottom
+
+盒子模型属性的写法：
+width
+height
+
+padding:10px 20px 30px 40px; 上 右 下 左
+padding:10px; 四个方向的值相同
+padding:10px 20px 20px;  上  左右  下
+padding:10px 20px;  上下  左右
+
+border
+border-top-width:20px;
+border-top-style:solid;
+border-top-color:red;
+
+border-top:20px solid red;
+
+如果盒子四个方向的边框样式相同
+border:20px solid red; 四个方向都是20px的宽 实线  红色
+border-width:20px;
+border-style:solid;
+border-color:red;
+
+margin:10px 20px 30px 40px; 上 右 下 左
+margin:10px; 四个方向的值相同
+margin:10px 20px 20px;  上  左右  下
+margin:10px 20px;  上下  左右
+
+每一个元素都有自带的css属性（内置属性），那么每一个浏览器对这些属性的解析是不同的，为了保证所有浏览器显示相同，我们需要进行全局样式的重新定义，给每个元素的初始值设置相同
+
+
+</body>
+</html>

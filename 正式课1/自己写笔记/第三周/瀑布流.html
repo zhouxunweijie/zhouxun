@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        html,body{
+            width: 100%;
+        }
+        ul{
+            width: 30%;
+            /*height: 300px;*/
+            float:left;
+        }
+        /*css3属性第二个ul*/
+        ul:nth-child(1){
+            /*margin: 0 5%;*/
+            /*_background: #ff6b81;*/
+        }
+        ul:nth-child(2){
+            margin: 0 5%;
+            /*_background: #ff1;*/
+        }
+        ul:nth-child(3){
+            /*margin: 0 5%;*/
+            /*_background: #8f59bd;*/
+
+        }
+    </style>
+</head>
+<body>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+
+
+<script>
+var uls = document.getElementsByTagName("ul");//类数组[ul,ul,ul]
+    //向这三个ul中动态添加li标签  =》create  =》appendChild
+//向页面中动态创建50个li;
+var ulsRry = listToArray(uls);
+function appendLiToUl(){
+    for(var i=0;i<50;i++){
+        var li = liFactory();//每次函数执行完就会留下li
+        //问题又来了？？把li放在哪个ul中
+        ulsRry.sort(function(ul1,ul2){
+            return ul1.clientHeight -ul2.clientHeight;
+        });
+        var shortUl = ulsRry[0];//最矮
+        shortUl.appendChild(li);//添加到最矮的ul中
+    }
+}
+    appendLiToUl();
+
+window.onscroll = function(){
+    //只有浏览器滚动就会触发这个事件，滚动的时候需要判断滚出去的高度的值是否超出了内容的高度减去一个值，如果超出了那么需要继续创建50个，然后添加到页面中
+    var scrollTop = win('scrollTop');
+    if(scrollTop>document.body.scrollHeight - 1000){
+        //如果滚出去的高度超出了一个临界点，那么在创建50个li
+        appendLiToUl();
+    }
+};
+function win(attr,val){
+    if(typeof val !='undefined'){
+        document.documentElement[attr] = val;
+        document.body[attr] = val;
+
+    }
+    return document.documentElement[attr] || document.body[attr];
+}
+
+    function liFactory(){
+        var li = document.createElement("li");//创建
+        li.style.height = getRandom(100,200)+"px";
+        li.style.backgroundColor = "rgb("+getRandom(0,255)+","+getRandom(0,255)+","+getRandom(0,255)+")";//随机背景色
+        console.log(li);
+        return li;//返回
+    }
+    function  getRandom(n,m){
+        n = Number(n);
+        m = Number(m);
+        if(isNaN(n)||isNaN(m)){
+            return Math.random();
+        }
+        if(n>m){
+            var temp = n;
+            n = m;
+            m = temp;
+        }
+        return Math.round(Math.random()*(m-n)+n);
+    }
+    function listToArray(n){
+        try{
+            return Array.prototype.slice.call(n);
+        }catch(e){
+            var ary= [];
+            for (var i=0;i< n.length;i++){
+                ary.push(n[i])
+            }
+        }
+        return ary
+    }
+</script>
+</body>
+</html>

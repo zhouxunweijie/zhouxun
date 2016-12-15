@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height:300%;
+            background: -webkit-linear-gradient(top,red,blueviolet,fuchsia);
+        }
+        #link{
+            position: fixed;
+            right:20px;
+            bottom: 20px;
+            display:none;
+            width:80px;
+            height:80px;
+            border-radius: 50%;
+            background: white;
+            border:5px solid #000;
+            line-height: 80px;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            font-size: 50px;
+            opacity: 0.6;
+        }
+        #link:hover{
+            opacity: 1;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+<a id="link" href="javascript:void 0">顶</a>
+</body>
+</html>
+<script>
+var link=document.getElementById("link");
+var step = 5;//每一步运动五个像素
+var timer = null;
+    link.onclick=function(){
+        window.clearInterval(timer);
+        var timer=window.setInterval(function(){
+            var curScrollTop = document.documentElement.scrollTop||document.body.scrollTop;//每次滚出去的高度
+            if(curScrollTop<=0){
+                window.clearInterval(timer);//清空定时器
+                window.onscroll = showBon;
+                return; //已经到达顶部的就不需要往下执行了
+            }
+            curScrollTop -= step;
+            //把减掉步长之后的值重新赋值，然后才能生效，下次重新获取已经是生效的scrollTop了
+            document.documentElement.scrollTop = curScrollTop;
+            document.body.scrollTop = curScrollTop;
+        },10);
+        this.style.display = 'none';
+        window.onscroll = null;
+    };
+var winHeight = document.documentElement.clientHeight||document.body.clientHeight;
+    window.onscroll = showBon;
+    function showBon(){  //滚动的时候我要时刻判断当前是否已经滚出了一屏幕
+        var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;//滚出去的高度
+        if(scrollTop>winHeight){
+            link.style.display = "block";
+        }else{
+            link.style.display = 'none';
+        }
+
+    }
+</script>

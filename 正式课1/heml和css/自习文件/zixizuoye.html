@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+</head>
+<style>
+    div,ul,li{
+        margin:0;
+        padding:0;
+    }
+    ul,li{
+        list-style: none;
+    }
+    #list{
+        width: 500px;
+        border:1px solid red;
+        margin: 20px auto 0;
+        padding:10px;
+    }
+    #list li{
+        font-size: 14px;
+        line-height: 30px;
+        cursor: pointer;
+
+    }
+    .c1{
+        background-color: #2a69d5;
+    }
+    .c2{
+        background-color: #cccccc;
+    }
+</style>
+
+<body>
+<div id="list">
+    <ul>
+        <li>Fn+Home/End：增大/减少屏幕亮度，共有七档。</li>
+        <li>FN+SPACE 降低分辨率，只有r40、x31、t40以上机型使用了。</li>
+        <li>SHIFT+DELETE 永久删除所选项，而不将它放到“回收站”中 </li>
+        <li>拖动某一项时按 CTRL+SHIFT 创建所选项目的快捷方式。</li>
+        <li>Fn+Home/End：增大/减少屏幕亮度，共有七档。</li>
+        <li>FN+SPACE 降低分辨率，只有r40、x31、t40以上机型使用了。</li>
+        <li>SHIFT+DELETE 永久删除所选项，而不将它放到“回收站”中 </li>
+        <li>拖动某一项时按 CTRL+SHIFT 创建所选项目的快捷方式。</li>
+        <li>Fn+Home/End：增大/减少屏幕亮度，共有七档。</li>
+        <li>FN+SPACE 降低分辨率，只有r40、x31、t40以上机型使用了。</li>
+        <li>SHIFT+DELETE 永久删除所选项，而不将它放到“回收站”中 </li>
+        <li>拖动某一项时按 CTRL+SHIFT 创建所选项目的快捷方式。</li>
+        <li>Fn+Home/End：增大/减少屏幕亮度，共有七档。</li>
+        <li>FN+SPACE 降低分辨率，只有r40、x31、t40以上机型使用了。</li>
+        <li>SHIFT+DELETE 永久删除所选项，而不将它放到“回收站”中 </li>
+        <li>拖动某一项时按 CTRL+SHIFT 创建所选项目的快捷方式。</li>
+        <li>Fn+Home/End：增大/减少屏幕亮度，共有七档。</li>
+        <li>FN+SPACE 降低分辨率，只有r40、x31、t40以上机型使用了。</li>
+        <li>SHIFT+DELETE 永久删除所选项，而不将它放到“回收站”中 </li>
+        <li>拖动某一项时按 CTRL+SHIFT 创建所选项目的快捷方式。</li>
+    </ul>
+
+<!--//        var list=document.getElementsByTagName("li");-->
+<!--//        for (var i=0;i<list.length;i++){-->
+<!--//            switch (i%2){-->
+<!--//                case 0:list[i].className="c1";-->
+<!--//                    break;-->
+<!--//                    default:-->
+<!--//                    list[i].className='c2';-->
+<!--//            }-->
+<!--//-->
+<!--//-->
+<!--////        }-->
+<!--//        var list=document.getElementsByTagName("li");-->
+<!--//        for (var i=0;i<list.length;i++){-->
+<!--//            if(i%2===0){-->
+<!--//                list[i].className="c1";-->
+<!--//            }else{-->
+<!--//                list[i].className="c2";-->
+<!--//            }-->
+<!--//        }-->
+
+    <script>
+//        <!--var list=document.getElementsByTagName("li");-->
+//        <!--for (var i=0;i<list.length;i++){-->
+//            <!--switch(i%2){-->
+//                <!--case 0:-->
+//                    <!--list[i].className="c1";-->
+//                    <!--break;-->
+//                <!--default:-->
+//                    <!--list[i].className="c2";-->
+//            <!--}-->
+        <!--}-->
+        <!---->
+
+
+     var olis=document.getElementsByTagName("li");
+        for (var i=0;i<olis.length;i++){
+            if(i%2===0){
+                olis[i].className="c1";
+            }else{
+                olis[i].className="c2";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</div>
+</body>
+</html>

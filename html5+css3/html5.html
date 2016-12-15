@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>iption
+    <meta name="description" content="">
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        li{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            float: left;
+            margin: 50px 0 0 50px;
+            background-color: #0060b5;
+            text-align: center;
+            line-height: 50px;
+        }
+        .a1+li{/*相邻的弟弟节点*/
+            background-color: #0077B0;
+        }
+        .a1~li{/*a1以下的所有弟弟节点*/
+            background-color: red;
+        }
+        ul:nth-of-type(1){/*同种类型（标记名）的第一个子元素*/
+            background-color: #0fb200;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            box-shadow: 10px 10px 10px 12px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li class="a1">2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+</ul>
+<div></div>
+<!--<form novalidate>-->
+    <!--<input type="email" autocomplete="on" placeholder="fgs a rg " pattern="\d{3}"/>-->
+    <!--<input type="submit" value="提交"/>-->
+<!--</form>-->
+<!--<header>-->
+    <!--<p></p>-->
+    <!--<nav>-->
+        <!--<ul>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+            <!--<li></li>-->
+        <!--</ul>-->
+    <!--</nav>-->
+    <!--<span><img src="" alt=""/></span>-->
+<!--</header>-->
+<!--<section>-->
+    <!--<aside>-->
+        <!--<dl>-->
+            <!--<dt></dt>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt></dt>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+            <!--<dd></dd>-->
+        <!--</dl>-->
+    <!--</aside>-->
+    <!--<article>-->
+
+    <!--</article>-->
+<!--</section>-->
+</body>
+</html>

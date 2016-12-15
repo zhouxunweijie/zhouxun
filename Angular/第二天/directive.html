@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--元素-->
+<zf-Xxx></zf-Xxx>
+<!--属性 attribute-->
+<div zf-xxx></div>
+<!--样式-->
+<div class="zf-xxx"></div>
+<!--注释 comment-->
+<!--directive:zf-xxx-->
+<!--
+directive:指令（可以复用） 用指令封装功能
+1 。组件式指令  ：有模板的
+2  装饰性指令   ：增加属性的
+指令是否依赖于控制器：默认：不依赖
+-->
+<script src="../node_modules/angular/angular-csp.css"></script>
+<script>
+    var app = angular.module('appModule',[]);
+    //需要转化为驼峰命名法,标签名为-链接
+    app.directive('zfXxx',function(){
+        return{
+//            默认支持的只有E和A生效
+            restrict:'EA',//设置可以显示出来的效果
+            replace:true,//是否替换，可以将注释显示出来
+            template:'<h1>welcome zf</h1>'//模板中根节点只有一个，一般让注释显示出来的话，就会在两个根节点用一个标签包起来
+
+        }
+    })
+</script>
+</body>
+</html>

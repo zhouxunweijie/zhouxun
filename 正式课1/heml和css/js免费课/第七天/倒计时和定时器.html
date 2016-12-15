@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * var date=new Date();时间只能通过实例创建方式
+    *
+    * */
+    var date=new Date();//当前时间
+    var date1=new Date("1970/01/01 08:00:00");//把时间格式的字符串转化成一个时间格式的对象，转化成对象之后才能
+
+
+    console.log(typeof date);//包含着当前所有
+    console.log(date.getFullYear());//年
+    console.log(date.getMonth());//月
+    console.log(date.getData());//日
+    console.log(date.getDay());//星期
+    console.log(date.getHours());//小时
+    console.log(date.getMinutes());//分
+    console.log(date.getSeconds());//秒
+    console.log(date.getMilliseconds());//毫秒
+    console.log(date.getTime());//获取的是date所代表的时间距离1970年1月1日上午8点的毫秒数
+
+//    Monday  Tuesday Wednesday Thursday Friday  Saturday Sunday
+//    January February march April may June july August  September  October November D
+
+</script>
+</body>
+</html>

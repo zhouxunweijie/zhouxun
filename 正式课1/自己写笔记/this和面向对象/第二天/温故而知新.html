@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var i=3;
+//    function fn(){
+//        i*=2;只要i不是私有变量，只要用到I
+//        return function (n){
+//            console.log(n*(++i))
+//        }
+//    }
+//    var f=fn();
+//    f(3);
+//    fn()(3);
+//    f(4);
+//    fn()(3);
+
+//function fn() {
+//    var i = 10;
+//    return function (n) {
+//        console.log(n + (++i));
+//    }
+//}
+//var f = fn();
+//f(15);
+//f(20);
+//fn()(15);
+//fn()(20);
+//fn()(30);
+//f(30);
+
+var name='珠峰';
+var age=500;
+name=(function(name,age){
+    arguments[0]='珠峰培训';
+    age=age||window.age;
+    console.log(name,age);
+})(name);
+console.log(name,age)
+
+
+</script>
+</body>
+</html>

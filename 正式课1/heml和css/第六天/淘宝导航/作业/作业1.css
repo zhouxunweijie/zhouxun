@@ -1,0 +1,15 @@
+body,ul,li,a,i,p{margin:0;padding: 0;}
+body{font:12px/1.5"Microsoft YaHei"}
+ul{list-style: none}
+/*a{text-decoration: none;}*/
+ul{height: 35px;background-color: black}
+li{color:white;position:relative;display: inline-block;width:78px;height: 35px;line-height: 35px;text-align: center;}
+span{display: inline-block;color: white;}
+i{position:absolute;border:6px solid white;border-color: white transparent transparent transparent;padding-top:10px;margin-top: 17px;}
+span{position:absolute;line-height:22px;height: 22px;color: white;margin-top: 7px;background-color:orange;margin-left: 15px;}
+li:hover{background-color: white;color: black}
+i:hover{display: block}
+li:hover i{border-color: black transparent transparent transparent}
+div{width: 78px;height:125px;border: 1px solid darkgray;margin-left: 85px;}
+p{line-height: 30px;text-align: center;}
+/*li:hover  {border-color: black transparent transparent transparent;background-color: white}*/

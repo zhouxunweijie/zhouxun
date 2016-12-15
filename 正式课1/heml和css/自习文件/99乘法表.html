@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>99乘法表</title>
+    <style>
+        body,ul,li,span{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #list{
+            width:900px;
+            height: 270px;
+            border: 1px solid red;
+            margin: 30px auto 0;
+
+        }
+        li{
+           line-height: 30px;
+        }
+        span{
+            padding: 0 20px;
+        }
+        .c0{
+        background-color: #8b8b8b;
+        }
+        .c1{
+            background-color: #8f59bd;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+
+</ul>
+<script>
+    str="";
+    for(var i=1;i<=9;i++){
+        str+="<li class='c"+(i%2)+"'>";
+            for (var f=1;f<=i;f++){
+                str+="<span>"+f+"*"+i+"="+(f*i)+"</span>";
+            }
+        str+="</li>";
+    }
+    list.innerHTML=str;
+</script>
+</body>
+</html>

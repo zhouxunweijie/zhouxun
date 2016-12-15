@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            list-style: none;
+            width: 900px;
+            margin: 0 auto;
+            background: #ccc;
+        }
+        li{
+            line-height: 40px;
+        }
+        b{
+            display: inline-block;
+            padding: 0 10px;
+            width: 70px;
+            height: 40px;
+        }
+        .bg0{
+            background: #cc0000;
+        }
+        .bg1{
+            background: #ddff00;
+        }
+    </style>
+</head>
+<body id="box">
+<script>
+    var oBox=document.getElementById('box');
+    var str="";//在浏览器中找一个容器，用来一步步的放置我们拼接好的字符串
+    str+="<ul>";
+    for(var i=1;i<=9;i++){
+//        str+="<li class='bg"+(i%2)+"'>";
+        str+="<li>";
+        for(var k=1;k<=i;k++){
+            str+="<b class='bg"+(i%2)+"'>"+k+"*"+i+"="+(k*i)+"</b>";
+        }
+        str+="</li>";
+    }
+    str+="</ul>";
+    oBox.innerHTML=str;//把str中所有的内容赋值给oBox的innerHTML这个属性中
+    /*var oLis=document.getElementsByTagName('li');
+    for(var j=0;j<oLis.length;j++){
+        if(j%2===0){
+            oLis[j].className="bg0";
+        }else{
+            oLis[j].className="bg1";
+        }
+    }*/
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

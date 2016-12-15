@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body" style="font-size: 50px">
+0
+</body>
+<script>
+    var bod=document.getElementById("body");
+var bom=0;
+    var time=null;
+    function sun(){
+        bom++;
+        time=window.setTimeout(sun,500);
+        bod.innerHTML=bom;
+    }
+    sun();
+bod.onclick=function(){
+    if(!time){
+       sun();
+    }else {
+        window.clearTimeout(time);
+        time=null;
+    }
+}
+
+
+</script>
+</html>

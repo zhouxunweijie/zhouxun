@@ -1,0 +1,89 @@
+471  git commit -m'write hello1'
+  472  git log
+  473  git log --grep=co
+  474  git log --author=zhufeng
+  475  git log --author=zhufeng1
+  476  ls
+  477  clear
+  478  echo world >> hello.js
+  479  cat hello.js
+  480  git add .
+  481  git status
+  482  git reset HEAD hello.js
+  483  git status
+  484  clear
+  485  git status
+  486  clear
+  487  git checkout hello.js
+  488  cat hello.js
+  489  git status
+  490  clear
+  491  cat hello.js
+  492  git log
+  493  git log --oneline
+  494  git reset --hard 091c3d71a890bfbcf28b5eb41be5ae851161824d
+  495  cat hello.js
+  496  git reset --hard 627583cf9c07614
+  497  cat hello.js
+  498  clear
+  499  git log
+  500  git reset --hard  091c3d71a89
+  501  cat hello.js
+  502  git log
+  503  git reflog
+  504  git reset --hard 627583c
+  505  cat hello.js
+  502  git config --list
+    503  clear
+    504  git config --global user.name zhufengzhufeng
+    505  git config --global user.name
+    506  git config --global user.email 894918097@qq.com
+    507  git config --global user.email 894918097@qq.co
+    508  git config --list
+    509  git config --global user.email 894918097@qq.com
+    510  clear
+    511  mkdir gitRes
+    512  cd  gitRes/
+    513  git init
+    514  ckear
+    515  clear
+    516  dir
+    517  ls
+    518  ls -al
+    519  clear
+    520  touch hello.js
+    521  cat hello.js
+    522  echo hello > hello.js
+    523  cat hello.js
+    524  echo world > hello.js
+    525  cat hello.js
+    526  echo world >> hello.js
+    527  cat hello.js
+    528  rm hello.js
+    529  ls
+    530  echo hello > hello.js
+    531  ls
+    532  cat hello.js
+    533  clear
+    534  vi hello.js
+    535  vi hello.js
+    536  cat hello.js
+    537  vi hello.js
+    538  cat hello.js
+    539  vi hello.js
+    540  history > index.txt
+ 540  git branch
+  541  git branch dev
+  542  git branch
+  543  git checkout dev
+  544  clear
+  545  touch 1.txt
+  546  ls
+  547  git checkout master
+  548  ls
+  549  git checkout dev
+  550  clear
+  551  git add .
+  552  git commit -m 'add 1.txt'
+  553  ls
+  554  git checkout master

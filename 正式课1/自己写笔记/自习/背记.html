@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * namespace   命名空间
+    * namespace   命名空间
+    *
+    * 单例模式就是把描述同一个事物的方法和属性放在同一个对象里
+    * 单例模式就是把描述同一个事物的方法和属性放在同一个对象里
+    * 单例模式就是把描述同一个事物的方法和属性放在同一个对象里
+    * 单例模式中属性和属性之间的调用用this就可以了
+    *
+    *
+    * */
+//var ulits={
+//    getrandom:function(n,m){
+//        n=Number(n);
+//        m=Number(m);
+//        if(isNaN(n)||isNaN(m)){
+//            return Math.random();
+//        }
+//        return Math.round(Math.random()*(m-n)+n)
+//    }
+//    children:function(ele){
+//        var childs=ele.childNodes;
+//        var ary=[];
+//        for(var i=0;i<child.length;i++){
+//            if(childs[i].nodeType==1){
+//
+//            }
+//        }
+//    }
+//}
+//
+//function FN(x,y){
+//    var obj={};
+//    obj.x=x;
+//    obj.y=y;
+//    obj.fn=function(){
+//        console.log(this.x);
+//    };
+//    return obj;
+//}
+//var a=FN(1,2);
+//var b=FN(3,4);
+//    a.fn();
+//    b.fn();
+
+    function FN(x,y){
+        this.x=x;
+        this.y=y;
+        this.fn=function(){
+            console.log(this.x)
+        }
+    }
+   var a=new FN();
+</script>
+</body>
+</html>
