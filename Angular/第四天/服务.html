@@ -16,6 +16,18 @@
     app.config(function(calcProvider){//在需要配置的provider后面加provider,calcProvider代表的就是函数中的this
         calcProvider.currency = '%';
     });
+
+
+//    app.factory('calc',function(){
+//        return{
+//            '+':function(){return that.currency+(a+b)}
+//        }
+//    }//这个服务跟provider的是差不多的
+
+    app.factory('calc',function(){
+           this['+']=function(){return that.currency+(a+b)}
+   })//这个服务跟provider的是差不多的
+
     app.provider('calc',function(){
         this.currency = '$';
         this.$get = function () {

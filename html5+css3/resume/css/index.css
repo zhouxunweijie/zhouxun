@@ -1,0 +1,790 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.music {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url("../audio/music.svg") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+  z-index: 10;
+  opacity: 0;
+}
+.music audio {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.musicCur {
+  -webkit-animation: move 1s infinite linear;
+  animation: move6 1s infinite linear;
+}
+@keyframes move6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .swiper-wrapper .slide {
+  background-color: #031623;
+  position: relative;
+}
+.swiper-container .swiper-wrapper .slide img {
+  border: none;
+  vertical-align: top;
+  position: absolute;
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide img:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.92rem;
+}
+.swiper-container .swiper-wrapper .slide img:nth-child(2) {
+  width: 2.42rem;
+  height: 1.36rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.68rem;
+  margin-left: -1.21rem;
+}
+.swiper-container .swiper-wrapper .slide img:nth-child(3) {
+  width: 3.2rem;
+  height: 1.6rem;
+  bottom: 0;
+  left: 0;
+}
+.swiper-container .swiper-wrapper .slide img:nth-child(4) {
+  width: 3.06rem;
+  height: 2.41rem;
+  top: 0.92rem;
+  left: 0.09rem;
+}
+.swiper-container .swiper-wrapper .slide span:nth-child(5) {
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  font-size: 0.3rem;
+  height: 0.3rem;
+  top: 2.43rem;
+  left: 0.85rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01rem;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 10;
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide i {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.04rem solid #314053;
+  border-radius: 50%;
+  background: url("../img/_1.jpg") no-repeat;
+  background-size: 100% 100%;
+  z-index: 9;
+}
+.swiper-container .swiper-wrapper .slide span:nth-child(7) {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  height: 0.4rem;
+  width: 2.7rem;
+  bottom: 1.5rem;
+  left: 0.5rem;
+  background-color: #314053 ;
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide span:nth-child(7) p {
+  position: absolute;
+  display: block;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #eee;
+  text-align: center;
+  font-size: 0.15rem;
+  top: 0;
+}
+.swiper-container .swiper-wrapper .slide span:nth-child(7) p:nth-child(1) {
+  left: 0.5rem;
+}
+.swiper-container .swiper-wrapper .slide span:nth-child(7) p:nth-child(2) {
+  right: 0.5rem;
+}
+.swiper-container .swiper-wrapper #page1 img {
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page1 img:nth-child(1) {
+  -o-animation: bounceInDown 1s;
+  -ms-animation: bounceInDown 1s;
+  -moz-animation: bounceInDown 1s;
+  -webkit-animation: bounceInDown 1s;
+  animation: bounceInDown 1s;
+}
+.swiper-container .swiper-wrapper #page1 img:nth-child(2) {
+  -o-animation: move 1s linear 2s both;
+  -ms-animation: move 1s linear 2s both;
+  -moz-animation: move 1s linear 2s both;
+  -webkit-animation: move 1s linear 2s both;
+  animation: move 1s linear 2s both;
+}
+.swiper-container .swiper-wrapper #page1 img:nth-child(3) {
+  -o-animation: bounceInUp 1s;
+  -ms-animation: bounceInUp 1s;
+  -moz-animation: bounceInUp 1s;
+  -webkit-animation: bounceInUp 1s;
+  animation: bounceInUp 1s;
+}
+.swiper-container .swiper-wrapper #page1 img:nth-child(4) {
+  -o-animation: bounceIn 1s 1s both;
+  -ms-animation: bounceIn 1s 1s both;
+  -moz-animation: bounceIn 1s 1s both;
+  -webkit-animation: bounceIn 1s 1s both;
+  animation: bounceIn 1s 1s both;
+}
+.swiper-container .swiper-wrapper #page1 span:nth-child(5) {
+  opacity: 1;
+  -o-animation: bounceIn 1s 1s both;
+  -ms-animation: bounceIn 1s 1s both;
+  -moz-animation: bounceIn 1s 1s both;
+  -webkit-animation: bounceIn 1s 1s both;
+  animation: bounceIn 1s 1s both;
+}
+.swiper-container .swiper-wrapper #page1 i {
+  opacity: 1;
+  -o-animation: rollIn 1s 1.5s both;
+  -ms-animation: rollIn 1s 1.5s both;
+  -moz-animation: rollIn 1s 1.5s both;
+  -webkit-animation: rollIn 1s 1.5s both;
+  animation: rollIn 1s 1.5s both;
+}
+.swiper-container .swiper-wrapper #page1 span:nth-child(7) {
+  opacity: 1;
+  -o-animation: move1 1s 2s both;
+  -ms-animation: move1 1s 2s both;
+  -moz-animation: move1 1s 2s both;
+  -webkit-animation: move1 1s 2s both;
+  animation: move1 1s 2s both;
+}
+.swiper-container .swiper-wrapper #page1 span:nth-child(7) p:nth-child(1) {
+  -o-animation: bounceInLeft 1s 2.5s both;
+  -ms-animation: bounceInLeft 1s 2.5s both;
+  -moz-animation: bounceInLeft 1s 2.5s both;
+  -webkit-animation: bounceInLeft 1s 2.5s both;
+  animation: bounceInLeft 1s 2.5s both;
+}
+.swiper-container .swiper-wrapper #page1 span:nth-child(7) p:nth-child(2) {
+  -o-animation: bounceInRight 1s 2.5s both;
+  -ms-animation: bounceInRight 1s 2.5s both;
+  -moz-animation: bounceInRight 1s 2.5s both;
+  -webkit-animation: bounceInRight 1s 2.5s both;
+  animation: bounceInRight 1s 2.5s both;
+}
+.swiper-container .swiper-wrapper #page1 b {
+  opacity: 0.7;
+  -o-animation: move2 1s infinite 3.5s both;
+  -ms-animation: move2 1s infinite 3.5s both;
+  -moz-animation: move2 1s infinite 3.5s both;
+  -webkit-animation: move2 1s infinite 3.5s both;
+  animation: move2 1s infinite 3.5s both;
+}
+.swiper-container .swiper-wrapper .slide1 {
+  background: url("../img/2/4.jpg") no-repeat;
+  position: relative;
+}
+.swiper-container .swiper-wrapper .slide1 img {
+  position: absolute;
+  display: block;
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide1 img:nth-child(1) {
+  width: 3.2rem;
+  height: 2.5rem;
+  top: 0.5rem;
+  left: 0;
+  z-index: 20;
+}
+.swiper-container .swiper-wrapper .slide1 .list {
+  width: 3rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 0.1rem;
+  -webkit-background: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide1 .list li {
+  width: 2.95rem;
+  height: 0.4rem;
+  margin: 0.15rem 0;
+  border-radius: 0.06rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-left: 0.05rem;
+  color: #fff;
+  font-size: 0.15rem;
+  line-height: 0.4rem;
+}
+.swiper-container .swiper-wrapper #page2 img {
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page2 img:nth-child(1) {
+  -o-animation: move3 1.5s linear;
+  -ms-animation: move3 1.5s linear;
+  -moz-animation: move3 1.5s linear;
+  -webkit-animation: move3 1.5s linear;
+  animation: move3 1.5s linear;
+}
+.swiper-container .swiper-wrapper #page2 span {
+  opacity: 1;
+  -o-animation: bounceInUp 1s 1s both;
+  -ms-animation: bounceInUp 1s 1s both;
+  -moz-animation: bounceInUp 1s 1s both;
+  -webkit-animation: bounceInUp 1s 1s both;
+  animation: bounceInUp 1s 1s both;
+}
+.swiper-container .swiper-wrapper #page2 .list {
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(1) {
+  -o-animation: bounceInLeft 1s 1.3s both;
+  -ms-animation: bounceInLeft 1s 1.3s both;
+  -moz-animation: bounceInLeft 1s 1.3s both;
+  -webkit-animation: bounceInLeft 1s 1.3s both;
+  animation: bounceInLeft 1s 1.3s both;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(2) {
+  -o-animation: bounceInRight 1s 1.6s both;
+  -ms-animation: bounceInRight 1s 1.6s both;
+  -moz-animation: bounceInRight 1s 1.6s both;
+  -webkit-animation: bounceInRight 1s 1.6s both;
+  animation: bounceInRight 1s 1.6s both;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(3) {
+  -o-animation: bounceInLeft 1s 1.9s both;
+  -ms-animation: bounceInLeft 1s 1.9s both;
+  -moz-animation: bounceInLeft 1s 1.9s both;
+  -webkit-animation: bounceInLeft 1s 1.9s both;
+  animation: bounceInLeft 1s 1.9s both;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(4) {
+  -o-animation: bounceInRight 1s 2.2s both;
+  -ms-animation: bounceInRight 1s 2.2s both;
+  -moz-animation: bounceInRight 1s 2.2s both;
+  -webkit-animation: bounceInRight 1s 2.2s both;
+  animation: bounceInRight 1s 2.2s both;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(5) {
+  -o-animation: bounceInLeft 1s 2.5s both;
+  -ms-animation: bounceInLeft 1s 2.5s both;
+  -moz-animation: bounceInLeft 1s 2.5s both;
+  -webkit-animation: bounceInLeft 1s 2.5s both;
+  animation: bounceInLeft 1s 2.5s both;
+}
+.swiper-container .swiper-wrapper #page2 .list li:nth-child(6) {
+  -o-animation: bounceInRight 1s 2.8s both;
+  -ms-animation: bounceInRight 1s 2.8s both;
+  -moz-animation: bounceInRight 1s 2.8s both;
+  -webkit-animation: bounceInRight 1s 2.8s both;
+  animation: bounceInRight 1s 2.8s both;
+}
+.swiper-container .swiper-wrapper #page2 b {
+  opacity: 0.7;
+  -o-animation: move2 1s infinite 3.5s both;
+  -ms-animation: move2 1s infinite 3.5s both;
+  -moz-animation: move2 1s infinite 3.5s both;
+  -webkit-animation: move2 1s infinite 3.5s both;
+  animation: move2 1s infinite 3.5s both;
+}
+.swiper-container .swiper-wrapper .slide2 {
+  position: relative;
+  background: url("../img/2/7.jpg") no-repeat;
+}
+.swiper-container .swiper-wrapper .slide2 img:nth-child(1) {
+  position: absolute;
+  display: block;
+  width: 3.2rem;
+  height: 2.5rem;
+  top: 0.5rem;
+  left: 0;
+  z-index: 20;
+}
+.swiper-container .swiper-wrapper .slide2 .up {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 0.1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide2 .up li {
+  width: 0.83rem;
+  height: 0.6rem;
+  border: 0.03rem solid #19ba94;
+  border-radius: 50%;
+  float: left;
+  margin: 0.05rem;
+  text-align: center;
+  line-height: 0.6rem;
+  font-size: 0.15rem;
+  color: #fff;
+}
+.swiper-container .swiper-wrapper .slide2 .down {
+  width: 3rem;
+  height: 1.7rem;
+  position: absolute;
+  top: 3.6rem;
+  left: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+.swiper-container .swiper-wrapper .slide2 .down li {
+  height: 0.45rem;
+  padding: 0 0.1rem;
+  line-height: 0.45rem;
+  color: #fff;
+  font-size: 0.18rem;
+  position: relative;
+}
+.swiper-container .swiper-wrapper .slide2 .down li span {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.112rem;
+  height: 50%;
+  display: inline-block;
+}
+.swiper-container .swiper-wrapper #page3 img {
+  -o-animation: move3 1.5s both;
+  -ms-animation: move3 1.5s both;
+  -moz-animation: move3 1.5s both;
+  -webkit-animation: move3 1.5s both;
+  animation: move3 1.5s both;
+}
+.swiper-container .swiper-wrapper #page3 span {
+  opacity: 1;
+  -o-animation: bounceInUp 1s 1s both;
+  -ms-animation: bounceInUp 1s 1s both;
+  -moz-animation: bounceInUp 1s 1s both;
+  -webkit-animation: bounceInUp 1s 1s both;
+  animation: bounceInUp 1s 1s both;
+}
+.swiper-container .swiper-wrapper #page3 b {
+  opacity: 0.7;
+  -o-animation: move2 1s infinite 3.5s both;
+  -ms-animation: move2 1s infinite 3.5s both;
+  -moz-animation: move2 1s infinite 3.5s both;
+  -webkit-animation: move2 1s infinite 3.5s both;
+  animation: move2 1s infinite 3.5s both;
+}
+.swiper-container .swiper-wrapper #page3 .up {
+  -o-animation: bounceIn 1.5s 1.5s both;
+  -ms-animation: bounceIn 1.5s 1.5s both;
+  -moz-animation: bounceIn 1.5s 1.5s both;
+  -webkit-animation: bounceIn 1.5s 1.5s both;
+  animation: bounceIn 1.5s 1.5s both;
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(1) {
+  -o-animation: bounceInLeft 1s 2.5s both;
+  -ms-animation: bounceInLeft 1s 2.5s both;
+  -moz-animation: bounceInLeft 1s 2.5s both;
+  -webkit-animation: bounceInLeft 1s 2.5s both;
+  animation: bounceInLeft 1s 2.5s both;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(2) {
+  -o-animation: bounceInDown 1s 3s both;
+  -ms-animation: bounceInDown 1s 3s both;
+  -moz-animation: bounceInDown 1s 3s both;
+  -webkit-animation: bounceInDown 1s 3s both;
+  animation: bounceInDown 1s 3s both;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(3) {
+  -o-animation: bounceInRight 1s 3.5s both;
+  -ms-animation: bounceInRight 1s 3.5s both;
+  -moz-animation: bounceInRight 1s 3.5s both;
+  -webkit-animation: bounceInRight 1s 3.5s both;
+  animation: bounceInRight 1s 3.5s both;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(4) {
+  -o-animation: bounceInLeft 1s 4s both;
+  -ms-animation: bounceInLeft 1s 4s both;
+  -moz-animation: bounceInLeft 1s 4s both;
+  -webkit-animation: bounceInLeft 1s 4s both;
+  animation: bounceInLeft 1s 4s both;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(5) {
+  -o-animation: bounceInUp 1s 4.5s both;
+  -ms-animation: bounceInUp 1s 4.5s both;
+  -moz-animation: bounceInUp 1s 4.5s both;
+  -webkit-animation: bounceInUp 1s 4.5s both;
+  animation: bounceInUp 1s 4.5s both;
+}
+.swiper-container .swiper-wrapper #page3 .up li:nth-child(6) {
+  -o-animation: bounceInRight 1s 5s both;
+  -ms-animation: bounceInRight 1s 5s both;
+  -moz-animation: bounceInRight 1s 5s both;
+  -webkit-animation: bounceInRight 1s 5s both;
+  animation: bounceInRight 1s 5s both;
+}
+.swiper-container .swiper-wrapper #page3 .down {
+  -o-animation: bounceIn 1.5s 3s both;
+  -ms-animation: bounceIn 1.5s 3s both;
+  -moz-animation: bounceIn 1.5s 3s both;
+  -webkit-animation: bounceIn 1.5s 3s both;
+  animation: bounceIn 1.5s 3s both;
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(1) {
+  -o-animation: move1 1s 3.3s both;
+  -ms-animation: move1 1s 3.3s both;
+  -moz-animation: move1 1s 3.3s both;
+  -webkit-animation: move1 1s 3.3s both;
+  animation: move1 1s 3.3s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(1) span {
+  background-color: red;
+  -o-animation: down 1s 3.6s both;
+  -ms-animation: down 1s 3.6s both;
+  -moz-animation: down 1s 3.6s both;
+  -webkit-animation: down 1s 3.6s both;
+  animation: down 1s 3.6s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(2) {
+  -o-animation: move1 1s 3.6s both;
+  -ms-animation: move1 1s 3.6s both;
+  -moz-animation: move1 1s 3.6s both;
+  -webkit-animation: move1 1s 3.6s both;
+  animation: move1 1s 3.6s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(2) span {
+  background-color: hotpink;
+  -o-animation: down1 1s 3.9s both;
+  -ms-animation: down1 1s 3.9s both;
+  -moz-animation: down1 1s 3.9s both;
+  -webkit-animation: down1 1s 3.9s both;
+  animation: down1 1s 3.9s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(3) {
+  -o-animation: move1 1s 4.2s both;
+  -ms-animation: move1 1s 4.2s both;
+  -moz-animation: move1 1s 4.2s both;
+  -webkit-animation: move1 1s 4.2s both;
+  animation: move1 1s 4.2s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(3) span {
+  background-color: #19ba94;
+  -o-animation: down2 1s 4.5s both;
+  -ms-animation: down2 1s 4.5s both;
+  -moz-animation: down2 1s 4.5s both;
+  -webkit-animation: down2 1s 4.5s both;
+  animation: down2 1s 4.5s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(4) {
+  -o-animation: move1 1s 4.8s both;
+  -ms-animation: move1 1s 4.8s both;
+  -moz-animation: move1 1s 4.8s both;
+  -webkit-animation: move1 1s 4.8s both;
+  animation: move1 1s 4.8s both;
+}
+.swiper-container .swiper-wrapper #page3 .down li:nth-child(4) span {
+  background-color: yellow;
+  -o-animation: down3 1s 5.1s both;
+  -ms-animation: down3 1s 5.1s both;
+  -moz-animation: down3 1s 5.1s both;
+  -webkit-animation: down3 1s 5.1s both;
+  animation: down3 1s 5.1s both;
+}
+.swiper-container .swiper-wrapper .slide3 {
+  position: relative;
+  background: url("../img/2/6.jpg");
+}
+.swiper-container .swiper-wrapper .slide3 img:nth-child(1) {
+  position: absolute;
+  display: block;
+  width: 3.2rem;
+  height: 2.5rem;
+  top: 0.5rem;
+  left: 0;
+  z-index: 20;
+}
+.swiper-container .swiper-wrapper .slide3 .nuv {
+  position: absolute;
+  width: 3rem;
+  height: 4rem;
+  top: 1.5rem;
+  left: 0.1rem;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.swiper-container .swiper-wrapper .slide3 .nuv li:nth-child(1) {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem auto;
+  background: url("../img/weixin.png") no-repeat;
+  background-size: 100% 100% ;
+}
+.swiper-container .swiper-wrapper .slide3 .nuv li:nth-child(2) {
+  width: 3rem;
+  height: 1.5rem;
+}
+.swiper-container .swiper-wrapper .slide3 .nuv li:nth-child(2) span {
+  position: relative;
+  display: inline-block;
+  width: 2.7rem;
+  height: 0.3rem;
+  padding-left: 0.3rem;
+  margin: 0.1rem 0;
+  text-align: left;
+  font-size: 0.15rem;
+  line-height: 0.3rem;
+  color: #ccc;
+}
+.swiper-container .swiper-wrapper .slide3 .nuv li:nth-child(2) span a {
+  position: absolute;
+  right: 0.2rem;
+  top: 0.05rem;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.2rem;
+  line-height: 0.2rem;
+  text-align: center;
+  font-size: 0.12rem;
+  background-color: red;
+  color: #eee;
+  border-radius: 0.15rem;
+}
+.swiper-container .swiper-wrapper #page4 span {
+  opacity: 1;
+  -o-animation: bounceInUp 1s 1s both;
+  -ms-animation: bounceInUp 1s 1s both;
+  -moz-animation: bounceInUp 1s 1s both;
+  -webkit-animation: bounceInUp 1s 1s both;
+  animation: bounceInUp 1s 1s both;
+}
+.swiper-container .swiper-wrapper #page4 b {
+  opacity: 0.7;
+  -o-animation: move2 1s infinite 3.5s both;
+  -ms-animation: move2 1s infinite 3.5s both;
+  -moz-animation: move2 1s infinite 3.5s both;
+  -webkit-animation: move2 1s infinite 3.5s both;
+  animation: move2 1s infinite 3.5s both;
+}
+.swiper-container .swiper-wrapper #page4 img:nth-child(1) {
+  -o-animation: move3 1.5s both;
+  -ms-animation: move3 1.5s both;
+  -moz-animation: move3 1.5s both;
+  -webkit-animation: move3 1.5s both;
+  animation: move3 1.5s both;
+}
+.swiper-container .swiper-wrapper #page4 .nuv {
+  opacity: 1;
+}
+.swiper-container .swiper-wrapper #page4 .nuv li:nth-child(1) {
+  -o-animation: up 1s 1.5s both;
+  -ms-animation: up 1s 1.5s both;
+  -moz-animation: up 1s 1.5s both;
+  -webkit-animation: up 1s 1.5s both;
+  animation: up 1s 1.5s both;
+}
+b {
+  width: 0.22rem;
+  height: 0.2rem;
+  display: block;
+  position: absolute;
+  bottom: 0.15rem;
+  left: 50%;
+  margin-left: -0.1rem;
+  background: url("../img/2/icon.png") no-repeat;
+  background-position: 0 -20px;
+  background-size: 200px 25px;
+  opacity: 0;
+}
+.banner {
+  display: block;
+  color: #fff;
+  letter-spacing: 0.04rem;
+  font-size: 0.27rem;
+  text-align: center;
+  line-height: 0.4rem;
+  width: 1.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 0.51rem;
+  left: 0.9rem;
+  opacity: 0;
+}
+@-webkit-keyframes down {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.8rem;
+  }
+}
+@keyframes down {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.8rem;
+  }
+}
+@-webkit-keyframes down1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.6rem;
+  }
+}
+@keyframes down1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.6rem;
+  }
+}
+@-webkit-keyframes down2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2rem;
+  }
+}
+@keyframes down2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2rem;
+  }
+}
+@-webkit-keyframes down3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.9rem;
+  }
+}
+@keyframes down3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1.9rem;
+  }
+}
+@-webkit-keyframes up {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes up {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    left: 132%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes move {
+  0% {
+    left: 132%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@-webkit-keyframes move1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2.7rem;
+  }
+}
+@keyframes move1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 2.7rem;
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    background-position-y: 20px ;
+  }
+  100% {
+    background-position-y: -22px;
+  }
+}
+@keyframes move2 {
+  0% {
+    background-position-y: 20px ;
+  }
+  100% {
+    background-position-y: -22px;
+  }
+}
+@-webkit-keyframes move3 {
+  0% {
+    height: 0.7rem;
+  }
+  100% {
+    height: 2.5rem;
+  }
+}
+@keyframes move3 {
+  0% {
+    height: 0.7rem;
+  }
+  100% {
+    height: 2.5rem;
+  }
+}
